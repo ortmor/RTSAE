@@ -1,0 +1,1034 @@
+//Contact landing page
+.contactlandingcontainer {
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+    margin-top: -500px;
+  }
+}
+.contactlandingcontainerslide {
+  display: flex;
+  position: relative;
+  width: 100%;
+  height: 50vh;
+  background-color: #000000;
+  border: none !important;
+  outline: none !important;
+}
+//Contact Landing page ends
+
+.contactmainparentdiv {
+  position: relative;
+  width: 90%;
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  .contactmainboxone {
+    width: 50%;
+    .contactmainboxoneheading {
+      margin-bottom: 1em;
+      font-weight: 600;
+      h1 {
+        letter-spacing: -1.5px;
+        font-size: 2rem;
+        text-align: left;
+        letter-spacing: -1.25px;
+        color: #000000;
+        opacity: 1;
+        font-weight: 600;
+      }
+
+      p {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+        font-weight: 400;
+        margin-top: 1em;
+      }
+    }
+
+    .contactmainboxlinkcontainer {
+      display: flex;
+      flex-direction: column;
+
+      .contactmainboxlinkspace {
+        margin-top: 1em;
+
+        span {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          position: relative;
+          bottom: 1em;
+        }
+
+        .hiddenpara {
+          display: none;
+        }
+
+        .contactmainboxlinkpic {
+          padding: 0.7em;
+          background-color: #ff0000;
+          width: 40px;
+          height: 40px;
+          border-radius: 100px;
+          margin-right: 0.7em;
+          cursor: pointer;
+          transition: background-color 0.8s;
+        }
+
+        .contactmainboxlinkpic:hover {
+          background-color: #a20b0b;
+          transition: background-color 0.8s;
+        }
+      }
+    }
+
+    .contactmainboxlinkcontainerone {
+      display: flex;
+
+      .contactmainboxlinkspaceone {
+        margin-top: 2em;
+
+        .contactmainboxlinkpicone {
+          padding: 0.7em;
+          width: 40px;
+          height: 40px;
+          border-radius: 100px;
+          margin-right: 0.7em;
+          cursor: pointer;
+          border: 0.5px solid #ff0000;
+          opacity: 0.8;
+        }
+
+        .contactmainboxlinkpicone:hover {
+          padding: 0.7em;
+          width: 40px;
+          height: 40px;
+          border-radius: 100px;
+          margin-right: 0.7em;
+          border: none;
+          cursor: pointer;
+          fill: #ffffff;
+          background: #ff0000 0% 0% no-repeat padding-box;
+        }
+      }
+    }
+  }
+
+  //Contact form
+
+  .contactmainboxtwo {
+    position: relative;
+    width: 40%;
+    margin-top: -5em;
+  }
+
+  .contactformparent {
+    width: 100%;
+    margin: auto;
+    background: #ffffff 0% 0% no-repeat padding-box;
+    box-shadow: 0px 20px 50px #5b00000d;
+    border-radius: 55px 55px 0px 55px;
+    opacity: 1;
+    padding: 1em;
+
+    .contactformhead {
+      text-align: left;
+      width: 90%;
+      margin-left: auto;
+      margin-right: auto;
+      margin-top: 2em;
+      margin-bottom: 1em;
+
+      h3 {
+        text-align: left;
+        letter-spacing: -1px;
+        color: #000000;
+        opacity: 1;
+        font-size: 2rem;
+        font-weight: 600;
+      }
+
+      p {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+    }
+
+    .contactform {
+      width: 90%;
+      margin: auto;
+
+      select {
+        width: 100%;
+        padding: 1em;
+        outline: none;
+        margin-top: 1em;
+        margin-bottom: 1em;
+        color: #999999;
+        border: 1px solid #999999;
+        border-radius: 6px;
+        opacity: 1;
+      }
+
+      label {
+        text-align: left;
+        letter-spacing: 0px;
+        color: #999999;
+        opacity: 1;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px;
+        padding: 1em;
+        margin-top: 1em;
+        resize: none;
+        outline: none;
+
+        border: 1px solid #999999;
+        border-radius: 6px;
+        opacity: 1;
+      }
+
+      button {
+        background: #ff0000 0% 0% no-repeat padding-box;
+        border-radius: 28px;
+        opacity: 1;
+        color: #ffffff;
+        padding: 1em 3em;
+        outline: none;
+        border: none;
+        margin-top: 1em;
+        cursor: pointer;
+        transition: background-color 0.8s;
+      }
+
+      button:hover {
+        background-color: #a20b0b;
+        transition: background-color 0.8s;
+      }
+
+      .contactformfirstcontainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .contactformboxone {
+          width: 48%;
+
+          input {
+            width: 100%;
+            padding: 1em;
+            outline: none;
+            margin-top: 1em;
+            margin-bottom: 1em;
+            border: 1px solid #999999;
+            border-radius: 6px;
+            opacity: 1;
+            color: #999999;
+          }
+        }
+      }
+    }
+  }
+}
+
+.mapcontainermain {
+  width: 90%;
+  position: relative;
+  bottom: -2em;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 5em;
+
+  iframe {
+    width: 100%;
+    height: 50vh;
+    outline: none;
+    border: none;
+  }
+}
+
+//contact main page ends
+
+@media screen and (max-width: 1400px) {
+  //Contact landing page
+  .contactlandingcontainer {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .contactlandingcontainerslide {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    max-height: 80vh;
+    background-color: #000000;
+    border: none !important;
+    outline: none !important;
+  }
+  //Contact Landing page ends
+
+  .contactmainparentdiv {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    .contactmainboxone {
+      width: 45%;
+      .contactmainboxoneheading {
+        margin-bottom: 1em;
+        font-weight: 600;
+        h1 {
+          letter-spacing: -1.5px;
+          font-size: 1.8rem;
+          text-align: left;
+          letter-spacing: -1.25px;
+          color: #000000;
+          opacity: 1;
+          font-weight: 600;
+        }
+        p {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          font-weight: 400;
+          margin-top: 1em;
+          font-size: 0.9rem;
+        }
+      }
+
+      .contactmainboxlinkcontainer {
+        display: flex;
+        flex-direction: column;
+
+        .contactmainboxlinkspace {
+          margin-top: 1em;
+
+          span {
+            text-align: left;
+            letter-spacing: 0px;
+            color: #999999;
+            opacity: 1;
+            position: relative;
+            bottom: 1em;
+            font-size: 0.9rem;
+          }
+
+          .contactmainboxlinkpic {
+            padding: 0.7em;
+            background-color: #ff0000;
+            width: 35px;
+            height: 35px;
+            border-radius: 100px;
+            margin-right: 0.5em;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .contactmainboxlinkcontainerone {
+        display: flex;
+
+        .contactmainboxlinkspaceone {
+          margin-top: 1em;
+
+          .contactmainboxlinkpicone {
+            padding: 0.5em;
+            width: 35px;
+            height: 35px;
+            border-radius: 100px;
+            margin-right: 0.5em;
+            cursor: pointer;
+            border: 0.5px solid #ff0000;
+            opacity: 0.8;
+          }
+
+          .contactmainboxlinkpicone:hover {
+            border: none;
+            cursor: pointer;
+            fill: #ffffff;
+            background: #ff0000 0% 0% no-repeat padding-box;
+          }
+        }
+      }
+    }
+
+    //Contact form
+
+    .contactmainboxtwo {
+      position: relative;
+      width: 45%;
+      margin-top: -5em;
+    }
+
+    .contactformparent {
+      width: 100%;
+      margin: auto;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 20px 50px #5b00000d;
+      border-radius: 55px 55px 0px 55px;
+      opacity: 1;
+      padding: 1em;
+
+      .contactformhead {
+        text-align: left;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 1em;
+
+        h3 {
+          text-align: left;
+          letter-spacing: -1px;
+          color: #000000;
+          opacity: 1;
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+
+        p {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          font-size: 0.9rem;
+        }
+      }
+
+      .contactform {
+        width: 90%;
+        margin: auto;
+
+        select {
+          width: 100%;
+          padding: 1em;
+          outline: none;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          color: #999999;
+          border: 1px solid #999999;
+          border-radius: 6px;
+          opacity: 1;
+        }
+
+        label {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+        }
+
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 1em;
+          margin-top: 1em;
+          resize: none;
+          outline: none;
+
+          border: 1px solid #999999;
+          border-radius: 6px;
+          opacity: 1;
+        }
+
+        button {
+          background: #ff0000 0% 0% no-repeat padding-box;
+          border-radius: 28px;
+          opacity: 1;
+          color: #ffffff;
+          padding: 1em 3em;
+          outline: none;
+          border: none;
+          margin-top: 1em;
+          cursor: pointer;
+        }
+
+        .contactformfirstcontainer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .contactformboxone {
+            width: 48%;
+
+            input {
+              width: 100%;
+              padding: 1em;
+              outline: none;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              border: 1px solid #999999;
+              border-radius: 6px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mapcontainermain {
+    width: 90%;
+    position: relative;
+    bottom: -2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5em;
+
+    iframe {
+      width: 100%;
+      height: 50vh;
+      outline: none;
+      border: none;
+    }
+  }
+
+  //contact main page ends
+}
+
+@media screen and (max-width: 1100px) {
+  //Contact landing page
+  .contactlandingcontainer {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .contactlandingcontainerslide {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 50vh;
+    max-height: 80vh;
+    background-color: #000000;
+    border: none !important;
+    outline: none !important;
+  }
+  //Contact Landing page ends
+
+  .contactmainparentdiv {
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .contactmainboxone {
+      width: 100%;
+      .contactmainboxoneheading {
+        margin-bottom: 1em;
+        font-weight: 600;
+        h1 {
+          letter-spacing: -1.5px;
+          font-size: 1.8rem;
+          text-align: left;
+          letter-spacing: -1.25px;
+          color: #000000;
+          opacity: 1;
+          font-weight: 600;
+          margin-top: 1em;
+        }
+        p {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          font-weight: 400;
+          margin-top: 1em;
+          font-size: 0.9rem;
+        }
+      }
+
+      .contactmainboxlinkcontainer {
+        display: flex;
+        flex-direction: column;
+
+        .contactmainboxlinkspace {
+          margin-top: 1em;
+
+          span {
+            text-align: left;
+            letter-spacing: 0px;
+            color: #999999;
+            opacity: 1;
+            position: relative;
+            bottom: 1em;
+            font-size: 0.9rem;
+          }
+
+          .contactmainboxlinkpic {
+            padding: 0.7em;
+            background-color: #ff0000;
+            width: 35px;
+            height: 35px;
+            border-radius: 100px;
+            margin-right: 0.5em;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .contactmainboxlinkcontainerone {
+        display: flex;
+
+        .contactmainboxlinkspaceone {
+          margin-top: 1em;
+
+          .contactmainboxlinkpicone {
+            padding: 0.5em;
+            width: 35px;
+            height: 35px;
+            border-radius: 100px;
+            margin-right: 0.5em;
+            cursor: pointer;
+            border: 0.5px solid #ff0000;
+            opacity: 0.8;
+          }
+
+          .contactmainboxlinkpicone:hover {
+            border: none;
+            cursor: pointer;
+            fill: #ffffff;
+            background: #ff0000 0% 0% no-repeat padding-box;
+          }
+        }
+      }
+    }
+
+    //Contact form
+
+    .contactmainboxtwo {
+      position: relative;
+      width: 100%;
+      margin-top: -5em;
+    }
+
+    .contactformparent {
+      width: 100%;
+      margin: auto;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 20px 50px #5b00000d;
+      border-radius: 55px 55px 0px 55px;
+      opacity: 1;
+      padding: 1em;
+
+      .contactformhead {
+        text-align: left;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 1em;
+
+        h3 {
+          text-align: left;
+          letter-spacing: -1px;
+          color: #000000;
+          opacity: 1;
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+
+        p {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          font-size: 0.9rem;
+        }
+      }
+
+      .contactform {
+        width: 90%;
+        margin: auto;
+
+        select {
+          width: 100%;
+          padding: 1em;
+          outline: none;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          color: #999999;
+          border: 1px solid #999999;
+          border-radius: 6px;
+          opacity: 1;
+        }
+
+        label {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+        }
+
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 1em;
+          margin-top: 1em;
+          resize: none;
+          outline: none;
+
+          border: 1px solid #999999;
+          border-radius: 6px;
+          opacity: 1;
+        }
+
+        button {
+          background: #ff0000 0% 0% no-repeat padding-box;
+          border-radius: 28px;
+          opacity: 1;
+          color: #ffffff;
+          padding: 1em 3em;
+          outline: none;
+          border: none;
+          margin-top: 1em;
+          cursor: pointer;
+        }
+
+        .contactformfirstcontainer {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          .contactformboxone {
+            width: 48%;
+
+            input {
+              width: 100%;
+              padding: 1em;
+              outline: none;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              border: 1px solid #999999;
+              border-radius: 6px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mapcontainermain {
+    width: 90%;
+    position: relative;
+    bottom: -2em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+
+    iframe {
+      width: 100%;
+      height: 50vh;
+      outline: none;
+      border: none;
+    }
+  }
+
+  //contact main page ends
+}
+
+@media screen and (max-width: 600px) {
+  //Contact landing page
+  .contactlandingcontainer {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .contactlandingcontainerslide {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 30vh;
+    max-height: 100vh;
+    background-color: #000000;
+    border: none !important;
+    outline: none !important;
+  }
+  //Contact Landing page ends
+
+  .contactmainparentdiv {
+    position: relative;
+    width: 95%;
+    margin: 0 auto;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    .contactmainboxone {
+      width: 100%;
+      .contactmainboxoneheading {
+        margin-bottom: 1em;
+        font-weight: 600;
+        h1 {
+          letter-spacing: -1.5px;
+          font-size: 1.8rem;
+          text-align: left;
+          letter-spacing: -1.25px;
+          color: #000000;
+          opacity: 1;
+          font-weight: 600;
+          margin-top: 1em;
+        }
+        p {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          font-weight: 400;
+          margin-top: 1em;
+          font-size: 0.9rem;
+        }
+      }
+
+      .contactmainboxlinkcontainer {
+        display: flex;
+        flex-direction: column;
+
+        .contactmainboxlinkspace {
+          margin-top: 1em;
+
+          span {
+            text-align: left;
+            letter-spacing: 0px;
+            color: #999999;
+            opacity: 1;
+            position: relative;
+            bottom: 1em;
+            font-size: 0.9rem;
+          }
+
+          .spantext {
+            display: none;
+          }
+
+          .hiddenpara {
+            display: block;
+            text-align: left;
+            letter-spacing: 0px;
+            color: #999999;
+            opacity: 1;
+            position: relative;
+            bottom: 1em;
+            font-size: 0.9rem;
+            margin-top: 1em;
+          }
+
+          .contactmainboxlinkpic {
+            padding: 0.7em;
+            background-color: #ff0000;
+            width: 35px;
+            height: 35px;
+
+            border-radius: 100px;
+            margin-right: 0.5em;
+            cursor: pointer;
+          }
+        }
+      }
+
+      .contactmainboxlinkcontainerone {
+        display: flex;
+
+        .contactmainboxlinkspaceone {
+          margin-top: 1em;
+
+          .contactmainboxlinkpicone {
+            padding: 0.5em;
+            width: 35px;
+            height: 35px;
+            border-radius: 100px;
+            margin-right: 0.5em;
+            cursor: pointer;
+            border: 0.5px solid #ff0000;
+            opacity: 0.8;
+          }
+
+          .contactmainboxlinkpicone:hover {
+            border: none;
+            cursor: pointer;
+            fill: #ffffff;
+            background: #ff0000 0% 0% no-repeat padding-box;
+          }
+        }
+      }
+    }
+
+    //Contact form
+
+    .contactmainboxtwo {
+      position: relative;
+      width: 100%;
+      margin-top: -5em;
+    }
+
+    .contactformparent {
+      width: 100%;
+      margin: auto;
+      background: #ffffff 0% 0% no-repeat padding-box;
+      box-shadow: 0px 20px 50px #5b00000d;
+      border-radius: 55px 55px 0px 55px;
+      opacity: 1;
+      padding: 1em;
+
+      .contactformhead {
+        text-align: left;
+        width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+        margin-top: 2em;
+        margin-bottom: 1em;
+
+        h3 {
+          text-align: left;
+          letter-spacing: -1px;
+          color: #000000;
+          opacity: 1;
+          font-size: 1.8rem;
+          font-weight: 600;
+        }
+
+        p {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+          font-size: 0.9rem;
+        }
+      }
+
+      .contactform {
+        width: 90%;
+        margin: auto;
+
+        select {
+          width: 100%;
+          padding: 1em;
+          outline: none;
+          margin-top: 1em;
+          margin-bottom: 1em;
+          color: #999999;
+          border: 1px solid #999999;
+          border-radius: 6px;
+          opacity: 1;
+        }
+
+        label {
+          text-align: left;
+          letter-spacing: 0px;
+          color: #999999;
+          opacity: 1;
+        }
+
+        textarea {
+          width: 100%;
+          height: 100px;
+          padding: 1em;
+          margin-top: 1em;
+          resize: none;
+          outline: none;
+
+          border: 1px solid #999999;
+          border-radius: 6px;
+          opacity: 1;
+        }
+
+        button {
+          background: #ff0000 0% 0% no-repeat padding-box;
+          border-radius: 28px;
+          opacity: 1;
+          color: #ffffff;
+          padding: 1em 3em;
+          outline: none;
+          border: none;
+          margin-top: 1em;
+          cursor: pointer;
+        }
+
+        .contactformfirstcontainer {
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: center;
+
+          .contactformboxone {
+            width: 100%;
+
+            input {
+              width: 100%;
+              padding: 1em;
+              outline: none;
+              margin-top: 1em;
+              margin-bottom: 1em;
+              border: 1px solid #999999;
+              border-radius: 6px;
+              opacity: 1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .mapcontainermain {
+    width: 100%;
+    position: relative;
+    bottom: -1em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2em;
+
+    iframe {
+      width: 100%;
+      height: 50vh;
+      outline: none;
+      border: none;
+    }
+  }
+
+  //contact main page ends
+}
+
+@media screen and (max-width: 400px) {
+  .contactlandingcontainer {
+    width: 100%;
+    overflow: hidden;
+    img {
+      width: 100%;
+      margin-top: -100px;
+    }
+  }
+  .contactlandingcontainerslide {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 60vh;
+    background-color: #000000;
+    border: none !important;
+    outline: none !important;
+  }
+}

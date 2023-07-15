@@ -1,0 +1,66 @@
+'use client';
+import { useRef } from 'react';
+import Styles from '../styles/footer.module.scss';
+import { doSubscribe, doUnsubscribe } from '@/services/subscriptionService';
+
+const Subscribe = () => {
+  const emailRef = useRef('');
+
+  const handleSubmitForSubscribe = async (e) => {
+    e.preventDefault();
+    const { isSuccess, message } = await doSubscribe(emailRef.current.value);
+    if (isSuccess) {
+      alert(message);
+      localStorage.setItem('subscribedEmail', emailRef.current.value);
+      emailRef.current.value = '';
+    } else {
+      alert(message);
+    }
+  };
+
+  const handleSubmitForUnsubscribe = async (e) => {
+    e.preventDefault();
+    const { isSuccess, message } = await doUnsubscribe(emailRef.current.value);
+    if (isSuccess) {
+      alert(message);
+      localStorage.removeItem('subscribedEmail');
+      emailRef.current.value = '';
+    } else {
+      alert(message);
+    }
+  };
+  return (
+    <div className={Styles.subscribemaincontainer}>
+      <div className={Styles.subscribeparent}>
+        <div className={Styles.subchildone}>
+          <h1>Don't miss </h1>
+          <h1>our hottest news!</h1>
+          <p>
+            Enter your email to receive round-up of most
+            <br /> hottest news
+          </p>
+        </div>
+
+        <div className={Styles.subchildtwo}>
+          <form autoComplete="off">
+            <input
+              id={Styles.inputbutton1}
+              type="email"
+              placeholder="Your email goes here"
+              ref={emailRef}
+              required
+            />
+            <input
+              id={Styles.inputbutton2}
+              type="button"
+              value="Subscribe"
+              onClick={handleSubmitForSubscribe}
+            />
+          </form>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Subscribe;
