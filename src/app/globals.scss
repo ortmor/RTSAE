@@ -24,6 +24,12 @@
   --collightgary: #0000001a;
 }
 
+p{
+  -webkit-hyphens: auto !important; /* Safari, Chrome, and Opera */
+  -ms-hyphens: auto !important; /* Microsoft Edge */
+  hyphens: auto !important; /* Standard syntax */
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
