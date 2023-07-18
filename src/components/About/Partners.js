@@ -73,27 +73,12 @@ const Partners = () => {
                 <SwiperSlide>
                   <div className={Styles.PartnersSlideSlidermain}>
                     <img
-                      src="/about/partners/Asset 2.png"
+                      src="/about/partners/Asset 02.png"
                       loading="lazy"
                       alt="client.png"
                     />
                     <img
-                      src="/about/partners/Asset 3.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.PartnersSlideSlidermain}>
-                    <img
-                      src="/about/partners/Asset 4.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-                    <img
-                      src="/about/partners/Asset 5.png"
+                      src="/about/partners/Asset 03.png"
                       loading="lazy"
                       alt="client.png"
                     />
@@ -103,12 +88,27 @@ const Partners = () => {
                 <SwiperSlide>
                   <div className={Styles.PartnersSlideSlidermain}>
                     <img
-                      src="/about/partners/Asset 6.png"
+                      src="/about/partners/Asset 04.png"
                       loading="lazy"
                       alt="client.png"
                     />
                     <img
-                      src="/about/partners/Asset 7.png"
+                      src="/about/partners/Asset 05.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 06.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 07.png"
                       loading="lazy"
                       alt="client.png"
                     />
@@ -117,12 +117,12 @@ const Partners = () => {
                 <SwiperSlide>
                   <div className={Styles.PartnersSlideSlidermain}>
                     <img
-                      src="/about/partners/Asset 8.png"
+                      src="/about/partners/Asset 08.png"
                       loading="lazy"
                       alt="client.png"
                     />
                     <img
-                      src="/about/partners/Asset 9.png"
+                      src="/about/partners/Asset 09.png"
                       loading="lazy"
                       alt="client.png"
                     />
@@ -349,9 +349,7 @@ const Partners = () => {
                     />
                   </div>
                 </SwiperSlide>
-             
-             
-             
+
                 <SwiperSlide>
                   <div className={Styles.PartnersSlideSlidermain}>
                     <img
@@ -366,8 +364,6 @@ const Partners = () => {
                     />
                   </div>
                 </SwiperSlide>
-             
-
 
                 <SwiperSlide>
                   <div className={Styles.PartnersSlideSlidermain}>
@@ -384,7 +380,6 @@ const Partners = () => {
                   </div>
                 </SwiperSlide>
 
-
                 <SwiperSlide>
                   <div className={Styles.PartnersSlideSlidermain}>
                     <img
@@ -399,7 +394,186 @@ const Partners = () => {
                     />
                   </div>
                 </SwiperSlide>
-             
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 01.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 45.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 46.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 47.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 48.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 49.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 50.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 51.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 52.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 53.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 54.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 55.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 56.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 57.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 58.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 59.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 60.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 61.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 62.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 63.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 64.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 65.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 66.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 67.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>
