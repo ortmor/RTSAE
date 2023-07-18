@@ -1408,7 +1408,6 @@
 //   }
 // }
 
-
 //circle
 
 .circleservicemainparentdiv {
@@ -1453,16 +1452,14 @@
       cursor: pointer;
       margin-top: 1em;
       font-weight: 300;
- 
-      transition: background-color .8s;
+
+      transition: background-color 0.8s;
     }
 
     a:hover {
       background-color: #a20b0b;
-      transition: background-color .8s;
+      transition: background-color 0.8s;
     }
-
- 
   }
 
   .circleservicemainboxtwo {
@@ -1697,7 +1694,6 @@
 }
 
 //circle ends
-
 
 //circle ends
 
@@ -2331,6 +2327,169 @@
       letter-spacing: 0px;
       color: #999999;
       opacity: 1;
+    }
+  }
+}
+
+.supportmaintenanceparagraph {
+  width: 70%;
+  display: flex;
+  justify-content: center;
+
+  p {
+    text-align: justify;
+    margin-top: 1em;
+    letter-spacing: 0px;
+    color: #999999;
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .supportmaintenanceparagraph {
+    width: 90%;
+    display: flex;
+    justify-content: center;
+
+    p {
+      text-align: justify;
+      margin-top: 1em;
+      letter-spacing: 0px;
+      color: #999999;
+      opacity: 1;
+    }
+  }
+}
+
+//List
+
+.diciplinemainApproachgridcontainerlist {
+  width: 98%;
+  position: relative;
+  margin: 3em auto;
+
+  h4 {
+    text-decoration: underline;
+    margin-bottom: 2em;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    padding: 1em;
+
+    li {
+      color: #999999;
+      text-align: left;
+    }
+  }
+
+  .diciplinemainApproachgridcardlist {
+    display: grid;
+    text-align: center;
+    grid-gap: 1em;
+    grid-template-columns: repeat(auto-fill, minmax(30%, 3fr));
+  }
+  .diciplinemainApproachgridcardboxmainlist {
+    padding: 1em;
+    position: relative;
+    margin-bottom: 2em;
+    .diciplinemainiconboxlist {
+      color: #ffffff;
+      text-align: center;
+      font-size: 2rem;
+    }
+  }
+
+  .diciplinemainApproachgridcardboxmainlist {
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px,
+      rgba(0, 0, 0, 0.3) 0px 7px 13px -3px,
+      rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .diciplinemainApproachgridcontainerlist {
+    width: 98%;
+    position: relative;
+    margin: 3em auto;
+
+    h4 {
+      text-decoration: underline;
+      margin-bottom: 2em;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1em;
+
+      li {
+        color: #999999;
+      }
+    }
+
+    .diciplinemainApproachgridcardlist {
+      display: grid;
+      text-align: center;
+      grid-gap: 1em;
+      grid-template-columns: repeat(auto-fill, minmax(30%, 3fr));
+    }
+    .diciplinemainApproachgridcardboxmainlist {
+      padding: 1em;
+      position: relative;
+      margin-bottom: 2em;
+      .diciplinemainiconboxlist {
+        color: #ffffff;
+        text-align: center;
+        font-size: 2rem;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .diciplinemainApproachgridcontainerlist {
+    width: 98%;
+    position: relative;
+    margin: 3em auto;
+
+    h4 {
+      text-decoration: underline;
+      margin-bottom: 2em;
+    }
+
+    ul {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1em;
+
+      li {
+        color: #999999;
+      }
+    }
+
+    .diciplinemainApproachgridcardlist {
+      display: grid;
+      text-align: center;
+      grid-gap: 1em;
+      grid-template-columns: repeat(auto-fill, minmax(100%, 1fr));
+    }
+    .diciplinemainApproachgridcardboxmainlist {
+      padding: 1em;
+      position: relative;
+      margin-bottom: 2em;
+      .diciplinemainiconboxlist {
+        color: #ffffff;
+        text-align: center;
+        font-size: 2rem;
+      }
     }
   }
 }
