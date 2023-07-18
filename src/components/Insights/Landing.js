@@ -27,7 +27,7 @@ const Landing = () => {
           <div className={Styles.blogmainlandingcontainerslide}>
             <div className={Styles.blogmainlandingcontainerheading}>
               <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>How to invest your money in newest technologies</h5>
+                <h5>Coveted Best Partner Awards</h5>
               </div>
 
               <button className={Styles.buttonmain}>
@@ -56,11 +56,40 @@ const Landing = () => {
           <div className={Styles.blogmainlandingcontainerslide}>
             <div className={Styles.blogmainlandingcontainerheading}>
               <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>How to invest your money in newest technologies</h5>
+                <h5>RTS Shines Bright as HPE Rising Star of the Year 2023</h5>
               </div>
 
               <button className={Styles.buttonmain}>
-                <Link href="/insights/awards">Read Article</Link>
+                <Link href="/awards01">Read Article</Link>
+              </button>
+
+              <div className={Styles.customarrowcomponent}>
+                <button className="Nextslide">
+                  <BsArrowLeftShort color="#ffffff" size="3em" />
+                </button>
+                <button className="Backslide">
+                  <BsArrowRightShort color="#ffffff" size="3em" />
+                </button>
+              </div>
+            </div>
+            <img
+              id={Styles.img}
+              width="100%"
+              poster="/"
+              src="/blog/insights_hero.webp"
+            />
+          </div>
+        </SwiperSlide>
+
+        <SwiperSlide>
+          <div className={Styles.blogmainlandingcontainerslide}>
+            <div className={Styles.blogmainlandingcontainerheading}>
+              <div className={Styles.blogmainlandingcontainerparagraph}>
+                <h5> RTS Receives Prestigious</h5>
+              </div>
+
+              <button className={Styles.buttonmain}>
+                <Link href="/awards02">Read Article</Link>
               </button>
 
               <div className={Styles.customarrowcomponent}>

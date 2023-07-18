@@ -239,6 +239,17 @@
       }
     }
   }
+
+  .dynamiccontacticon {
+    margin-right: 0.5em;
+    width: 40px;
+    height: 40px;
+    transition: 0.8s;
+  }
+
+  .dynamiccontacticon:hover {
+    transform: rotate(30deg);
+  }
 }
 
 .mapcontainermain {

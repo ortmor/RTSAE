@@ -118,7 +118,7 @@ const Contactmain = () => {
                 <div className={Styles.contactformboxone}>
                   <label>Phone</label>
                   <br />
-                  <input name="phone" defaultValue="+971"   type="tel" ref={phoneRef} required />
+                  <input name="phone" type="tel" ref={phoneRef} required />
                 </div>
               </div>
 
@@ -150,16 +150,16 @@ const Contactmain = () => {
               </div>
             </Link>
 
-            <Link style={{ textDecoration: "none" }} href="tel:+02-8111333">
+            <Link style={{ textDecoration: "none" }} href="tel:+97102-8111333">
               <div className={Styles.contactmainboxlinkspace}>
                 <MdPhone
                   className={Styles.contactmainboxlinkpic}
                   color="#fff"
                   size="1em"
                 />{" "}
-                <span className={Styles.spantext}>02-8111333</span>
+                <span className={Styles.spantext}>+971 02-8111333</span>
                 <div className={Styles.hiddenpara}>
-                  <p>02-8111333</p>
+                  <p>+971 02-8111333</p>
                 </div>
               </div>
             </Link>
@@ -183,50 +183,45 @@ const Contactmain = () => {
           <div className={Styles.contactmainboxlinkcontainerone}>
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="https://twitter.com/i/flow/login?redirect_after_login=%2Frts_ae">
-                <FaTwitter
-                  className={Styles.contactmainboxlinkpicone}
-                  color="#999999"
-                  size="2em"
+                <img
+                  className={Styles.dynamiccontacticon}
+                  src="/contact/tw.png"
                 />
               </Link>
             </div>
 
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="https://www.linkedin.com/company/royal-technology-solutions">
-                <FaLinkedinIn
-                  className={Styles.contactmainboxlinkpicone}
-                  color="#999999"
-                  size="2em"
+                <img
+                   className={Styles.dynamiccontacticon}
+                  src="/contact/in.png"
                 />
               </Link>
             </div>
 
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="/">
-                <FaInstagram
-                  className={Styles.contactmainboxlinkpicone}
-                  color="#999999"
-                  size="2em"
+                <img
+                   className={Styles.dynamiccontacticon}
+                  src="/contact/insta.png"
                 />
               </Link>
             </div>
 
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="https://www.facebook.com/RTSUAE/">
-                <FaFacebookF
-                  className={Styles.contactmainboxlinkpicone}
-                  color="#999999"
-                  size="2em"
+                <img
+                  className={Styles.dynamiccontacticon}
+                  src="/contact/fb.png"
                 />
               </Link>
             </div>
 
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="/">
-                <FaYoutube
-                  className={Styles.contactmainboxlinkpicone}
-                  color="#999999"
-                  size="2em"
+                <img
+                  className={Styles.dynamiccontacticon}
+                  src="/contact/yt.png"
                 />
               </Link>
             </div>

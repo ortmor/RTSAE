@@ -2,7 +2,7 @@ import Layout from "@/components/Layout";
 import Landing from "@/components/About/Aboutlanding";
 import Whoweare from "@/components/About/Whoweare";
 import Valueabout from "@/components/About/Value";
-import Aboutclientslider from "@/components/About/Aboutclientslider";
+// import Aboutclientslider from "@/components/About/Aboutclientslider";
 import Industries from "@/components/About/Industries";
 import Ourclient from "@/components/About/Ourclients";
 import Partners from "@/components/About/Partners";
@@ -15,9 +15,9 @@ export default function About() {
       <Landing />
       <Whoweare />
       <Valueabout />
-      <Aboutclientslider />
-      <Industries />
-      <Ourclient />
+     {/* <Aboutclientslider /> */}
+      <Industries /> 
+      <Ourclient /> 
       <Partners />
       <Certifications />
       <Jointeam />

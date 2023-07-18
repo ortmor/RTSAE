@@ -1125,6 +1125,292 @@
 
 //circle
 
+// .circleservicemainparentdiv {
+//   position: relative;
+//   width: 90%;
+//   margin: 2em auto;
+//   align-items: center;
+//   display: flex;
+//   justify-content: space-between;
+
+//   .circleservicemainboxone {
+//     width: 40%;
+
+//     .circleservicemainboxoneheading {
+//       margin-bottom: 1em;
+//       font-weight: 400;
+
+//       h1 {
+//         letter-spacing: -1.5px;
+//         font-size: 3rem;
+//       }
+//     }
+
+//     .circleservicemainboxonepara {
+//       color: #999999;
+
+//       p {
+//         margin-top: 1em;
+//         text-align: justify;
+//       }
+//     }
+
+//     a {
+//       text-decoration: none;
+//       background: #ff0000 0% 0% no-repeat padding-box;
+//       border-radius: 25px;
+//       border: none;
+//       outline: none;
+//       font-size: 1.1rem;
+//       padding: 0.9em 1.5em;
+//       color: #ffffff;
+//       cursor: pointer;
+//       margin-top: 1em;
+//       font-weight: 300;
+
+//       transition: background-color 0.8s;
+//     }
+
+//     a:hover {
+//       background-color: #a20b0b;
+//       transition: background-color 0.8s;
+//     }
+//   }
+
+//   .circleservicemainboxtwo {
+//     width: 55%;
+//     img {
+//       position: relative;
+//       width: 70%;
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1400px) {
+//   .circleservicemainparentdiv {
+//     position: relative;
+//     width: 90%;
+//     margin: 2em auto;
+//     align-items: center;
+//     display: flex;
+//     justify-content: space-between;
+
+//     .circleservicemainboxone {
+//       width: 50%;
+
+//       .circleservicemainboxoneheading {
+//         margin-bottom: 1em;
+//         font-weight: 400;
+
+//         h1 {
+//           letter-spacing: -1.5px;
+//           font-size: 3rem;
+//         }
+//       }
+
+//       .circleservicemainboxonepara {
+//         color: #999999;
+
+//         p {
+//           margin-top: 1em;
+//           text-align: justify;
+//         }
+//       }
+
+//       a {
+//         text-decoration: none;
+//         background: #ff0000 0% 0% no-repeat padding-box;
+//         border-radius: 25px;
+//         border: none;
+//         outline: none;
+//         font-size: 1.1rem;
+//         padding: 0.9em 1.5em;
+//         color: #ffffff;
+//         cursor: pointer;
+//         font-weight: 300;
+//       }
+//     }
+
+//     .circleservicemainboxtwo {
+//       position: relative;
+//       width: 40%;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1200px) {
+//   .circleservicemainparentdiv {
+//     position: relative;
+//     width: 90%;
+//     margin: 1em auto;
+//     align-items: center;
+//     display: flex;
+//     justify-content: space-between;
+
+//     .circleservicemainboxone {
+//       width: 50%;
+
+//       .circleservicemainboxoneheading {
+//         margin-bottom: 1em;
+//         font-weight: 400;
+
+//         h1 {
+//           letter-spacing: -1.5px;
+//           font-size: 2.5rem;
+//         }
+//       }
+
+//       .circleservicemainboxonepara {
+//         color: #999999;
+
+//         p {
+//           margin-top: 1em;
+//           text-align: justify;
+//         }
+//       }
+
+//       a {
+//         text-decoration: none;
+//         background: #ff0000 0% 0% no-repeat padding-box;
+//         border-radius: 25px;
+//         border: none;
+//         outline: none;
+//         font-size: 1.1rem;
+//         padding: 0.9em 1.5em;
+//         color: #ffffff;
+//         cursor: pointer;
+//         font-weight: 300;
+//       }
+//     }
+
+//     .circleservicemainboxtwo {
+//       position: relative;
+//       width: 45%;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 1000px) {
+//   .circleservicemainparentdiv {
+//     position: relative;
+//     width: 90%;
+//     margin: 1em auto;
+//     align-items: center;
+//     flex-direction: column;
+//     display: flex;
+//     justify-content: space-between;
+
+//     .circleservicemainboxone {
+//       width: 90%;
+
+//       .circleservicemainboxoneheading {
+//         margin-bottom: 1em;
+//         font-weight: 400;
+
+//         h1 {
+//           letter-spacing: -1.5px;
+//           font-size: 2.5rem;
+//         }
+//       }
+
+//       .circleservicemainboxonepara {
+//         color: #999999;
+
+//         p {
+//           margin-top: 1em;
+//           text-align: justify;
+//         }
+//       }
+
+//       a {
+//         text-decoration: none;
+//         background: #ff0000 0% 0% no-repeat padding-box;
+//         border-radius: 25px;
+//         border: none;
+//         outline: none;
+//         font-size: 1.1rem;
+//         padding: 0.9em 1.5em;
+//         color: #ffffff;
+//         cursor: pointer;
+//         font-weight: 300;
+//       }
+//     }
+
+//     .circleservicemainboxtwo {
+//       position: relative;
+//       width: 90%;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+// @media screen and (max-width: 600px) {
+//   .circleservicemainparentdiv {
+//     position: relative;
+//     width: 95%;
+//     margin: 1em auto;
+//     align-items: center;
+//     flex-direction: column;
+//     display: flex;
+//     justify-content: space-between;
+
+//     .circleservicemainboxone {
+//       width: 95%;
+
+//       .circleservicemainboxoneheading {
+//         margin-bottom: 1em;
+//         font-weight: 400;
+
+//         h1 {
+//           letter-spacing: -1.5px;
+//           font-size: 2rem;
+//         }
+//       }
+
+//       .circleservicemainboxonepara {
+//         color: #999999;
+
+//         p {
+//           margin-top: 1em;
+//           text-align: left;
+//         }
+//       }
+
+//       a {
+//         text-decoration: none;
+//         background: #ff0000 0% 0% no-repeat padding-box;
+//         border-radius: 25px;
+//         border: none;
+//         outline: none;
+//         font-size: 1.1rem;
+//         padding: 0.9em 1.5em;
+//         color: #ffffff;
+//         cursor: pointer;
+//         font-weight: 300;
+//       }
+//     }
+
+//     .circleservicemainboxtwo {
+//       position: relative;
+//       width: 95%;
+//       img {
+//         width: 100%;
+//       }
+//     }
+//   }
+// }
+
+
+//circle
+
 .circleservicemainparentdiv {
   position: relative;
   width: 90%;
@@ -1134,7 +1420,7 @@
   justify-content: space-between;
 
   .circleservicemainboxone {
-    width: 40%;
+    width: 50%;
 
     .circleservicemainboxoneheading {
       margin-bottom: 1em;
@@ -1167,20 +1453,22 @@
       cursor: pointer;
       margin-top: 1em;
       font-weight: 300;
-
-      transition: background-color 0.8s;
+ 
+      transition: background-color .8s;
     }
 
     a:hover {
       background-color: #a20b0b;
-      transition: background-color 0.8s;
+      transition: background-color .8s;
     }
+
+ 
   }
 
   .circleservicemainboxtwo {
-    width: 55%;
+    position: relative;
+    width: 35%;
     img {
-      position: relative;
       width: 100%;
     }
   }
@@ -1233,7 +1521,7 @@
 
     .circleservicemainboxtwo {
       position: relative;
-      width: 40%;
+      width: 45%;
       img {
         width: 100%;
       }
@@ -1380,7 +1668,7 @@
 
         p {
           margin-top: 1em;
-          text-align: left;
+          text-align: justify;
         }
       }
 
@@ -1407,6 +1695,9 @@
     }
   }
 }
+
+//circle ends
+
 
 //circle ends
 

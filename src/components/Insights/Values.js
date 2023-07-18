@@ -56,8 +56,6 @@ const Values = () => {
               modules={[Autoplay, Navigation]}
               className="mySwiper"
             >
-              
-              
               <SwiperSlide>
                 <div className={Styles.iframebox}>
                   <iframe
@@ -66,7 +64,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -79,7 +77,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -92,7 +90,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -104,20 +102,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -130,22 +115,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-
-
-
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -158,7 +128,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -171,19 +141,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -196,7 +154,7 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
@@ -209,13 +167,48 @@ const Values = () => {
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowfullscreen
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </SwiperSlide>
+              <SwiperSlide>
+                <div className={Styles.iframebox}>
+                  <iframe
+                    className={Styles.youtubeclass}
+                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
                   ></iframe>
                 </div>
               </SwiperSlide>
 
+              <SwiperSlide>
+                <div className={Styles.iframebox}>
+                  <iframe
+                    className={Styles.youtubeclass}
+                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </SwiperSlide>
 
-
+              <SwiperSlide>
+                <div className={Styles.iframebox}>
+                  <iframe
+                    className={Styles.youtubeclass}
+                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowFullScreen
+                  ></iframe>
+                </div>
+              </SwiperSlide>
             </Swiper>
           </div>
         </div>
@@ -232,12 +225,16 @@ const Values = () => {
 
       <div className={Styles.valuesfootercontainermain}>
         <div className={Styles.valuefooterimgboxone}>
-          <img src="/blog/pro_values.png" alt="" />
+          <img src="/blog/pro_values.webp" alt="" />
         </div>
 
         <div className={Styles.valuefooterboxtwo}>
           <div className={Styles.valuefooterboxsectionone}>
-            <img src="/blog/quality_service.png" alt="Quality" />
+            <img
+              className={Styles.valueimganime}
+              src="/blog/quality_service.png"
+              alt="Quality"
+            />
             <h1>Quality Service</h1>
             <p>
               Quality service is at the core of everything we do. We strive to
@@ -251,7 +248,11 @@ const Values = () => {
           </div>
 
           <div className={Styles.valuefooterboxsectiontwo}>
-            <img src="/blog/planning.png" alt="Quality" />
+            <img
+              className={Styles.valueimganime}
+              src="/blog/planning.png"
+              alt="Quality"
+            />
             <h1>Planning & Strategy</h1>
             <p>
               Planning and strategy form the backbone of our approach. By
@@ -267,7 +268,11 @@ const Values = () => {
 
       <div className={Styles.valuesfootercontainermainsecond}>
         <div className={Styles.valuefooterboxsecondboxone}>
-          <img src="/blog/client_satisfaction.png" alt="Quality" />
+          <img
+            className={Styles.valueimganime}
+            src="/blog/client_satisfaction.png"
+            alt="Quality"
+          />
           <h1>Clients Satisfaction</h1>
           <p>
             We understand that our success is directly linked to the success of
@@ -280,7 +285,11 @@ const Values = () => {
         </div>
 
         <div className={Styles.valuefooterboxsecondboxtwo}>
-          <img src="/blog/teamwork.png" alt="Quality" />
+          <img
+            className={Styles.valueimganime}
+            src="/blog/teamwork.png"
+            alt="Quality"
+          />
           <h1>Teamwork</h1>
           <p>
             At RTS, we firmly believe in the power of teamwork. We foster a

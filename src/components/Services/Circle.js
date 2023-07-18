@@ -5,7 +5,7 @@ const Circle = () => {
   return (
     <div id="projectmanagement" className={Styles.circleservicemainparentdiv}>
       <div className={Styles.circleservicemainboxtwo}>
-        <img src="/services/circle.webp"></img>
+        <img src="/services/circle.png"></img>
       </div>
       <div className={Styles.circleservicemainboxone}>
         <div className={Styles.circleservicemainboxoneheading}>
