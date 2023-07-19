@@ -3,17 +3,29 @@ import Styles from "../../styles/insights.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 
+
 const Values = () => {
+
+ 
+
+
+
+
+
   return (
     <div className={Styles.valuesmaincontainer}>
+     
+     
+     
+     
       <div className={Styles.valuesvideocontainer}>
         <div className={Styles.Custombuttondiv}>
           <button className="Back-slide">
-            {/* <BsFillArrowLeftCircleFill color="#999999"  /> */}
+         
             <img src="/blog/btnleft.png" />
           </button>
           <button className="Next-slide">
-            {/* <BsFillArrowRightCircleFill color="#999999"  /> */}
+       
             <img src="/blog/btnright.png" />
           </button>
         </div>
@@ -214,6 +226,13 @@ const Values = () => {
         </div>
       </div>
 
+
+
+      
+
+
+      
+
       <div className={Styles.valuesmainheading}>
         <h1>
           <span>Our</span> professional values
@@ -225,7 +244,7 @@ const Values = () => {
 
       <div className={Styles.valuesfootercontainermain}>
         <div className={Styles.valuefooterimgboxone}>
-          <img src="/blog/pro_values.webp" alt="" />
+          {/* <img src="/blog/pro_values.webp" alt="" /> */}
         </div>
 
         <div className={Styles.valuefooterboxtwo}>

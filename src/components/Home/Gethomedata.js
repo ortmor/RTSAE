@@ -26,10 +26,10 @@ const Gethomedata = () => {
               clearInterval(interval);
               return 12;
             } else {
-              return prevCount + 1;
+              return prevCount + 2;
             }
           });
-        }, 1000);
+        }, 80);
 
         const interval2 = setInterval(() => {
           setCount2((prevCount) => {
@@ -37,10 +37,10 @@ const Gethomedata = () => {
               clearInterval(interval2);
               return 250;
             } else {
-              return prevCount + 1;
+              return prevCount + 40;
             }
           });
-        }, 50);
+        }, 80);
 
         const interval3 = setInterval(() => {
           setCount3((prevCount) => {
@@ -48,10 +48,10 @@ const Gethomedata = () => {
               clearInterval(interval3);
               return 1000;
             } else {
-              return prevCount + 2;
+              return prevCount + 100;
             }
           });
-        }, 25);
+        }, 80);
 
         const interval4 = setInterval(() => {
           setCount4((prevCount) => {
@@ -59,10 +59,10 @@ const Gethomedata = () => {
               clearInterval(interval4);
               return 1000;
             } else {
-              return prevCount + 2;
+              return prevCount + 100;
             }
           });
-        }, 25);
+        }, 80);
 
         return () => {
           clearInterval(interval);

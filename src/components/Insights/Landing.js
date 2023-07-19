@@ -2,7 +2,7 @@
 import React, { useEffect } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Navigation } from "swiper";
+import { Autoplay, EffectFade, Navigation,Pagination } from "swiper";
 import Link from "next/link";
 import Styles from "../../styles/insights.module.scss";
 
@@ -20,7 +20,16 @@ const Landing = () => {
           nextEl: ".Nextslide",
           prevEl: ".Backslide",
         }}
-        modules={[Autoplay, EffectFade, Navigation]}
+        autoplay={{
+          delay: 5000,
+          // disableOnInteraction: false,
+          // pauseOnMouseEnter: true,
+        }}
+        pagination={{
+          dynamicBullets: true,
+          clickable: true,
+        }}
+        modules={[Autoplay, EffectFade, Navigation,Pagination]}
         className={Styles.mySwiper}
       >
         <SwiperSlide>

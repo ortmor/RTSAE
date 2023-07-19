@@ -1868,6 +1868,20 @@
   }
 }
 
+.blogCustombuttondiv {
+  display: flex;
+  width: 80%;
+  margin: 2em auto;
+  justify-content: space-between;
+
+  button {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+  }
+}
+
 @media screen and (max-width: 1400px) {
   .Bloglandingpageparent {
     width: 90%;
@@ -1961,6 +1975,20 @@
           text-decoration: 2px underline #999999;
         }
       }
+    }
+  }
+
+  .blogCustombuttondiv {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
     }
   }
 }
@@ -2074,6 +2102,25 @@
 
     .Bloglandingpageboxtwomain:nth-child(4) {
       margin-top: 2em;
+    }
+  }
+
+  .blogCustombuttondiv {
+    display: flex;
+    width: 90%;
+    margin: auto;
+    justify-content: space-between;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+
+    button {
+      background-color: transparent;
+      border: none;
+      outline: none;
+      cursor: pointer;
     }
   }
 }
