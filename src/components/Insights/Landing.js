@@ -65,7 +65,7 @@ const Landing = () => {
           <div className={Styles.blogmainlandingcontainerslide}>
             <div className={Styles.blogmainlandingcontainerheading}>
               <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>RTS Shines Bright as HPE Rising Star of the Year 2023</h5>
+                <h5>HPE Rising Star of the Year 2023-Middle East and Africa</h5>
               </div>
 
               <button className={Styles.buttonmain}>
@@ -94,7 +94,7 @@ const Landing = () => {
           <div className={Styles.blogmainlandingcontainerslide}>
             <div className={Styles.blogmainlandingcontainerheading}>
               <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5> RTS Receives Prestigious</h5>
+                <h5>2T- Partner of the Year – 2022</h5>
               </div>
 
               <button className={Styles.buttonmain}>
