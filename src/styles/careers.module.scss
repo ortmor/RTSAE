@@ -421,6 +421,10 @@
         border: none;
       }
     }
+
+    .careersmanagedservicescontentmainboxmainparagraph {
+      width: 50%;
+    }
   }
 
   .viewmorecontainer {
@@ -477,7 +481,7 @@
         }
 
         button {
-          border: 1px solid #707070;
+          border: 1px solid #ff0000;
           border-radius: 8px;
           padding: 1em;
           color: #999999;
@@ -544,8 +548,12 @@
           pointer-events: all;
         }
 
+        .careersmanagedservicescontentmainboxmainparagraph {
+          width: unset;
+        }
+
         button {
-          border: 1px solid #707070;
+          border: 1px solid #ff0000;
           border-radius: 8px;
           padding: 1em;
           color: #999999;
@@ -592,7 +600,7 @@
       .careersmanagedservicesbox {
         width: 100%;
         margin-top: 2em;
-        border: 1px solid #7070701c;
+        border: 1px solid #ff0000;
         border-radius: 25px;
         padding: 1em;
         cursor: pointer;
