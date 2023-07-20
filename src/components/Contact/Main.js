@@ -1,10 +1,5 @@
 "use client";
 import Link from "next/link";
-import { FaFacebookF } from "react-icons/fa";
-import { FaInstagram } from "react-icons/fa";
-import { FaTwitter } from "react-icons/fa";
-import { FaYoutube } from "react-icons/fa";
-import { FaLinkedinIn } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 import { MdPhone } from "react-icons/md";
 import { TbMapPinFilled } from "react-icons/tb";
@@ -87,11 +82,11 @@ const Contactmain = () => {
                 id="type"
                 ref={typeRef}
               >
-                <option value="General">General</option>
-                <option value="Support">Support</option>
-                <option value="IT Project">IT Project</option>
+                <option value="General">Sales Enquiries</option>
+                <option value="Support">Support Services</option>
+                {/* <option value="IT Project">IT Project</option>
                 <option value="ELV Projects">ELV Projects</option>
-                <option value="Solution Enquiry">Solution Enquiry</option>
+                <option value="Solution Enquiry">Solution Enquiry</option> */}
               </select>
 
               <div className={Styles.contactformfirstcontainer}>

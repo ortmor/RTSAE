@@ -37,8 +37,8 @@ const Managedservice = () => {
        <br />
        <br />
        <p style="color:#999999">
-       Transform your IT department's operations into a well-organized and efficient system with our comprehensive IT Strategy framework. Take charge of your organization's technological landscape as we provide you with a clear and meticulous roadmap for success. By leveraging our expertise in IT strategy, you can optimize resource allocation, streamline workflows, and align technology initiatives with your business objectives, empowering your organization to thrive in the ever-evolving digital landscape.
- 
+       Unlock the full potential of your workforce and stay ahead of the competition with our Digital Workspace solutions. With years of experience and a passion for innovation, Royal Technology Solutions is your go-to partner for embracing the future of work. Our expert team will guide you through the seamless integration of Digital Workspace solutions, ensuring a smooth transition and maximum ROI.
+
        </p>
        </div>
        
@@ -398,7 +398,7 @@ Experience the convenience of a Single Point of Contact for all your communicati
       
 
        
-Unlock the power of smart procurement and licensing decisions with our expert guidance. Discover the best deals and optimize your organization's software packages and applications to maximize value and minimize costs. Gain a competitive edge by leveraging our industry insights and comprehensive solutions tailored to your specific procurement and licensing needs. 
+       At RTS, we are proud to offer top-notch ERP services that streamline and optimize your business processes. Our experienced team of ERP experts is dedicated to understanding your unique business requirements and tailoring solutions that align perfectly with your goals. Whether you're a small startup or a large enterprise, our scalable ERP services will optimize your operations, saving you time, effort, and resources. 
 
 
 
@@ -699,7 +699,7 @@ Unlock the power of smart procurement and licensing decisions with our expert gu
             </h2>
           </div>
 
-          <p>Best deals with licensing packages and applications</p>
+          <p>Streamline Your Business with Cutting-Edge ERP Solutions</p>
           <div className={Styles.managedserviceboxlink}>
             <button onClick={Boxthirteen}>View more</button>
           </div>
@@ -716,8 +716,8 @@ Unlock the power of smart procurement and licensing decisions with our expert gu
           </div>
 
           <p>
-            Manage your IT department system properly with our clear & thorough
-            road map.
+            Revolutionize the way you work and collaborate with Digital
+            Workspace
           </p>
           <div className={Styles.managedserviceboxlink}>
             <button onClick={Boxtwo}>View more</button>

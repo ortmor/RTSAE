@@ -11,7 +11,7 @@ const Jointeam = () => {
 
       <div className={Styles.Joinmainboxone}>
         <div className={Styles.Joinmainboxoneheading}>
-          <h1>Career</h1>
+          <h1>Careers</h1>
         </div>
 
         <div className={Styles.Joinmainboxonepara}>

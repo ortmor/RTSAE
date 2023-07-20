@@ -1998,6 +1998,10 @@
   margin: 5em auto;
   position: relative;
 
+  iframe {
+    overflow: hidden !important;
+  }
+
   .Custombuttondiv {
     display: flex;
     justify-content: space-between;
@@ -2031,13 +2035,15 @@
       justify-content: center;
       width: 100%;
 
-      // .iframebox {
-      //   background-color: #999999;
-      // }
+      .valuevideosliderthumb {
+        height: 500px;
+        cursor: pointer;
 
-      .youtubeclass {
-        width: 100%;
-        height: 400px;
+        img {
+          width: 100%;
+          height: 400px;
+          object-fit: cover;
+        }
       }
     }
   }
@@ -2082,9 +2088,10 @@
         justify-content: center;
         width: 100%;
 
-        .youtubeclass {
-          width: 100%;
+        .valuevideosliderthumb {
           height: 500px;
+          width: 100%;
+          cursor: pointer;
         }
       }
     }

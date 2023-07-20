@@ -574,6 +574,21 @@ const Partners = () => {
                     />
                   </div>
                 </SwiperSlide>
+
+                <SwiperSlide>
+                  <div className={Styles.PartnersSlideSlidermain}>
+                    <img
+                      src="/about/partners/Asset 68.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                    <img
+                      src="/about/partners/Asset 69.png"
+                      loading="lazy"
+                      alt="client.png"
+                    />
+                  </div>
+                </SwiperSlide>
               </Swiper>
             </div>
           </div>

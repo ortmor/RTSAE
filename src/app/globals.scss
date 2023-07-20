@@ -24,7 +24,7 @@
   --collightgary: #0000001a;
 }
 
-p{
+p {
   -webkit-hyphens: auto !important; /* Safari, Chrome, and Opera */
   -ms-hyphens: auto !important; /* Microsoft Edge */
   hyphens: auto !important; /* Standard syntax */
@@ -715,19 +715,14 @@ div:where(.swal2-container) .swal2-html-container {
   box-shadow: none !important;
 }
 
+.swal2-close:focus {
+  box-shadow: none !important;
+}
 
+.sweet-alert button:focus {
+  box-shadow: none;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.swal2-popup .swal2-styled:focus {
+  box-shadow: none !important;
+}

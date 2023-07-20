@@ -13,10 +13,9 @@ const Awards = () => {
           <div className={Styles.homelandingcontainerheading}>
             <div className={Styles.homelandingcontanerheadinginner}>
               <h5>
-                RTS Shines Bright as HPE Rising Star
+                RTS Shines Bright as HPE Rising Star of the Year 2023-
                 <br />
-                of the Year 2023-Middle East and Africa:
-                <br />A Journey Fueled by Excellence
+                Middle East and Africa: A Journey Fueled by Excellence
               </h5>
             </div>
 

@@ -87,7 +87,7 @@ function Footer() {
           <div className={Styles.linkcontainer}>
             <Link href="/">HOME</Link>
             <Link href="/about">ABOUT</Link>
-            <Link href="/career">CAREER</Link>
+            <Link href="/career">CAREERS</Link>
             <Link href="/services&support">SERVICES</Link>
             <Link href="/insights"> INSIGHTS</Link>
           </div>

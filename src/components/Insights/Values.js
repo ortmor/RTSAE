@@ -1,31 +1,108 @@
 "use client";
+import Swal from "sweetalert2";
 import Styles from "../../styles/insights.module.scss";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 
-
 const Values = () => {
+  const Videoone = () => {
+    Swal.fire({
+      html: `
+      <div>
+      <iframe
+        width='100%'
+        height='500px'
+        src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+       
+       `,
 
- 
+      width: 800,
+      background: "#000",
+      showCloseButton: true,
+      cancelButtonColor: "#d33",
+      showConfirmButton: false,
+      backdrop: `
+                    rgba(0,0,0,0.8)
+                    left top
+                    no-repeat
+                  `,
+    });
+  };
 
+  const Videotwo = () => {
+    Swal.fire({
+      html: `
+      <div>
+      <iframe
+        width='100%'
+        height='500px'
+        src="https://www.youtube.com/embed/jaxCI3fDg3g?rel=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+       
+       `,
 
+      width: 800,
+      background: "#000",
+      showCloseButton: true,
+      cancelButtonColor: "#d33",
+      showConfirmButton: false,
+      backdrop: `
+                    rgba(0,0,0,0.8)
+                    left top
+                    no-repeat
+                  `,
+    });
+  };
 
+  const Videothree = () => {
+    Swal.fire({
+      html: `
+      <div>
+      <iframe
+        width='100%'
+        height='500px'
+        src="https://www.youtube.com/embed/MftNgtvmPrI?rel=0"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowFullScreen
+      ></iframe>
+    </div>
+       
+       `,
 
+      width: 800,
+      background: "#000",
+      showCloseButton: true,
+      cancelButtonColor: "#d33",
+      showConfirmButton: false,
+      backdrop: `
+                    rgba(0,0,0,0.8)
+                    left top
+                    no-repeat
+                  `,
+    });
+  };
 
   return (
     <div className={Styles.valuesmaincontainer}>
-     
-     
-     
-     
       <div className={Styles.valuesvideocontainer}>
         <div className={Styles.Custombuttondiv}>
           <button className="Back-slide">
-         
             <img src="/blog/btnleft.png" />
           </button>
           <button className="Next-slide">
-       
             <img src="/blog/btnright.png" />
           </button>
         </div>
@@ -68,170 +145,45 @@ const Values = () => {
               modules={[Autoplay, Navigation]}
               className="mySwiper"
             >
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <SwiperSlide onClick={Videoone}>
+                <div className={Styles.valuevideosliderthumb}>
+                  <img src="blog/ytvideoone.png" />
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <SwiperSlide onClick={Videotwo}>
+                <div className={Styles.valuevideosliderthumb}>
+                  <img src="blog/ytvideotwo.png" />
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <SwiperSlide onClick={Videothree}>
+                <div className={Styles.valuevideosliderthumb}>
+                  <img src="blog/ytvideothree.png" />
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <SwiperSlide onClick={Videoone}>
+                <div className={Styles.valuevideosliderthumb}>
+                  <img src="blog/ytvideoone.png" />
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <SwiperSlide onClick={Videotwo}>
+                <div className={Styles.valuevideosliderthumb}>
+                  <img src="blog/ytvideotwo.png" />
                 </div>
               </SwiperSlide>
 
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
-                </div>
-              </SwiperSlide>
-
-              <SwiperSlide>
-                <div className={Styles.iframebox}>
-                  <iframe
-                    className={Styles.youtubeclass}
-                    src="https://www.youtube.com/embed/PVC0BQqfIOs?rel=0"
-                    title="YouTube video player"
-                    frameborder="0"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                  ></iframe>
+              <SwiperSlide onClick={Videothree}>
+                <div className={Styles.valuevideosliderthumb}>
+                  <img src="blog/ytvideothree.png" />
                 </div>
               </SwiperSlide>
             </Swiper>
           </div>
         </div>
       </div>
-
-
-
-      
-
-
-      
 
       <div className={Styles.valuesmainheading}>
         <h1>

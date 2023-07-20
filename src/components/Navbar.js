@@ -132,7 +132,7 @@ function Nav() {
 
             <li>
               <Link className="link-show-grad" onClick={Removing} href="/career">
-                CAREER
+                CAREERS
               </Link>
             </li>
 

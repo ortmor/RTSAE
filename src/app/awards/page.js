@@ -7,19 +7,14 @@ const Awards = () => {
     element.scrollIntoView({ behavior: "smooth" });
   };
   return (
-   
     <Layout>
       <div className={Styles.homelandingcontainer}>
         <div className={Styles.homelandingcontainerslide}>
           <div className={Styles.homelandingcontainerheading}>
             <div className={Styles.homelandingcontanerheadinginner}>
               <h5>
-                RTS Recognized with
-                <br />
-                Coveted Best Partner Awards,
-                <br />
-                Celebrating Unparalleled <br />
-                Excellence
+                RTS Recognized with Coveted Best Partner Awards,
+                <br /> Celebrating Unparalleled Excellence
               </h5>
             </div>
 
@@ -41,15 +36,15 @@ const Awards = () => {
             <p>
               In a series of resounding triumphs, RTS has garnered multiple
               esteemed Best Partner Awards, solidifying its position as an
-              industry leader. This remarkable feat is a testament to the
+              industry leader. This remarkable feat is a reflection of the
               unwavering commitment and exceptional efforts of each and every
               RTS employee.
             </p>
             <p>
               These best partner awards are a testament to the dedication,
-              expertise, and tireless endeavors of the entire RTS workforce.
+              expertise, and tireless endeavours of the entire RTS workforce.
               Their consistently surpassing expectations and delivering
-              outstanding results have been duly acknowledged and honored.
+              outstanding results have been duly acknowledged and honoured.
             </p>
           </div>
           <br />
@@ -72,7 +67,7 @@ const Awards = () => {
             <p>
               Renowned for its unwavering pursuit of excellence, RTS has
               distinguished itself through innovative solutions and exemplary
-              client collaboration. This recognition reaffirms RTS' unrivaled
+              client collaboration. This recognition reaffirms RTS' unrivalled
               status in the field, serving as a proud reflection of the
               collective accomplishments of the entire team.
             </p>
@@ -80,7 +75,7 @@ const Awards = () => {
               These esteemed awards not only acknowledge the remarkable
               achievements of RTS but also serve as a motivating reminder of the
               organization's ongoing success. The RTS team takes immense pride
-              in these honors, further fueling their drive to exceed
+              in these honours, further fueling their drive to exceed
               expectations and set new benchmarks in the industry.
             </p>
           </div>
@@ -88,8 +83,7 @@ const Awards = () => {
           <br />
         </div>
       </div>
-      </Layout>
-  
+    </Layout>
   );
 };
 

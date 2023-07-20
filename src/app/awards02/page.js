@@ -13,9 +13,8 @@ const Awards = () => {
           <div className={Styles.homelandingcontainerheading}>
             <div className={Styles.homelandingcontanerheadinginner}>
               <h5>
-                RTS Receives Prestigious "2T- Partner of the <br />
-                Year – 2022" Award at Ingram and Cisco <br />
-                Annual Partner Awards
+                RTS Receives Prestigious "2T- Partner of the Year – 2022" <br />{" "}
+                Award at Ingram and Cisco Annual Partner Awards
               </h5>
             </div>
 
@@ -83,11 +82,11 @@ const Awards = () => {
             <p>
               As RTS continues to pave the way for groundbreaking solutions, its
               dedication to excellence and customer satisfaction remains at the
-              forefront of their operations. The "2T- Partner of the Year –
-              2022" award underscores RTS's position as a trailblazer in the
-              UAE's tech landscape and solidifies their status as a key player
-              in driving innovation and success for organizations seeking
-              digital transformation.
+              forefront of its operations. The "2T- Partner of the Year – 2022"
+              award underscores RTS's position as a trailblazer in the UAE's
+              tech landscape and solidifies its status as a key player in
+              driving innovation and success for organizations seeking digital
+              transformation.
             </p>
           </div>
           <br />
