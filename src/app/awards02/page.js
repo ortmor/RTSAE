@@ -57,7 +57,7 @@ const Awards = () => {
         </div>
 
         <div className={Styles.homemainboxtwo}>
-          <img src="/blog/awards_img_1.webp"></img>
+          <img src="/blog/awards02_img_1.jpg"></img>
           <div className={Styles.homemainboxtwoimg}></div>
         </div>
       </div>
