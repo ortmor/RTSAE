@@ -20,12 +20,7 @@ const Awards = () => {
 
             <button onClick={scrollToMain}>Explore more</button>
           </div>
-          <img
-            id={Styles.img}
-            width="100%"
-            poster="/"
-            src="/blog/Cisco.webp"
-          />
+          <img id={Styles.img} width="100%" poster="/" src="/blog/Cisco.webp" />
         </div>
         <div id="main"></div>
       </div>
@@ -37,11 +32,12 @@ const Awards = () => {
               In a momentous celebration of excellence, RTS was bestowed with
               the prestigious "2T- Partner of the Year – 2022" award during the
               highly anticipated Ingram and Cisco Annual Partner awards
-              ceremony. The event, held in April 2023, recognized outstanding
-              contributions to the UAE business landscape, with a particular
-              focus on delivering unwavering support in the realms of digital
-              planning, implementation, and operational services through
-              cutting-edge Cisco solutions.
+              ceremony, held in April 2023 at the Raffles The Palm, Dubai. The
+              event, held in April 2023, recognized outstanding contributions to
+              the UAE business landscape, with a particular focus on delivering
+              unwavering support in the realms of digital planning,
+              implementation, and operational services through cutting-edge
+              Cisco solutions.
             </p>
             <p>
               RTS's exceptional dedication to empowering UAE organizations with
@@ -73,16 +69,7 @@ const Awards = () => {
               The Ingram and Cisco Annual Partner Awards ceremony brought
               together industry leaders, innovators, and visionaries, all united
               in celebrating the transformative impact of technology on
-              businesses across the region. RTS's recognition as the "2T-
-              Partner of the Year – 2022" serves as a testament to its
-              unparalleled expertise, customer-centric approach, and unwavering
-              commitment to pushing the boundaries of what's possible in the
-              digital realm.
-            </p>
-            <p>
-              As RTS continues to pave the way for groundbreaking solutions, its
-              dedication to excellence and customer satisfaction remains at the
-              forefront of its operations. The "2T- Partner of the Year – 2022"
+              businesses across the region. The "2T- Partner of the Year – 2022"
               award underscores RTS's position as a trailblazer in the UAE's
               tech landscape and solidifies its status as a key player in
               driving innovation and success for organizations seeking digital

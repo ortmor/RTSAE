@@ -18,7 +18,7 @@ const Topnews = () => {
 
             <div className={Styles.topnewscardparagraph}>
               <h6>JAN 02, 2023</h6>
-              <h2>Our Commitment to Corporate Social Responsibility</h2>
+              <h2>Our Commitment to Corporate Social Responsibility...</h2>
               <p>
                 At RTS, we believe that success extends beyond financial
                 achievements. As responsible corporate citizen, we are committed
@@ -34,19 +34,17 @@ const Topnews = () => {
 
         <div className={Styles.childtwo}>
           <div className={Styles.topnewscardcontainer}>
-            <img src="home/landingblogone.webp" alt="img" />
+            <img src="/blog/gitex 2.webp" alt="img" />
             <div className={Styles.topnewscardparagraph}>
               <h6>FEB 28, 2023</h6>
               <h2>
-                Unleashing Innovation: Creating a Business Idea with Social
-                Impact
+                Royal Technology Solutions and Dell Join Forces through...
               </h2>
               <p>
-                In today's dynamic business landscape, success isn't solely
-                measured by financial gains. More and more, entrepreneurs and
-                businesses are recognizing the importance of corporate social
-                responsibility (CSR) and the positive impact it can have on
-                society.
+                At the prestigious GITEX 2022 event, a significant moment in the
+                world of information technology and security occurred as Dell
+                and Royal Technology Solutions joined hands through the signing
+                of a momentous memorandum of understanding (MoU).
               </p>
               <Link href="/section2">
                 READ <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}
@@ -57,16 +55,18 @@ const Topnews = () => {
 
         <div className={Styles.childtwo}>
           <div className={Styles.topnewscardcontainer}>
-            <img src="/home/landingblogtwo.webp" alt="img" />
+            <img src="/blog/gitex 1.webp" alt="img" />
             <div className={Styles.topnewscardparagraph}>
               <h6>MAY 22, 2023</h6>
-              <h2>The Future of Cloud Computing: Empowering the Digital Age</h2>
+              <h2>
+                Royal Technology Solutions and HPE Unite in a Memorandum...
+              </h2>
               <p>
-                In today's rapidly evolving digital landscape, cloud computing
-                has emerged as a game-changer, revolutionizing the way
-                businesses operate and individuals interact with technology. As
-                we look to the future, it is clear that cloud computing will
-                continue to play a pivotal role
+                At the highly acclaimed GITEX 2022 event, a momentous
+                collaboration took centre stage as global technology leader
+                Hewlett Packard Enterprise (HPE) and esteemed innovators Royal
+                Technology Solutions joined hands to sign a momentous memorandum
+                of understanding (MoU).
               </p>
               <Link href="/section3">
                 READ <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}

@@ -38,15 +38,18 @@ const Awards = () => {
               RTS has accomplished a remarkable feat by being honoured with the
               prestigious HPE Rising Star of the Year 2023-Middle East and
               Africa Award, solidifying its position as a prominent force in the
-              industry.
+              industry. The award was presented during the 2023 HPE Worldwide
+              Partner Global Summit at the Partner Awards Dinner in Las Vegas,
+              US.
             </p>
             <p>
-              The HPE Rising Star of the Year Awards recognizes exceptional
-              organizations in the Middle East and Africa region that have shown
-              remarkable growth, innovation, and dedication to excellence. These
-              awards celebrate organizations that have exhibited outstanding
-              performance and made significant contributions to their respective
-              industries.
+              The Rising Star award recognises partners achieving remarkable
+              growth with HPE, becoming strategic partners in their countries
+              and extending HPE's market reach with advanced solutions. And the
+              award was presented by UKIMEA HPE VP Matt Harris along with the
+              UKIMEA High-Velocity Sales Director Muna Eissa (UK & Ireland,
+              Middle East & Africa), UAE Channel and SBM/Commercial Lead Yacob
+              Ahli for their exemplary performance in the Hybrid IT Division/BU.
             </p>
           </div>
           <br />
