@@ -65,7 +65,7 @@ const Landing = () => {
           <div className={Styles.blogmainlandingcontainerslide}>
             <div className={Styles.blogmainlandingcontainerheading}>
               <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>HPE Rising Star of the Year 2023-Middle East and Africa</h5>
+                <h5>HPE Rising Star of the Year 2023</h5>
               </div>
 
               <button className={Styles.buttonmain}>
