@@ -80,8 +80,8 @@ export const POST = async (req, res) => {
       !phone ||
       !type ||
       ![
-        'General',
-        'Support',
+        'SalesEnquiries',
+        'SupportServices',
         'IT Project',
         'ELV Projects',
         'Solution Enquiry',
@@ -92,7 +92,7 @@ export const POST = async (req, res) => {
         statusCode: 400,
         message: !validator.isEmail(email)
           ? 'Invalid email address'
-          : "Provide fname, lname, email, phone, type - ['General', 'Support', 'IT Project', 'ELV Projects', 'Solution Enquiry'], message",
+          : "Provide fname, lname, email, phone, type - ['SalesEnquiries', 'SupportServices', 'IT Project', 'ELV Projects', 'Solution Enquiry'], message",
       };
     }
 

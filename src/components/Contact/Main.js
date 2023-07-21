@@ -14,7 +14,7 @@ const Contactmain = () => {
   const toastId = useRef(null);
   const fnameRef = useRef("");
   const lnameRef = useRef("");
-  const typeRef = useRef("General");
+  const typeRef = useRef("");
   const emailRef = useRef("");
   const phoneRef = useRef("");
   const messageRef = useRef("");
@@ -78,12 +78,12 @@ const Contactmain = () => {
               <br />
               <select
                 name="type"
-                defaultValue="General"
+                defaultValue="SalesEnquiries"
                 id="type"
                 ref={typeRef}
               >
-                <option value="General">Sales Enquiries</option>
-                <option value="Support">Support Services</option>
+                <option value="SalesEnquiries">Sales Enquiries</option>
+                <option value="SupportServices">Support Services</option>
                 {/* <option value="IT Project">IT Project</option>
                 <option value="ELV Projects">ELV Projects</option>
                 <option value="Solution Enquiry">Solution Enquiry</option> */}
@@ -188,7 +188,7 @@ const Contactmain = () => {
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="https://www.linkedin.com/company/royal-technology-solutions">
                 <img
-                   className={Styles.dynamiccontacticon}
+                  className={Styles.dynamiccontacticon}
                   src="/contact/in.png"
                 />
               </Link>
@@ -197,7 +197,7 @@ const Contactmain = () => {
             <div className={Styles.contactmainboxlinkspaceone}>
               <Link href="/">
                 <img
-                   className={Styles.dynamiccontacticon}
+                  className={Styles.dynamiccontacticon}
                   src="/contact/insta.png"
                 />
               </Link>

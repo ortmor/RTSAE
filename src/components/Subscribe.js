@@ -1,20 +1,46 @@
-'use client';
-import { useRef } from 'react';
-import Styles from '../styles/footer.module.scss';
-import { doSubscribe, doUnsubscribe } from '@/services/subscriptionService';
+"use client";
+import { useRef } from "react";
+import { ToastContainer, toast } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import Styles from "../styles/footer.module.scss";
+import { doSubscribe, doUnsubscribe } from "@/services/subscriptionService";
 
 const Subscribe = () => {
-  const emailRef = useRef('');
+  const emailRef = useRef("");
+  const toastId = useRef(null);
 
   const handleSubmitForSubscribe = async (e) => {
     e.preventDefault();
     const { isSuccess, message } = await doSubscribe(emailRef.current.value);
     if (isSuccess) {
-      alert(message);
-      localStorage.setItem('subscribedEmail', emailRef.current.value);
-      emailRef.current.value = '';
+      if (!toast.isActive(toastId.current)) {
+        toastId.current = toast.success(message, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
+
+      localStorage.setItem("subscribedEmail", emailRef.current.value);
+      emailRef.current.value = "";
     } else {
-      alert(message);
+      if (!toast.isActive(toastId.current)) {
+        toastId.current = toast.error(message, {
+          position: "bottom-right",
+          autoClose: 5000,
+          hideProgressBar: true,
+          closeOnClick: true,
+          pauseOnHover: false,
+          draggable: true,
+          progress: undefined,
+          theme: "light",
+        });
+      }
     }
   };
 
@@ -23,14 +49,15 @@ const Subscribe = () => {
     const { isSuccess, message } = await doUnsubscribe(emailRef.current.value);
     if (isSuccess) {
       alert(message);
-      localStorage.removeItem('subscribedEmail');
-      emailRef.current.value = '';
+      localStorage.removeItem("subscribedEmail");
+      emailRef.current.value = "";
     } else {
       alert(message);
     }
   };
   return (
     <div className={Styles.subscribemaincontainer}>
+      <ToastContainer />
       <div className={Styles.subscribeparent}>
         <div className={Styles.subchildone}>
           <h1>Don't miss </h1>
