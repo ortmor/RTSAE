@@ -14,7 +14,7 @@ const Contactmain = () => {
   const toastId = useRef(null);
   const fnameRef = useRef("");
   const lnameRef = useRef("");
-  const typeRef = useRef("");
+  const typeRef = useRef("SalesEnquiries");
   const emailRef = useRef("");
   const phoneRef = useRef("");
   const messageRef = useRef("");
@@ -46,7 +46,7 @@ const Contactmain = () => {
       lnameRef.current.value = "";
       emailRef.current.value = "";
       phoneRef.current.value = "";
-      typeRef.current.value = "General";
+      typeRef.current.value = "SalesEnquiries";
       messageRef.current.value = "";
     } else {
       if (!toast.isActive(toastId.current)) {
