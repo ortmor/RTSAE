@@ -97,17 +97,17 @@ export const POST = async (req, res) => {
     }
 
     // Check if the contact exists in db in same type
-    const contactExist = await Contact.findOne({
-      type,
-      $or: [{ email }, { phone }],
-    });
+    // const contactExist = await Contact.findOne({
+    //   type,
+    //   $or: [{ email }, { phone }],
+    // });
 
-    if (contactExist) {
-      throw {
-        statusCode: 400,
-        message: "Your contact already submited",
-      };
-    }
+    // if (contactExist) {
+    //   throw {
+    //     statusCode: 400,
+    //     message: "Your contact already submited",
+    //   };
+    // }
 
     // Save contact details to the database
     await Contact.create({

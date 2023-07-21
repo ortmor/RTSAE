@@ -56,7 +56,7 @@ const Landing = () => {
               id={Styles.img}
               width="100%"
               poster="/"
-              src="/blog/insights_hero.webp"
+              src="/blog/awards_hero.webp"
             />
           </div>
         </SwiperSlide>
@@ -85,7 +85,7 @@ const Landing = () => {
               id={Styles.img}
               width="100%"
               poster="/"
-              src="/blog/insights_hero.webp"
+              src="/blog/rts-shines.webp"
             />
           </div>
         </SwiperSlide>
@@ -114,7 +114,7 @@ const Landing = () => {
               id={Styles.img}
               width="100%"
               poster="/"
-              src="/blog/insights_hero.webp"
+              src="/blog/Cisco.webp"
             />
           </div>
         </SwiperSlide>

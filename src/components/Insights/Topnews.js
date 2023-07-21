@@ -48,7 +48,7 @@ const Topnews = () => {
                 responsibility (CSR) and the positive impact it can have on
                 society.
               </p>
-              <Link href="/comingsoon">
+              <Link href="/section2">
                 READ <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}
               </Link>
             </div>
@@ -68,7 +68,7 @@ const Topnews = () => {
                 we look to the future, it is clear that cloud computing will
                 continue to play a pivotal role
               </p>
-              <Link href="/comingsoon">
+              <Link href="/section3">
                 READ <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}
               </Link>
             </div>

@@ -25,7 +25,7 @@ const Awards = () => {
             id={Styles.img}
             width="100%"
             poster="/"
-            src="/blog/awards_hero.webp"
+            src="/blog/rts-shines.webp"
           />
         </div>
         <div id="main"></div>
@@ -61,7 +61,7 @@ const Awards = () => {
 
       <div className={Styles.homemainparentdiv}>
         <div className={Styles.homemainboxtwo}>
-          <img src="/blog/awards_img_2.webp"></img>
+          <img src="/blog/hpone.webp"></img>
           <div className={Styles.homemainboxtwoimg}></div>
         </div>
         <div className={Styles.homemainboxone}>
