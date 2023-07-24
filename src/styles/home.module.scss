@@ -1801,7 +1801,31 @@
     display: flex;
 
     .Bloglandingpageboxoneimg {
+      // background: url("/blog/awards_img_1.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+
+    #blogimgone {
       background: url("/blog/awards_img_1.webp");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+
+    #blogimgtwo {
+      background: url("/blog/awards01_img_1.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+    }
+
+    #blogimgthree {
+      background: url("/blog/awards02_img_1.jpg");
       background-repeat: no-repeat;
       background-size: cover;
       background-position: center;

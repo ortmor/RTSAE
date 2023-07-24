@@ -36,7 +36,7 @@ const Jointeam = () => {
         </div>
         <br />
         <br />
-        <Link href="/careers">View Openings</Link>
+        <Link href="/career">View Openings</Link>
       </div>
 
       <div className={Styles.JoinSpace}></div>

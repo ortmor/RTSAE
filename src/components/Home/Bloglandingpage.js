@@ -35,7 +35,10 @@ const Bloglandingpage = () => {
             {/* chlid one */}
 
             <div className={Styles.Bloglandingpageboxonemain}>
-              <div className={Styles.Bloglandingpageboxoneimg}></div>
+              <div
+                id={Styles.blogimgone}
+                className={Styles.Bloglandingpageboxoneimg}
+              ></div>
               <div className={Styles.Bloglandingpageoneparagraph}>
                 <div className={Styles.Bloglandingpageoneparagraphcontent}>
                   <h1>Coveted Best Partner Awards</h1>
@@ -72,11 +75,14 @@ const Bloglandingpage = () => {
             {/* chlid one */}
 
             <div className={Styles.Bloglandingpageboxonemain}>
-              <div className={Styles.Bloglandingpageboxoneimg}></div>
+              <div
+                id={Styles.blogimgtwo}
+                className={Styles.Bloglandingpageboxoneimg}
+              ></div>
               <div className={Styles.Bloglandingpageoneparagraph}>
                 <div className={Styles.Bloglandingpageoneparagraphcontent}>
                   <h1>
-                  HPE Rising Star of the Year 2023-Middle East and Africa
+                    HPE Rising Star of the Year 2023-Middle East and Africa
                   </h1>
                   <p>
                     RTS has accomplished a remarkable feat by being honoured
@@ -109,7 +115,10 @@ const Bloglandingpage = () => {
             {/* chlid one */}
 
             <div className={Styles.Bloglandingpageboxonemain}>
-              <div className={Styles.Bloglandingpageboxoneimg}></div>
+              <div
+                id={Styles.blogimgthree}
+                className={Styles.Bloglandingpageboxoneimg}
+              ></div>
               <div className={Styles.Bloglandingpageoneparagraph}>
                 <div className={Styles.Bloglandingpageoneparagraphcontent}>
                   <h1> 2T- Partner of the Year – 2022</h1>

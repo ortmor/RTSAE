@@ -42,7 +42,7 @@ const Values = () => {
       <iframe
         width='100%'
         height='500px'
-        src="https://www.youtube.com/embed/jaxCI3fDg3g?rel=0"
+        src="https://www.youtube.com/embed/18EeZzdp4YM?rel=0"
         title="YouTube video player"
         frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"

@@ -8,7 +8,6 @@ import { FaTwitter } from "react-icons/fa";
 import { FaYoutube } from "react-icons/fa";
 import { FaLinkedinIn } from "react-icons/fa";
 import { BsArrowUpShort } from "react-icons/bs";
-
 import Link from "next/link";
 
 function Footer() {
@@ -39,7 +38,8 @@ function Footer() {
 
             <span className={Styles.buttonletstalkor}>or</span>
             <span className={Styles.buttonletstalklink}>
-              <Link href="mailto:info@rts.ae">info@rts.ae</Link>
+              <a href="mailto:info@rts.ae">info@rts.ae</a>
+              {/* <Link href="mailto:info@rts.ae">info@rts.ae</Link> */}
             </span>
           </div>
           <br />
