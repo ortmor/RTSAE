@@ -195,7 +195,7 @@ const Bottombox = () => {
         <Link href="tel:+97128111399">Give us a Call : +971 28111399</Link>
         <Link href="mailto:service.support@rts.ae">
           {" "}
-          Shoot us a Mail : service.support@rts.ae
+          Send us an email : service.support@rts.ae
         </Link>
       </div>
 

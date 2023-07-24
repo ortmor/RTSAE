@@ -91,6 +91,8 @@ const Main = () => {
 
       <div className={Styles.innersolutionhomemainparentdiv}>
         <div className={Styles.innersolutionhomemainboxone}>
+          <br />
+          <br />
           <div className={Styles.innersolutionhomemainboxoneheading}>
             <h1>Our Services </h1>
             <h1> For You</h1>
@@ -140,6 +142,8 @@ const Main = () => {
           </div>
           <br />
           <Link href="/contact">Let’s Talk</Link>
+          <br />
+          <br />
         </div>
 
         <div className={Styles.innersolutionhomemainboxtwo}>
