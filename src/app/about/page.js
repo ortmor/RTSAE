@@ -7,7 +7,7 @@ import Industries from "@/components/About/Industries";
 import Ourclient from "@/components/About/Ourclients";
 import Partners from "@/components/About/Partners";
 import Certifications from "@/components/About/Certifications";
-import Jointeam from "@/components/About/Jointeam";
+// import Jointeam from "@/components/About/Jointeam";
 
 export default function About() {
   return (
@@ -20,7 +20,7 @@ export default function About() {
       <Ourclient /> 
       <Partners />
       <Certifications />
-      <Jointeam />
+      {/* <Jointeam /> */}
     </Layout>
   );
 }

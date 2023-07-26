@@ -159,7 +159,7 @@ const Bottombox = () => {
             </div>
 
             <div className={Styles.diciplinemainApproachgridcardboxmainlist}>
-              <h4>Annual Maintenance Service</h4>
+              <h4>Annual Maintenance Services</h4>
               <ul>
                 <li>Inspection And Assessment</li>
                 <li>Preventive Maintenance</li>

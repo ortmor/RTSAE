@@ -126,17 +126,12 @@ const Main = () => {
 
               <li>
                 We provide end-to-end project planning and management to ensure
-                on-time and within-budget delivery.
+                on-time and in budget delivery.
               </li>
 
               <li>
                 Our change management services support successful adoption and
                 integration of digital solutions.
-              </li>
-
-              <li>
-                We oversee cost and budget management, ensuring efficient
-                resource utilization and financial control.
               </li>
             </ul>
           </div>

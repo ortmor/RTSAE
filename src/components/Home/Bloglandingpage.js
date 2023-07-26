@@ -8,7 +8,7 @@ const Bloglandingpage = () => {
   return (
     <div className={Styles.Bloglandingpageparent}>
       <div className={Styles.Bloglandingpageheadingmain}>
-        <h1>Awards</h1>
+        <h1>Triumphs and Accolades</h1>
       </div>
 
       <Swiper

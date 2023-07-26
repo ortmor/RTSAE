@@ -165,7 +165,7 @@ const Values = () => {
 
               <SwiperSlide onClick={Videoone}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytvideoone.png" />
+                  <img src="https://www.youtube.com/embed/18EeZzdp4YM" />
                 </div>
               </SwiperSlide>
 

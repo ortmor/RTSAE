@@ -22,10 +22,6 @@ const Landingheading = () => {
             data-driven insights to keep your business ahead of the competition.
           </p>
           <br />
-          <p>
-            Here are how our Management Solutions can revolutionize your
-            business;
-          </p>
         </div>
       </div>
     </div>

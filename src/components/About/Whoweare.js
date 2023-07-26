@@ -7,7 +7,7 @@ const Whoweare = () => {
         <div className={Styles.aboutmainboxone}>
           <div className={Styles.aboutmainboxoneheading}>
             <h1>
-              <span>Who </span>we are
+              <span>Who </span>are we
             </h1>
           </div>
 

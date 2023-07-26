@@ -6,7 +6,7 @@ const Landingheading = () => {
     <div className={Styles.landingheadingparent}>
       <div className={Styles.landingparentmain}>
         <div className={Styles.landingparenthead}>
-          <h1>Embark on a Journey toward Digital Transformation</h1>
+          <h1>Embark on a Journey towards Digital Transformation</h1>
         </div>
 
         <div className={Styles.landingparentheadparagraph}>
