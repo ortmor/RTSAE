@@ -145,41 +145,48 @@ const Values = () => {
               modules={[Autoplay, Navigation]}
               className="mySwiper"
             >
+          
+          
               <SwiperSlide onClick={Videoone}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytvideoone.png" />
+                  <img src="blog/ytone.png" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videotwo}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytvideotwo.png" />
+                  <img src="blog/yttwo.png" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videothree}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytvideothree.png" />
+                  <img src="blog/ytthree.png" />
                 </div>
               </SwiperSlide>
 
+          
+           
               <SwiperSlide onClick={Videoone}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="https://www.youtube.com/embed/18EeZzdp4YM" />
+                  <img src="blog/ytone.png" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videotwo}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytvideotwo.png" />
+                  <img src="blog/yttwo.png" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videothree}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytvideothree.png" />
+                  <img src="blog/ytthree.png" />
                 </div>
               </SwiperSlide>
+
+          
+           
             </Swiper>
           </div>
         </div>
