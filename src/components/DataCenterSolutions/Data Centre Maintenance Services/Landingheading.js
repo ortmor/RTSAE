@@ -17,13 +17,19 @@ const Landingheading = () => {
             primary focus is on understanding your systems and standards as
             intimately as you do. We operate with complete transparency, taking
             full accountability for our actions as if we were an integral part
-            of your internal team. We acknowledge that our customers operate in
-            dynamic environments, frequently responding to global events while
-            striving to maintain consistent service levels. We don't just see
-            ourselves as developers; we think like operators. This mindset
-            drives us to make substantial investments in our partners and
-            personnel, ensuring we recruit the finest talent available in the
-            market and train them to meet the highest global standards.
+            of your internal team.
+          </p>
+          <br />
+
+          <p>
+            {" "}
+            We acknowledge that our customers operate in dynamic environments,
+            frequently responding to global events while striving to maintain
+            consistent service levels. We don't just see ourselves as
+            developers; we think like operators. This mindset drives us to make
+            substantial investments in our partners and personnel, ensuring we
+            recruit the finest talent available in the market and train them to
+            meet the highest global standards.
           </p>
           <br />
           <p>

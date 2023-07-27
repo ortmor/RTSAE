@@ -20,13 +20,18 @@ const Footerheading = () => {
             and operating mission-critical systems for sectors such as aviation,
             financial services, military, utilities, and governments.
           
-            Collaboratively, we specialize in the design, construction, and
+          
+          </p>
+          <br />
+
+
+          <p>  Collaboratively, we specialize in the design, construction, and
             operation of data centers for hyper-scale clients, meticulously
             aligning our solutions with their internal standards to ensure the
             availability, service, and integrity they require to pursue their
-            business plans sustainably and efficiently on a global scale.
-          </p>
-          <br />
+            business plans sustainably and efficiently on a global scale.</p>
+          
+            <br />
         </div>
       </div>
     </div>

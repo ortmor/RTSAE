@@ -20,17 +20,17 @@ const Footerheading = () => {
             convenient through common desktop operating systems and smart
             devices, catering to employees at all levels. Advanced maintenance
             protocols, including robust security measures and software patches,
-            ensure maximum uptime and protection. Moreover, on-premises data
-            centers provide full data access and control over specific sections
-            of the digital infrastructure, guaranteeing compliance with
-            regulatory requirements.
+            ensure maximum uptime and protection.
           </p>
           <br />
           <p>
-            In contrast, cloud-based data centers offer a range of advantages,
-            such as cost-efficiency, heightened security measures, scalable
-            resource allocation, and access to cutting-edge technology. These
-            data centers eliminate the need for location dependence, providing
+            Moreover, on-premises data centers provide full data access and
+            control over specific sections of the digital infrastructure,
+            guaranteeing compliance with regulatory requirements. In contrast,
+            cloud-based data centers offer a range of advantages, such as
+            cost-efficiency, heightened security measures, scalable resource
+            allocation, and access to cutting-edge technology. These data
+            centers eliminate the need for location dependence, providing
             businesses with backup and recovery options for seamless operations.
           </p>
           <br />

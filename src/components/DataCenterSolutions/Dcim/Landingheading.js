@@ -17,13 +17,16 @@ const Landingheading = () => {
             solutions. Our team of experienced mechanical engineers ensures that
             our solutions are designed and installed to minimize carbon impact
             and maintain uptime, providing cost-effective and environmentally
-            friendly options for your business. In addition to our cooling
+            friendly options for your business. 
+          </p>
+          <br />
+
+          <p>In addition to our cooling
             solutions, we also specialize in critical infrastructure services.
             Our knowledgeable team works closely with a diverse range of clients
             to ensure that their data centers and critical facilities are
-            resilient, sustainable, and well-protected.
-          </p>
-          <br />
+            resilient, sustainable, and well-protected.</p>
+            <br />
           <p>
             Our Professional Services are designed to guide our clients through
             every step of their critical facility journey, from initial designs
