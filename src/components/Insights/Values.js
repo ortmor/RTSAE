@@ -145,48 +145,41 @@ const Values = () => {
               modules={[Autoplay, Navigation]}
               className="mySwiper"
             >
-          
-          
               <SwiperSlide onClick={Videoone}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytone.png" />
+                  <img src="blog/ytone.jpg" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videotwo}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/yttwo.png" />
+                  <img src="blog/yttwo.jpg" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videothree}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytthree.png" />
+                  <img src="blog/ytthree.jpg" />
                 </div>
               </SwiperSlide>
 
-          
-           
               <SwiperSlide onClick={Videoone}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytone.png" />
+                  <img src="blog/ytone.jpg" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videotwo}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/yttwo.png" />
+                  <img src="blog/yttwo.jpg" />
                 </div>
               </SwiperSlide>
 
               <SwiperSlide onClick={Videothree}>
                 <div className={Styles.valuevideosliderthumb}>
-                  <img src="blog/ytthree.png" />
+                  <img src="blog/ytthree.jpg" />
                 </div>
               </SwiperSlide>
-
-          
-           
             </Swiper>
           </div>
         </div>
@@ -202,9 +195,9 @@ const Values = () => {
       </div>
 
       <div className={Styles.valuesfootercontainermain}>
-        <div className={Styles.valuefooterimgboxone}>
-          {/* <img src="/blog/pro_values.webp" alt="" /> */}
-        </div>
+        {/* <div className={Styles.valuefooterimgboxone}>
+     
+        </div> */}
 
         <div className={Styles.valuefooterboxtwo}>
           <div className={Styles.valuefooterboxsectionone}>
@@ -225,7 +218,7 @@ const Values = () => {
             </p>
           </div>
 
-          <div className={Styles.valuefooterboxsectiontwo}>
+          {/* <div className={Styles.valuefooterboxsectiontwo}>
             <img
               className={Styles.valueimganime}
               src="/blog/planning.png"
@@ -240,11 +233,127 @@ const Values = () => {
               and meticulous planning enable us to navigate complex challenges,
               optimize resources, and achieve desired outcomes for our clients.
             </p>
+          </div> */}
+        </div>
+
+        <div className={Styles.valuefooterboxtwo}>
+          <div className={Styles.valuefooterboxsectionone}>
+            <img
+              className={Styles.valueimganime}
+              src="/blog/client_satisfaction.png"
+              alt="Quality"
+            />
+            <h1>Clients Satisfaction</h1>
+            <p>
+              We understand that our success is directly linked to the success
+              of our clients. We take the time to listen and understand their
+              unique requirements, challenges, and goals. By tailoring our
+              services to their specific needs that not only meet but exceed our
+              client's expectations, fostering enduring partnerships based on
+              mutual trust and satisfaction.
+            </p>
           </div>
+
+          {/* <div className={Styles.valuefooterboxsectiontwo}>
+            <img
+              className={Styles.valueimganime}
+              src="/blog/teamwork.png"
+              alt="Quality"
+            />
+
+            <h1>Teamwork</h1>
+            <p>
+              At RTS, we firmly believe in the power of teamwork. We foster a
+              collaborative environment where each team member's skills,
+              expertise, and perspectives are valued. By working together
+              seamlessly, we maximize efficiency, creativity, and
+              problem-solving capabilities, ultimately delivering innovative
+              solutions that surpass client expectations.
+            </p>
+          </div> */}
         </div>
       </div>
 
-      <div className={Styles.valuesfootercontainermainsecond}>
+
+
+      <div className={Styles.valuesfootercontainermain}>
+        {/* <div className={Styles.valuefooterimgboxone}>
+     
+        </div> */}
+
+        <div className={Styles.valuefooterboxtwo}>
+          <div className={Styles.valuefooterboxsectionone}>
+          <img src="/blog/planning.png" alt="Quality" />
+            <h1>Planning & Strategy</h1>
+            <p>
+              Planning and strategy form the backbone of our approach. By
+              thoroughly analyzing client objectives, industry trends, and
+              market dynamics, we develop comprehensive plans that align with
+              their vision and drive tangible results. Our strategic thinking
+              and meticulous planning enable us to navigate complex challenges,
+              optimize resources, and achieve desired outcomes for our clients.
+            </p>
+          </div>
+
+          {/* <div className={Styles.valuefooterboxsectiontwo}>
+            <img
+              className={Styles.valueimganime}
+              src="/blog/planning.png"
+              alt="Quality"
+            />
+            <h1>Planning & Strategy</h1>
+            <p>
+              Planning and strategy form the backbone of our approach. By
+              thoroughly analyzing client objectives, industry trends, and
+              market dynamics, we develop comprehensive plans that align with
+              their vision and drive tangible results. Our strategic thinking
+              and meticulous planning enable us to navigate complex challenges,
+              optimize resources, and achieve desired outcomes for our clients.
+            </p>
+          </div> */}
+        </div>
+
+        <div className={Styles.valuefooterboxtwo}>
+          <div className={Styles.valuefooterboxsectionone}>
+          <img
+              className={Styles.valueimganime}
+              src="/blog/teamwork.png"
+              alt="Quality"
+            />
+
+            <h1>Teamwork</h1>
+            <p>
+              At RTS, we firmly believe in the power of teamwork. We foster a
+              collaborative environment where each team member's skills,
+              expertise, and perspectives are valued. By working together
+              seamlessly, we maximize efficiency, creativity, and
+              problem-solving capabilities, ultimately delivering innovative
+              solutions that surpass client expectations.
+            </p>
+          </div>
+
+          {/* <div className={Styles.valuefooterboxsectiontwo}>
+            <img
+              className={Styles.valueimganime}
+              src="/blog/teamwork.png"
+              alt="Quality"
+            />
+
+            <h1>Teamwork</h1>
+            <p>
+              At RTS, we firmly believe in the power of teamwork. We foster a
+              collaborative environment where each team member's skills,
+              expertise, and perspectives are valued. By working together
+              seamlessly, we maximize efficiency, creativity, and
+              problem-solving capabilities, ultimately delivering innovative
+              solutions that surpass client expectations.
+            </p>
+          </div> */}
+        </div>
+      </div>
+
+
+      {/* <div className={Styles.valuesfootercontainermainsecond}>
         <div className={Styles.valuefooterboxsecondboxone}>
           <img
             className={Styles.valueimganime}
@@ -278,7 +387,7 @@ const Values = () => {
             surpass client expectations.
           </p>
         </div>
-      </div>
+      </div> */}
 
       {/* <div className={Styles.valuesfootercontainermain}>
         <div className={Styles.valuesfirstsection}>

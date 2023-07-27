@@ -39,7 +39,13 @@ const Getthesupport = () => {
             <div>
               <img src="/home/support_1.png" />
               <h2>Support & Maintenance</h2>
-              <p>Still up in the air on our technology and solution?…</p>
+              <p>
+                At RTS, we take pride in our highly skilled and extensively
+                trained technicians and engineers with unparalleled expertise in
+                managing and optimising cutting-edge systems. Bid farewell to
+                uncertainties and embrace top-notch solutions tailored
+                specifically for you…
+              </p>
             </div>
           </Link>
         </div>

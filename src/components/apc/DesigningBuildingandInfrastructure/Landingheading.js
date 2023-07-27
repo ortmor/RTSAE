@@ -17,17 +17,18 @@ const Landingheading = () => {
             client's preferences and requirements, we initiate a series of
             phases aimed at creating exceptional spaces. Moving into the second
             phase, we draft an initial design proposal accompanied by detailed
-            drawings and immersive 3D renderings. With a focus on customization,
-            we provide bespoke solutions that completely transform spaces to
-            suit our clients' design and functional needs. Our expertise spans
-            from architectural applications to MEP (Mechanical, Electrical, and
-            Plumbing), Fire Fighting, and IT solutions.
+            drawings and immersive 3D renderings.
           </p>
           <br />
           <p>
-            We offer turnkey solutions, ensuring a seamless transition from
-            conceptualization to execution.
+            With a focus on customization, we provide bespoke solutions that
+            completely transform spaces to suit our clients' design and
+            functional needs. Our expertise spans from architectural
+            applications to MEP (Mechanical, Electrical, and Plumbing), Fire
+            Fighting, and IT solutions. We offer turnkey solutions, ensuring a
+            seamless transition from conceptualization to execution.
           </p>
+          <br />
         </div>
       </div>
     </div>

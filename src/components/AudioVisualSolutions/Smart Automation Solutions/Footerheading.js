@@ -23,12 +23,16 @@ const Footerheading = () => {
             systems that work together harmoniously, controlled through a single
             user-friendly interface. This unified interface allows you to
             effortlessly manage and control various aspects of your environment,
-            whether it's your home or your office. From lighting and climate
-            control to security systems, entertainment systems, and more, our
-            Smart Automation Solutions streamline and consolidate these
-            technologies, providing you with unprecedented control and
-            convenience. Explore our website to learn more about the endless
-            possibilities of Smart Automation Solutions and how they can
+            whether it's your home or your office.
+          </p>
+
+          <br />
+          <p>
+            From lighting and climate control to security systems, entertainment
+            systems, and more, our Smart Automation Solutions streamline and
+            consolidate these technologies, providing you with unprecedented
+            control and convenience. Explore our website to learn more about the
+            endless possibilities of Smart Automation Solutions and how they can
             transform your home or business. Embrace the future of automation
             with RTS, and unlock a new level of control, convenience, and
             efficiency.

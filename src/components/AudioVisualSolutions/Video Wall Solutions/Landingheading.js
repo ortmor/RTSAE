@@ -20,7 +20,11 @@ const Landingheading = () => {
             expert engineers excels in designing and implementing cutting-edge
             video solutions. With their extensive knowledge and expertise, they
             bring together the perfect combination of multiple screens and
-            backend video processing and distribution systems. This ensures that
+            backend video processing and distribution systems. 
+          </p>
+          <br />
+
+          <p>This ensures that
             your video setup is not only visually captivating but also efficient
             and reliable. We understand that video solutions can sometimes be
             complex and challenging, particularly without the right preparation.
@@ -28,9 +32,9 @@ const Landingheading = () => {
             and programmers who specialize in catering to the specific needs of
             our customers. They work closely with you to develop tailored video
             solutions that meet your unique requirements and surpass your
-            expectations.
-          </p>
-          <br />
+            expectations.</p>
+
+            <br />
           <p>
             Experience the transformative power of our seamless video solutions.
             Let us help you create a visually immersive environment that leaves

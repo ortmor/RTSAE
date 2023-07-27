@@ -19,12 +19,17 @@ const Landingheading = () => {
             enhanced safety. At RTS, we specialize in delivering advanced
             control system solutions that empower businesses and individuals to
             streamline operations, reduce costs, and achieve greater control
-            over their environments. Control systems utilize sensors, actuators,
-            and sophisticated software to monitor, regulate, and manage various
-            processes and equipment in real time. By continuously gathering data
-            and making informed decisions, these systems ensure optimal
-            performance, maintain safety standards, and enable effective
-            resource management.
+            over their environments.{" "}
+          </p>
+
+          <br />
+
+          <p>
+            Control systems utilize sensors, actuators, and sophisticated
+            software to monitor, regulate, and manage various processes and
+            equipment in real time. By continuously gathering data and making
+            informed decisions, these systems ensure optimal performance,
+            maintain safety standards, and enable effective resource management.
           </p>
           <br />
           <p>
@@ -33,6 +38,9 @@ const Landingheading = () => {
             customized control system solutions. We provide end-to-end services,
             including system integration, installation, testing, and ongoing
             maintenance, ensuring seamless implementation and long-term success.
+          </p>
+          <br />
+          <p>
             Embrace the power of control systems to optimize your operations,
             increase efficiency, and gain better control over your environment.
             Partner with RTS to leverage cutting-edge technologies and unlock

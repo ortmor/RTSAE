@@ -20,15 +20,19 @@ const Footerheading = () => {
             management. With the use of Internet of Things (IoT) devices,
             sensors, and data analytics, Smart City Automation streamlines city
             services such as transportation, waste management, lighting,
-            utilities, surveillance, and traffic management. By implementing
+            utilities, surveillance, and traffic management.
+          </p>
+
+          <br />
+
+          <p> By implementing
             Smart City Automation, cities can enhance the quality of life for
             citizens by reducing unnecessary surplus usage and improving
             resource utilization. Additionally, Smart City Automation can help
             cities achieve cost savings, increased sustainability, and improved
             communication and collaboration between city services. Explore our
             website to learn more about how Smart City Automation can
-            revolutionize your city.
-          </p>
+            revolutionize your city.</p>
           <br />
         </div>
       </div>

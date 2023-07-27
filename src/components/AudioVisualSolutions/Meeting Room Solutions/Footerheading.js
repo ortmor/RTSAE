@@ -19,10 +19,13 @@ const Footerheading = () => {
             with furniture, audiovisual tools, and technology to support
             effective communication and productivity. Meeting Rooms facilitate
             various purposes such as presentations, team meetings, training
-            sessions, and brainstorming. With advancing technology, Meeting
-            Rooms now enable remote participation and virtual collaboration,
-            connecting people across locations for efficient communication and
-            decision-making.
+            sessions, and brainstorming.
+          </p>
+          <br />
+          <p>
+            With advancing technology, Meeting Rooms now enable remote
+            participation and virtual collaboration, connecting people across
+            locations for efficient communication and decision-making.
           </p>
 
           <br />

@@ -23,13 +23,15 @@ const Footerheading = () => {
             for impactful and immersive experiences. With our expertise in
             Videowall Solutions, we at RTS are committed to delivering
             cutting-edge display technologies that meet the unique requirements
-            of our clients. Our team of skilled engineers and designers work
+            of our clients. 
+          </p>
+               <br />
+          <p>Our team of skilled engineers and designers work
             closely with you to design, implement, and maintain Videowall
             Solutions that transform spaces, enhance communication, and create
             visually captivating environments. Experience the power of Videowall
             Solutions and elevate your visual display capabilities to new
-            heights.
-          </p>
+            heights.</p>
           <br />
         </div>
       </div>

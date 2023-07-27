@@ -18,15 +18,18 @@ const Footerheading = () => {
             the ambiance and cater to your specific needs. Delivering
             crystal-clear public announcements and intelligible speech, along
             with immersive background music, our PA-BGM systems create a
-            captivating environment. Our solutions are driven by industry
+            captivating environment.
+          </p>
+          <br />
+          <p>Our solutions are driven by industry
             standards and encompass in-house EASE calculations, ensuring precise
             sound distribution. With acoustic reports tailored to your project
             requirements, we provide accurate and customized solutions for every
             purpose and application. Enhance your space with the power of PA-BGM
             systems, where speech and music come together to captivate minds and
-            create unforgettable experiences.
-          </p>
-          <br />
+            create unforgettable experiences.</p>
+
+            <br />
         </div>
       </div>
     </div>

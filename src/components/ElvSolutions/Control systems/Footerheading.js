@@ -22,7 +22,7 @@ const Footerheading = () => {
             control system solutions that empower businesses to optimize
             performance, increase productivity, and achieve remarkable success.
           </p>
-<br />
+          <br />
           <p>
             We recognize the unique nature of each business, which is why we
             offer tailor-made control system solutions designed to address your
@@ -31,12 +31,17 @@ const Footerheading = () => {
             operations, develop customized control systems, and ensure a
             seamless integration and implementation process. Embracing the power
             of control systems enables you to streamline operations, enhance
-            efficiency, and drive overall success. At RTS, we are committed to
-            delivering cutting-edge control system solutions that transform
-            businesses. Whether you require automation, real-time monitoring,
-            cost optimization, or improved safety measures, our bespoke
-            solutions will help you reach your goals and achieve sustainable
-            growth.
+            efficiency, and drive overall success.
+          </p>
+
+          <br />
+          <p>
+            {" "}
+            At RTS, we are committed to delivering cutting-edge control system
+            solutions that transform businesses. Whether you require automation,
+            real-time monitoring, cost optimization, or improved safety
+            measures, our bespoke solutions will help you reach your goals and
+            achieve sustainable growth.
           </p>
           <br />
         </div>

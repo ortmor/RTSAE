@@ -19,13 +19,18 @@ const Landingheading = () => {
             Address and Background Music) systems specifically tailored for open
             spaces. To ensure unparalleled performance and seamless integration,
             our designs are meticulously crafted in accordance with industry
-            standards such as EASE calculations. Our team members conduct these
+            standards such as EASE calculations.
+          </p>
+          <br />
+
+          <p> Our team members conduct these
             calculations in-house, guaranteeing precision and accuracy.
             Additionally, we prepare detailed acoustic reports based on project
             requirements, allowing us to deliver customized solutions that
-            perfectly align with each space's unique purpose and applications.
-          </p>
-          <br />
+            perfectly align with each space's unique purpose and applications.</p>
+
+            <br />
+
           <p>
             Experience the transformative power of exceptional sound quality
             with RTS. Our PA-BGM systems are engineered to enhance the ambiance,
@@ -34,6 +39,7 @@ const Landingheading = () => {
             comprehensive solution is tailored to meet the specific needs of
             various industries and sectors, including
           </p>
+          <br />
         </div>
       </div>
     </div>
