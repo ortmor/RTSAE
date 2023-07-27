@@ -51,8 +51,8 @@ const Main = () => {
 
         <div className={Styles.innersolutionhomemainboxthree}>
           <div className={Styles.innersolutionhomemainboxthreeheading}>
-            <h1> Customer-oriented</h1>
-            <h1>Solutions</h1>
+            <h1> Stakeholder </h1>
+            <h1> Management System</h1>
           </div>
 
           <div className={Styles.innersolutionpointsmain}>

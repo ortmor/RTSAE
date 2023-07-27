@@ -19,14 +19,15 @@ const Footerheading = () => {
             ensuring seamless communication and data transmission throughout
             your organization. Our expertly designed ELV systems guarantee
             optimal performance, flexibility, and scalability, empowering your
-            business to thrive in the digital era. Trust our professional team
-            to create a reliable and future-proof network foundation, enabling
-            you to focus on what matters most—your business success. Elevate
-            your connectivity standards today with our cutting-edge ELV -
-            Structured Cabling services.
+            business to thrive in the digital era.
           </p>
           <br />
-
+          <p>
+            Trust our professional team to create a reliable and future-proof
+            network foundation, enabling you to focus on what matters most—your
+            business success. Elevate your connectivity standards today with our
+            cutting-edge ELV - Structured Cabling services.
+          </p>
           <br />
         </div>
       </div>

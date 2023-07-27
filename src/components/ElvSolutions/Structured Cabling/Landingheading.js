@@ -19,20 +19,25 @@ const Landingheading = () => {
             essential modern technologies for buildings. It includes data
             networks, CCTV equipment, access control systems, intrusion
             detection systems, structured cabling, public address systems, audio
-            and video solutions, home automation, and more. RTS provides a
-            complete range of structured cabling services, covering new
-            constructions and retrofits. We handle expansions, upgrades,
-            troubleshooting, and optimization.
+            and video solutions, home automation, and more.
           </p>
-
+          <br />
           <p>
-            Our versatile solutions cater to diverse requirements, offering
-            copper and fiber solutions, intelligent cabling, and rack solutions
-            for data centers and campuses. Our expertise extends to a wide range
-            of sectors, including malls, hospitals, ministries, telecom
-            companies, factories, luxury villas, corporate offices, banks,
-            multi-story apartments, and towers. Here is how ELV structured
-            cabling can make an impact on your businesses;
+            RTS provides a complete range of structured cabling services,
+            covering new constructions and retrofits. We handle expansions,
+            upgrades, troubleshooting, and optimization. Our versatile solutions
+            cater to diverse requirements, offering copper and fiber solutions,
+            intelligent cabling, and rack solutions for data centers and
+            campuses.{" "}
+          </p>{" "}
+
+          <br />
+          <p>
+            {" "}
+            Our expertise extends to a wide range of sectors, including malls,
+            hospitals, ministries, telecom companies, factories, luxury villas,
+            corporate offices, banks, multi-story apartments, and towers. Here
+            is how ELV structured cabling can make an impact on your businesses;
           </p>
           <br />
         </div>

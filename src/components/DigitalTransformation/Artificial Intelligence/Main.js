@@ -45,7 +45,7 @@ const Main = () => {
 
       <div className={Styles.innersolutionhomemainparentdivthree}>
         <div className={Styles.innersolutionhomemainboxthree}>
-          <img src="/digitaltransformation/02/Informed Decision-making.webp"></img>
+          <img src="/digitaltransformation/02/IDM.webp"></img>
           <div className={Styles.innersolutionhomemainboxthreeimg}></div>
         </div>
 

@@ -16,11 +16,16 @@ const Footerheading = () => {
           <p>
             Our Video Surveillance & Management solution combines cutting-edge
             camera technology with advanced software to provide you with robust
-            security and efficient monitoring capabilities. With strategically
-            placed cameras, real-time video capture, and centralized management,
-            our system ensures enhanced security for your premises. Monitor
-            critical areas, deter potential threats, and gain valuable insights
-            with our streamlined video surveillance solution.
+            security and efficient monitoring capabilities.
+          </p>
+          <br />
+
+          <p>
+            With strategically placed cameras, real-time video capture, and
+            centralized management, our system ensures enhanced security for
+            your premises. Monitor critical areas, deter potential threats, and
+            gain valuable insights with our streamlined video surveillance
+            solution.
           </p>
           <br />
         </div>
