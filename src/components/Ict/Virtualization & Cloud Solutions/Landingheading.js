@@ -17,10 +17,14 @@ const Landingheading = () => {
             server consolidation, streamlined desktop management, improved
             storage utilization, enhanced network control, robust security
             measures, efficient disaster recovery, and optimized application
-            performance through load balancing. By leveraging virtualization,
-            businesses can maximize resource utilization, reduce hardware costs,
-            and scale their operations with ease. Our expert team delivers
-            tailored solutions that align with your business goals.
+            performance through load balancing.{" "}
+          </p>
+          <br />
+          <p>
+            By leveraging virtualization, businesses can maximize resource
+            utilization, reduce hardware costs, and scale their operations with
+            ease. Our expert team delivers tailored solutions that align with
+            your business goals.
           </p>
           <br />
           <p>

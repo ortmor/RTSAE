@@ -16,12 +16,17 @@ const Landingheading = () => {
             communication with RTS's innovative Unified Communications and
             Collaboration (UCC) solutions. Our comprehensive suite of tools and
             features empowers your teams to connect, collaborate, and
-            communicate effortlessly, revolutionizing the way you work. Our
-            Unified Communications (UC) solution brings together voice, video,
-            messaging, and conferencing into a single, integrated platform.
-            Seamlessly switch between different communication channels for
-            enhanced productivity, and access UC tools from desktop, mobile, and
-            web applications for flexibility and mobility.
+            communicate effortlessly, revolutionizing the way you work.{" "}
+          </p>
+
+          <br />
+
+          <p>
+            Our Unified Communications (UC) solution brings together voice,
+            video, messaging, and conferencing into a single, integrated
+            platform. Seamlessly switch between different communication channels
+            for enhanced productivity, and access UC tools from desktop, mobile,
+            and web applications for flexibility and mobility.
           </p>
           <br />
           <p>

@@ -14,10 +14,14 @@ const Landingheading = () => {
             As technology rapidly evolves and digital adoption accelerates,
             organizations may face a constant threat from cyberattacks and it
             can have devastating consequences on operations, services,
-            reputation, etc. So It has become crucial to implement a robust
-            cybersecurity strategy that addresses the constantly changing
-            terrain of cyber threats. Guarding against a range of prevalent
-            cyber threats, we prioritize your protection from
+            reputation, etc.
+          </p>{" "}
+          <br />
+          <p>
+            So It has become crucial to implement a robust cybersecurity
+            strategy that addresses the constantly changing terrain of cyber
+            threats. Guarding against a range of prevalent cyber threats, we
+            prioritize your protection from
           </p>
           <br />
         </div>

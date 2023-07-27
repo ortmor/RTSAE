@@ -17,10 +17,14 @@ const Landingheading = () => {
             infrastructure and reliable security solutions are no longer
             optional but essential. At RTS ICT, we are experts in designing and
             integrating high-performance IT infrastructures and providing
-            top-of-the-line network and cyber security solutions. Our
-            comprehensive range of services includes IT network solutions such
-            as software-defined data center solutions and SDWAN, as well as IT
-            security solutions like firewalls, zero-trust network access, and
+            top-of-the-line network and cyber security solutions.
+          </p>
+          <br />
+
+          <p>
+            Our comprehensive range of services includes IT network solutions
+            such as software-defined data center solutions and SDWAN, as well as
+            IT security solutions like firewalls, zero-trust network access, and
             cloud security. We prioritize flexibility, integration, and
             protection to ensure that your business remains secure and
             productive. With our expertise, you can focus on growing your

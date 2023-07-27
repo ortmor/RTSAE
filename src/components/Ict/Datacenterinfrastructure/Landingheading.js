@@ -14,10 +14,14 @@ const Landingheading = () => {
           <p>
             In the ever-expanding realm of our digital landscape, the Data
             Center Infrastructure has emerged as the backbone, weaving together
-            the sway of computing and networking components. With its formidable
-            expertise in handling colossal volumes of data, the Data Center
-            Infrastructure empowers organizations to unlock the treasures of
-            knowledge and embark upon the path of informed decision-making.{" "}
+            the sway of computing and networking components.{" "}
+          </p>
+          <br />
+          <p>
+            With its formidable expertise in handling colossal volumes of data,
+            the Data Center Infrastructure empowers organizations to unlock the
+            treasures of knowledge and embark upon the path of informed
+            decision-making.{" "}
           </p>
           <br />
           <p>

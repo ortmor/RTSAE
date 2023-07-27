@@ -18,14 +18,18 @@ const Footerheading = () => {
             cutting-edge Unified Communications and Collaboration (UCC)
             solutions. Our integrated platform offers seamless integration with
             your existing systems and applications, ensuring compatibility
-            across various devices and operating systems. With advanced security
-            measures, including encrypted voice and video calls, your
-            communication and data are protected at all times. Our UCC solutions
-            provide reliable communication through redundant systems and backups
-            while adhering to industry regulations and data protection
-            standards.
+            across various devices and operating systems.{" "}
           </p>
+          <br />
 
+          <p>
+            With advanced security measures, including encrypted voice and video
+            calls, your communication and data are protected at all times. Our
+            UCC solutions provide reliable communication through redundant
+            systems and backups while adhering to industry regulations and data
+            protection standards.
+          </p>
+<br />
           <p>
             Scale your communication capabilities effortlessly as your business
             grows, and customize features to suit your specific needs. Integrate

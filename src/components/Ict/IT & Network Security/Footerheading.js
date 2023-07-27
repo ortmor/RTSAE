@@ -18,8 +18,12 @@ const Footerheading = () => {
             technicians, with over a decade of expertise in the IT networking
             industry. Our profound understanding of complex network environments
             and the challenges businesses face has enabled us to deliver
-            successful projects and exceptional customer satisfaction. We
-            believe in providing personalized services that align with your
+            successful projects and exceptional customer satisfaction.
+          </p>
+          <br />
+
+          <p>
+            We believe in providing personalized services that align with your
             unique business requirements and budget. Our topmost priority is
             reliability, and we provide ongoing support to ensure that your
             network operates seamlessly. Our responsive support team is just a

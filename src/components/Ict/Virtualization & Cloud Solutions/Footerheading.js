@@ -18,11 +18,18 @@ const Footerheading = () => {
             harnessing the advantages of cloud technologies. Our comprehensive
             solutions deliver a range of benefits, including streamlined
             administration, accelerated developer productivity, and access to
-            high-value hybrid cloud services. With automation and lifecycle
-            management, you can optimize operations and ensure efficient
-            resource allocation. Orchestration capabilities enable seamless
-            coordination and execution of complex workflows, while operations
-            management provides real-time insights and proactive monitoring.
+            high-value hybrid cloud services.{" "}
+          </p>
+
+          <br />
+
+          <p>
+            {" "}
+            With automation and lifecycle management, you can optimize
+            operations and ensure efficient resource allocation. Orchestration
+            capabilities enable seamless coordination and execution of complex
+            workflows, while operations management provides real-time insights
+            and proactive monitoring.
           </p>
           <br />
           <p>
@@ -30,10 +37,14 @@ const Footerheading = () => {
             in and out, and gain consolidated VM and container management for
             simplified administration. Achieve cost savings with reduced capital
             and operational expenditures, leading to a lower total cost of
-            ownership. Moreover, our solutions empower you to build, modernize,
-            and deploy applications at scale, enabling your organization to stay
-            agile and competitive. Experience seamless integrations and a range
-            of services designed to enhance your cloud journey. Let us help you
+            ownership.
+          </p>
+          <br />
+          <p>
+            Moreover, our solutions empower you to build, modernize, and deploy
+            applications at scale, enabling your organization to stay agile and
+            competitive. Experience seamless integrations and a range of
+            services designed to enhance your cloud journey. Let us help you
             unlock the full potential of your infrastructure and propel your
             business forward.
           </p>
