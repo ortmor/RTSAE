@@ -17,14 +17,15 @@ const Landingheading = () => {
             profitability for our business partners. We work with you throughout
             the entire project life cycle and beyond, ensuring the
             implementation of the perfect ERP system and offering continuous
-            assistance for any post-project concerns or clarifications. Our ERP
-            solutions provide 360-degree transparency and visibility, ensuring
-            regulatory compliance and facilitating seamless interactions with
-            regulatory boards and agencies.
+            assistance for any post-project concerns or clarifications.{" "}
           </p>
           <br />
           <p>
-          The following modules have been the most valuable to the business partners of our company
+            Our ERP solutions provide 360-degree transparency and visibility,
+            ensuring regulatory compliance and facilitating seamless
+            interactions with regulatory boards and agencies. The following
+            modules have been the most valuable to the business partners of our
+            company;
           </p>
         </div>
       </div>

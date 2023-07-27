@@ -14,11 +14,16 @@ const Landingheading = () => {
             We are one of the premier suppliers of artificial intelligence (AI)
             equipment & support services across the globe. Our company can
             provide you with robust AI solutions that are not seen in some of
-            the leading global companies. At Royal Technology Solutions, we will
-            collaborate with you to achieve digital supremacy in your fields of
-            endeavor through ethical, sustainable, and cost-efficient means.
+            the leading global companies.
           </p>
+          <br />
 
+          <p>
+            At Royal Technology Solutions, we will collaborate with you to
+            achieve digital supremacy in your fields of endeavor through
+            ethical, sustainable, and cost-efficient means.
+          </p>
+          <br />
           <p>
             Our company has you covered from the initial in-depth consultations
             and discovery sessions to development, implementation, and

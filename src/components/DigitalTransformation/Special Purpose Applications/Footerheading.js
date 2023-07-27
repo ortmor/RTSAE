@@ -18,14 +18,18 @@ const Footerheading = () => {
             software applications that go beyond generic solutions. Whether it's
             automating complex processes, optimizing workflows, or solving
             industry-specific challenges, our Special Purpose Applications are
-            designed to propel your business forward. With meticulous attention
-            to detail and a deep understanding of your requirements, we create
-            intuitive and user-friendly interfaces that ensure seamless
-            integration into your existing infrastructure. Our agile development
-            approach guarantees timely delivery, while rigorous testing ensures
-            reliability and performance.
+            designed to propel your business forward.{" "}
           </p>
 
+          <br />
+          <p>
+            With meticulous attention to detail and a deep understanding of your
+            requirements, we create intuitive and user-friendly interfaces that
+            ensure seamless integration into your existing infrastructure. Our
+            agile development approach guarantees timely delivery, while
+            rigorous testing ensures reliability and performance.
+          </p>
+          <br />
           <p>
             Our Special Purpose Applications empower your business, enhance
             productivity, and unlock new possibilities. Let us be your trusted

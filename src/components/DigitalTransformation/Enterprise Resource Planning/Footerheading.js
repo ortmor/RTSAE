@@ -19,10 +19,13 @@ const Footerheading = () => {
             means to revolutionize your business operations. With seamless
             integration, streamlined processes, and real-time insights, our ERP
             software empowers your organization to eliminate data silos and
-            achieve peak efficiency. Scale effortlessly, customize with
-            precision, and maintain compliance effortlessly. Experience the
-            transformative impact of ERP as you unlock the true potential of
-            your business.
+            achieve peak efficiency.{" "}
+          </p>
+          <br />
+          <p>
+            Scale effortlessly, customize with precision, and maintain
+            compliance effortlessly. Experience the transformative impact of ERP
+            as you unlock the true potential of your business.
           </p>
           <br />
         </div>

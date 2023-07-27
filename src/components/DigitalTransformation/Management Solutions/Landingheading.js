@@ -16,10 +16,16 @@ const Landingheading = () => {
             new heights with our cutting-edge solutions. Our comprehensive
             platform combines enterprise content, documentation, and intra- and
             inter-department management, providing a robust and secure
-            foundation for your operations. With our Enterprise Content
-            Management and Document Management Solutions working hand-in-hand,
-            we identify and address pain points and challenges, while leveraging
-            data-driven insights to keep your business ahead of the competition.
+            foundation for your operations.{" "}
+          </p>
+          <br />
+
+          <p>
+            {" "}
+            With our Enterprise Content Management and Document Management
+            Solutions working hand-in-hand, we identify and address pain points
+            and challenges, while leveraging data-driven insights to keep your
+            business ahead of the competition.
           </p>
           <br />
         </div>

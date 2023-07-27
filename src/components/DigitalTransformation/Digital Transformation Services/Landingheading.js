@@ -18,7 +18,7 @@ const Landingheading = () => {
             and measurable business outcomes should you anticipate? And most
             importantly, are you on the right track?
           </p>
-
+<br />
           <p>
             At Royal Technology Solutions, we specialize in empowering your team
             with a tailored approach to digital transformation, enabling you to

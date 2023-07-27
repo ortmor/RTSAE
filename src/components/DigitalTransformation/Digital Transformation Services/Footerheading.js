@@ -20,13 +20,18 @@ const Footerheading = () => {
             businesses to adapt, innovate, and thrive in the digital age. The
             impact of digital transformation is far-reaching. It fosters
             improved collaboration across teams, breaking down silos and
-            enabling seamless communication and knowledge sharing. By harnessing
-            the power of data and analytics, you can enhance decision-making,
-            gain deeper insights into customer behaviour, and drive innovation.
-            Moreover, digital transformation drives customer-centricity by
-            delivering personalized experiences and tailored solutions. By
-            leveraging digital channels and technologies, you can enhance
-            customer engagement, satisfaction, and loyalty.
+            enabling seamless communication and knowledge sharing.
+          </p>
+
+          <br />
+
+          <p>
+            By harnessing the power of data and analytics, you can enhance
+            decision-making, gain deeper insights into customer behaviour, and
+            drive innovation. Moreover, digital transformation drives
+            customer-centricity by delivering personalized experiences and
+            tailored solutions. By leveraging digital channels and technologies,
+            you can enhance customer engagement, satisfaction, and loyalty.
           </p>
           <br />
           <p>

@@ -17,16 +17,17 @@ const Landingheading = () => {
             transformation only if used effectively. With our comprehensive
             digital infrastructure and our decades’ worth of industry expertise
             and experience, we can guarantee that your business will never fall
-            behind the latest digital trends and applications. To stay ahead of
-            the rest of the world, RTS will help you manage and extract maximum
-            value from core applications – unlocking their power, so you can
-            develop new ways of achieving success and profits.
+            behind the latest digital trends and applications.{" "}
           </p>
           <br />
           <p>
-            Here are how digital transformation can make a big impact on your
-            business;
+            To stay ahead of the rest of the world, RTS will help you manage and
+            extract maximum value from core applications – unlocking their
+            power, so you can develop new ways of achieving success and
+            profits.Here are how digital transformation can make a big impact on
+            your business;
           </p>
+          <br />
         </div>
       </div>
     </div>

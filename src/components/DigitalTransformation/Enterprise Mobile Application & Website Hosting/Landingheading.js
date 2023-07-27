@@ -19,14 +19,19 @@ const Landingheading = () => {
             and more. As a seasoned mobile application development company, we
             understand the unique requirements of diverse industry verticals.
             Our team of experts offers a wide range of programs and scalable
-            solutions tailored to your specific needs. Experience the power of
-            our mobile applications that are built with precision, innovation,
-            and user-centric design. We create intuitive and feature-rich mobile
-            applications that captivate your target audience, providing seamless
-            user experiences. In addition to mobile application development, we
-            also provide top-notch website hosting services. Our robust hosting
-            solutions ensure optimal performance and security for your websites,
-            allowing you to focus on your core business activities.
+            solutions tailored to your specific needs.{" "}
+          </p>
+
+          <br />
+          <p>
+            Experience the power of our mobile applications that are built with
+            precision, innovation, and user-centric design. We create intuitive
+            and feature-rich mobile applications that captivate your target
+            audience, providing seamless user experiences. In addition to mobile
+            application development, we also provide top-notch website hosting
+            services. Our robust hosting solutions ensure optimal performance
+            and security for your websites, allowing you to focus on your core
+            business activities.
           </p>
           <br />
           <p>

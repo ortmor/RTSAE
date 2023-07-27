@@ -14,11 +14,17 @@ const Footerheading = () => {
             Enterprise Mobile Application & Website Hosting is a comprehensive
             solution for businesses' hosting needs. It provides a secure
             platform for managing mobile applications and websites, ensuring top
-            performance and reliability. Our user-friendly interface and
-            scalable infrastructure empower businesses to effortlessly deploy
-            and maintain their digital assets. With our streamlined services,
-            you can focus on core activities while our innovative features
-            enable data-driven decision-making and optimize user experiences.
+            performance and reliability.{" "}
+          </p>
+
+          <br />
+
+          <p>
+            Our user-friendly interface and scalable infrastructure empower
+            businesses to effortlessly deploy and maintain their digital assets.
+            With our streamlined services, you can focus on core activities
+            while our innovative features enable data-driven decision-making and
+            optimize user experiences.
           </p>
           <br />
           <p>
