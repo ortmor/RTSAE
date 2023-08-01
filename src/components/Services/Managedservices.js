@@ -158,10 +158,7 @@ Experience the power of seamless cloud-based solutions tailored to meet your spe
 
       
 
-       Ensure uninterrupted server performance with our exceptional on-site server support services. Our team of experts is readily available to provide you with expert assistance, guaranteeing seamless server maintenance and swift troubleshooting. Experience peace of mind knowing that your servers are in capable hands, enabling you to focus on your core business objectives without any disruptions.
-
-
-
+       Our expert team specializes in providing reliable and high-performance solutions to ensure seamless connectivity. From network design and implementation to maintenance and security, we've got you covered. Experience enhanced efficiency, reduced downtime, and superior user experiences with our top-notch network services.
  
        </p>
        </div>
@@ -664,10 +661,7 @@ Experience the convenience of a Single Point of Contact for all your communicati
             </h2>
           </div>
 
-          <p>
-            Expert assistance for seamless server maintenance and
-            troubleshooting.
-          </p>
+          <p>Expert assistance for seamless connectivity and communication</p>
           <div className={Styles.managedserviceboxlink}>
             <button onClick={Boxsix}>View more</button>
           </div>
