@@ -23,7 +23,7 @@ const Landing = () => {
             </h5>
             <p className={Styles.aboutlandingcontainerparagraph}>
               Royal Technology Solutions (RTS) has been committed to continually
-              improve end-user satisfaction since the day the company was
+              improving end-user satisfaction since the day the company was
               founded over 10 years ago. We are inventive, innovative, and
               futuristic.
             </p>

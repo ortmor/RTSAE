@@ -24,7 +24,7 @@ const Homemain = () => {
           <p>
             Our team of professionals working on the client-first model strives
             to deliver creative, custom, comprehensive and cutting-edge
-            solutions as per the needs and expectation of our clients.
+            solutions as per the needs and expectations of our clients.
           </p>
         </div>
         <br />

@@ -1,4 +1,5 @@
 "use client";
+import Image from "next/image";
 import Styles from "../../styles/home.module.scss";
 
 const Landing = () => {
@@ -20,7 +21,7 @@ const Landing = () => {
             </h5>
             <p className={Styles.homelandingcontainerparagraph}>
               With cutting-edge technology as our passion, and a business model
-              based on client-first approach - RTS has rapidly grown in the last
+              based on a client-first approach - RTS has rapidly grown in the last
               few years.
             </p>
           </div>
@@ -32,6 +33,8 @@ const Landing = () => {
           </button>
         </div>
         <img id={Styles.img} width="100%" poster="/" src="/home/home_banner.webp" />
+
+      
       </div>
       <div id="main"></div>
     </div>

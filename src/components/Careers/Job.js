@@ -257,7 +257,7 @@ const Job = () => {
                   Styles.careersmanagedservicescontentmainboxmainparagraph
                 }
               >
-                <h2>Network Architecht</h2>
+                <h2>Network  Architect</h2>
               </div>
               <button>FULL TIME </button>
             </div>

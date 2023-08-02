@@ -21,7 +21,7 @@ const page = () => {
             <div className={Styles.Bloginnercommoncontaineraparagraph}>
               <p>
                 At RTS, we believe that success extends beyond financial
-                achievements. As responsible corporate citizen, we are committed
+                achievements. As responsible corporate citizens, we are committed
                 to making a positive impact on society and contributing to the
                 sustainable development of the United Arab Emirates (UAE).
                 <br />

@@ -92,8 +92,8 @@ function Testimonials() {
                   <h1>ICT ERP Implementation Go Live</h1>
                   <h2>ICT - International Capital Trading</h2>
                   <p className={Styles.blockquote}>
-                    RTS has Completed the implementation of Oracle e-Business
-                    suite R12 in ICT, which is A leader in Abu Dhabi business
+                    RTS has completed the implementation of Oracle e-Business
+                    suite R12 in ICT, which is A leader in the Abu Dhabi business
                     environment, International Capital Trading (ICT) is a
                     private company that owns and operates substantial assets in
                     real estate, and investments throughout the world.
@@ -154,17 +154,17 @@ function Testimonials() {
                   <Avatar className={Styles.avatarbg} src="/home/avatars/Asset 41.png" size="100" round={true} />
                   </div>
                   <h1>Alejandro Fonseca</h1>
-                  <h2>ROYAL ARCHITECTS architecture & project management</h2>
+                  <h2>ROYAL ARCHITECTS Architecture & Project Management</h2>
                   <p className={Styles.blockquote}>
                     With reference to the above subject, we strongly recommended
                     RTS for ELV projects of any magnitude. The company has been
                     known to us in connection with several projects local and
                     international and by far we have found their staff to be
-                    competent, technically sound and target oriented managment
+                    competent, technically sound and  target-oriented management
                     team of professionals, with a broader prospect towards the
                     business. We wish the team all the best for their future and
                     would always be interested in working with them on ELV
-                    requirments.
+                    requirements.
                     <br />
                     <br />
                   </p>

@@ -63,7 +63,7 @@ const Subscribe = () => {
           <h1>Don't miss </h1>
           <h1>our hottest news!</h1>
           <p>
-            Enter your email to receive round-up of most
+            Enter your email to receive a round-up of the most
             <br /> hottest news
           </p>
         </div>
