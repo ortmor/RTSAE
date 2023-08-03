@@ -97,7 +97,7 @@ const Values = () => {
 
   return (
     <div className={Styles.valuesmaincontainer}>
-      <div className={Styles.valuesvideocontainer}>
+      {/* <div className={Styles.valuesvideocontainer}>
         <div className={Styles.Custombuttondiv}>
           <button className="Back-slide">
             <img src="/blog/btnleft.png" />
@@ -183,8 +183,9 @@ const Values = () => {
             </Swiper>
           </div>
         </div>
-      </div>
-
+      </div> */}
+      <br />
+      <br />
       <div className={Styles.valuesmainheading}>
         <h1>
           <span>Our</span> professional values

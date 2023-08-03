@@ -55,10 +55,10 @@ function Footer() {
               <br />
               P.O.Box 112847, Abu Dhabi, UAE
               <br />
-              Tel: <span>02-8111333</span> / <span> 02-8111345</span>
+              Tel: <span>   <a style={{fontSize:"0.8rem"}} href="tel:+97102-8111333">+971 02-8111333</a>  </span> / <span>  <a style={{fontSize:"0.8rem"}} href="tel:+97102-8111345">+971  02-8111345</a>      </span>
             </p>
           </div>
-
+        
           <div className={Styles.linkiconcontainer}>
             <Link href="https://twitter.com/i/flow/login?redirect_after_login=%2Frts_ae">
               <FaTwitter size="1em" />

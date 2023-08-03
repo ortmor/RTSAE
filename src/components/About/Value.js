@@ -106,13 +106,17 @@ const Valueabout = () => {
           </div>
 
           <p>
-            Through our extensive network of business partners and advanced
-            digital technology and technical expertise, we aim to stay ahead of
-            our competitors to help our business partners do the same.
+            Through our extensive network of business partners, advanced digital
+            technology and technical expertise, we aim to stay ahead of our
+            competitors to help our business partners do the same.
           </p>
         </div>
 
-        <div id={Styles.valueabouthide} style={{ visibility: "hidden" }} className={Styles.valueboxone}>
+        <div
+          id={Styles.valueabouthide}
+          style={{ visibility: "hidden" }}
+          className={Styles.valueboxone}
+        >
           <div className={Styles.valuecontentmainone}>
             <img src="/about/integrity.png" />
             <h2>Integrity</h2>
