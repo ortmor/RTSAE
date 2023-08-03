@@ -17,7 +17,7 @@ const Whoweare = () => {
               (RTS) is a trailblazer in enhancing end-user satisfaction through
               innovation, creativity, and forward thinking. Equipped with
               comprehensive resources, we stay at the forefront by monitoring,
-              evaluating, and analyzing current trends and emerging
+              evaluating, analyzing current trends and emerging
               technologies. This ensures our clients stay ahead in their
               respective industries. At RTS, each project takes top priority,
               evidenced by our track record of successful ventures that leverage
