@@ -157,6 +157,24 @@
   }
 }
 
+//For Ios if needed
+
+@media only screen and (device-width: 1180px) and (device-height: 820px) and (orientation: landscape) {
+}
+
+@media only screen and (device-width: 820px) and (device-height: 1180px) and (orientation: portrait) {
+}
+
+//
+
+//For Ios if needed
+@media only screen and (device-width: 1024px) and (device-height: 768px) and (orientation: landscape) {
+}
+
+@media only screen and (device-width: 768px) and (device-height: 1024px) and (orientation: portrait) {
+}
+//
+
 @media screen and (max-width: 600px) {
   .homelandingcontainerheading {
     text-align: left;
