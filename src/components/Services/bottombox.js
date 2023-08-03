@@ -138,65 +138,63 @@ const Bottombox = () => {
         <h1>Our Services </h1>
       </div>
 
-    
-        {/* grid */}
+      {/* grid */}
 
-        <div className={Styles.diciplinemainApproachgridcontainerlist}>
-          <div className={Styles.diciplinemainApproachgridcardlist}>
-            <div
-              id={Styles.noborderbox1list}
-              className={Styles.diciplinemainApproachgridcardboxmainlist}
-            >
-              <h4>Operations And Maintenance</h4>
-              <ul>
-                <li>Regular Inspections</li>
-                <li>Preventive Maintenance</li>
-                <li>Corrective Maintenance</li>
-                <li>Troubleshooting And Repairs</li>
-                <li>Software Updates And Upgrades</li>
-                <li>Documentation And Reporting</li>
-              </ul>
-            </div>
+      <div className={Styles.diciplinemainApproachgridcontainerlist}>
+        <div className={Styles.diciplinemainApproachgridcardlist}>
+          <div
+            id={Styles.noborderbox1list}
+            className={Styles.diciplinemainApproachgridcardboxmainlist}
+          >
+            <h4>Operations And Maintenance</h4>
+            <ul>
+              <li>Regular Inspections</li>
+              <li>Preventive Maintenance</li>
+              <li>Corrective Maintenance</li>
+              <li>Troubleshooting And Repairs</li>
+              <li>Software Updates And Upgrades</li>
+              <li>Documentation And Reporting</li>
+            </ul>
+          </div>
 
-            <div className={Styles.diciplinemainApproachgridcardboxmainlist}>
-              <h4>Annual Maintenance Services</h4>
-              <ul>
-                <li>Inspection And Assessment</li>
-                <li>Preventive Maintenance</li>
-                <li>Repairs And Troubleshooting</li>
-                <li> Emergency Support</li>
-                <li> Software Updates And Upgrades</li>
-                <li>Documentation And Reporting</li>
-                <li>Performance Monitoring</li>
-                <li>Service</li>
-                <li> Spare Parts</li>
-              </ul>
-            </div>
+          <div className={Styles.diciplinemainApproachgridcardboxmainlist}>
+            <h4>Annual Maintenance Services</h4>
+            <ul>
+              <li>Inspection And Assessment</li>
+              <li>Preventive Maintenance</li>
+              <li>Repairs And Troubleshooting</li>
+              <li> Emergency Support</li>
+              <li> Software Updates And Upgrades</li>
+              <li>Documentation And Reporting</li>
+              <li>Performance Monitoring</li>
+              <li>Service</li>
+              <li> Spare Parts</li>
+            </ul>
+          </div>
 
-            <div className={Styles.diciplinemainApproachgridcardboxmainlist}>
-              <h4>Critical Environment Services</h4>
-              <ul>
-                <li> Power Management</li>
-                <li> Cooling And HVAC Systems</li>
-                <li> Fire Detection And Suppression</li>
-                <li> Monitoring And Surveillance</li>
-                <li> Maintenance And Repair</li>
-                <li> Disaster Recovery And Business Continuity</li>
-                <li>Compliance And Regulatory Support</li>
-              </ul>
-            </div>
+          <div className={Styles.diciplinemainApproachgridcardboxmainlist}>
+            <h4>Critical Environment Services</h4>
+            <ul>
+              <li> Power Management</li>
+              <li> Cooling And HVAC Systems</li>
+              <li> Fire Detection And Suppression</li>
+              <li> Monitoring And Surveillance</li>
+              <li> Maintenance And Repair</li>
+              <li> Disaster Recovery And Business Continuity</li>
+              <li>Compliance And Regulatory Support</li>
+            </ul>
           </div>
         </div>
-     
+      </div>
 
       <div className={Styles.bottomboxsupportpage}>
         <h1>Still up in the air on who to trust with your systems?</h1>
         <br />
         <Link href="tel:+97128111399">Give us a Call : +971 28111399</Link>
-        <Link href="mailto:service.support@rts.ae">
-          {" "}
+
+        <a className={Styles.link} href="mailto:service.support@rts.ae">
           Send us an email : service.support@rts.ae
-        </Link>
+        </a>
       </div>
 
       <div className={Styles.bottomiframe}>

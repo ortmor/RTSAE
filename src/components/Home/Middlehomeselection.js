@@ -33,12 +33,12 @@ const Middlehomeselection = () => {
             </div>
             <div className={Styles.Middlehomeselectionicontext}>
               <h4>
-               Digital <br/> Transformation
+                Digital <br /> Transformation
               </h4>
             </div>
 
             <div className={Styles.Middlehomeselectioniconlink}>
-              <Link href="/comingsoon">Explore</Link>
+              <Link href="/digitaltransformation">Explore</Link>
             </div>
           </div>
 
@@ -53,7 +53,7 @@ const Middlehomeselection = () => {
             </div>
 
             <div className={Styles.Middlehomeselectioniconlink}>
-              <Link href="/comingsoon">Explore</Link>
+              <Link href="/elvsolutions">Explore</Link>
             </div>
           </div>
 
@@ -68,7 +68,7 @@ const Middlehomeselection = () => {
             </div>
 
             <div className={Styles.Middlehomeselectioniconlink}>
-              <Link href="/comingsoon">Explore</Link>
+              <Link href="/audiovisualsolutions">Explore</Link>
             </div>
           </div>
 
@@ -83,7 +83,7 @@ const Middlehomeselection = () => {
             </div>
 
             <div className={Styles.Middlehomeselectioniconlink}>
-              <Link href="/comingsoon">Explore</Link>
+              <Link href="/datacentersolutions">Explore</Link>
             </div>
           </div>
 
@@ -101,7 +101,7 @@ const Middlehomeselection = () => {
             </div>
 
             <div className={Styles.Middlehomeselectioniconlink}>
-              <Link href="/comingsoon">Explore</Link>
+              <Link href="/apcturnkeyprojects">Explore</Link>
             </div>
           </div>
         </div>
