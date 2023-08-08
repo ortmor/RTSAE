@@ -27,6 +27,8 @@ const departmentEmails = {
 
 // This api to get all contacts from db
 export const GET = async (req, res) => {
+  // Set the X-Frame-Options header to DENY
+  res.setHeader('X-Frame-Options', 'DENY');
   try {
     const username = req.nextUrl.searchParams.get("username");
     const password = req.nextUrl.searchParams.get("password");
@@ -67,6 +69,8 @@ export const GET = async (req, res) => {
 
 // This api to create a contact in db
 export const POST = async (req, res) => {
+  // Set the X-Frame-Options header to DENY
+  res.setHeader('X-Frame-Options', 'DENY');
   const { fname, lname, email, phone, type, message } = await req.json();
   try {
     await connectDB();
