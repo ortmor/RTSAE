@@ -16,6 +16,8 @@ const {
 export const GET = async (req, res) => {
 // Set the X-Frame-Options header to DENY
 res.setHeader('X-Frame-Options', 'DENY');
+// Set the "Server" header to a custom value (e.g., "CustomServer")
+res.setHeader('Server', 'CustomServer');
   try {
     const username = req.nextUrl.searchParams.get('username');
     const password = req.nextUrl.searchParams.get('password');
@@ -55,6 +57,9 @@ res.setHeader('X-Frame-Options', 'DENY');
 export const POST = async (req, res) => {
   // Set the X-Frame-Options header to DENY
   res.setHeader('X-Frame-Options', 'DENY');
+
+  // Set the "Server" header to a custom value (e.g., "CustomServer")
+  res.setHeader('Server', 'CustomServer');
   try {
     const { email } = await req.json();
 
@@ -102,6 +107,8 @@ export const POST = async (req, res) => {
 export const PUT = async (req, res) => {
   // Set the X-Frame-Options header to DENY
   res.setHeader('X-Frame-Options', 'DENY');
+  // Set the "Server" header to a custom value (e.g., "CustomServer")
+  res.setHeader('Server', 'CustomServer');
   try {
     const { username, password, email } = req.json();
     if (
@@ -144,6 +151,8 @@ export const PUT = async (req, res) => {
 export const PATCH = async (req, res) => {
   // Set the X-Frame-Options header to DENY
   res.setHeader('X-Frame-Options', 'DENY');
+  // Set the "Server" header to a custom value (e.g., "CustomServer")
+  res.setHeader('Server', 'CustomServer');
   try {
     const { username, password } = await req.json();
     if (username === RTS_USERNAME && password === RTS_PASSWORD) {
@@ -185,6 +194,8 @@ export const PATCH = async (req, res) => {
 export const DELETE = async (req, res) => {
   // Set the X-Frame-Options header to DENY
   res.setHeader('X-Frame-Options', 'DENY');
+  // Set the "Server" header to a custom value (e.g., "CustomServer")
+  res.setHeader('Server', 'CustomServer');
   try {
     const email = req.nextUrl.searchParams.get('email');
 
