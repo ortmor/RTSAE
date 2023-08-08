@@ -69,6 +69,7 @@ export const POST = async (req, res) => {
         statusCode: 400,
       };
     }
+
     await connectDB();
     const subscriptionExist = await Subscription.findOne({ email });
     if (subscriptionExist && subscriptionExist.status === 'ACTIVE') {

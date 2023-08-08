@@ -1,4 +1,5 @@
 import emailjs from '@emailjs/nodejs';
+import nodemailer from "nodemailer";
 
 const { EMAILJS_SERVICE_ID, EMAILJS_PUBLIC_KEY, EMAILJS_PRIVATE_KEY } =
   process.env;
@@ -34,4 +35,62 @@ const sendEmail = (name, templateId, emailParams) => {
   });
 };
 
-export default sendEmail;
+const MAIL_SERVICE_HOST = "smtp.office365.com"
+const MAIL_SERVICE_PORT = "587"
+const MAIL_AUTH_USER = "test.rtsweb@rtsit.ae"
+const MAIL_AUTH_PASS = "Dubai@2020$"
+const MAIL_AUTH_NAME = "RTS"
+
+/**
+ * To send a mail through nodemailer
+ * @param {Object} body - { name, email, role, password } | { name, email, token }
+ * @returns success message
+ */
+export const sendNodeMailer = (samp, type, body) => {
+  return new Promise(async (resolve, reject) => {
+    try {
+      if(!type || !["DEP_MAIL","REPLY_MAIL","SUBSCRIBE_MAIL"].includes(type)){
+        return reject({
+          message:"Provide type(DEP_MAIL, REPLY_MAIL, SUBSCRIBE_MAIL) and body"
+        })
+      }
+      const { email } = body;
+
+      // create reusable transporter object using the default SMTP transport
+      const transporter = nodemailer.createTransport({
+        host: MAIL_SERVICE_HOST,
+        port: MAIL_SERVICE_PORT,
+        secure: MAIL_SERVICE_PORT == "465" ? true : false, // true for 465, false for other ports
+        // secureConnection: false,
+        // tls: {
+        //   ciphers: "SSLv3",
+        // },
+        // requireTLS: true,
+        // debug: true,
+        auth: {
+          user: MAIL_AUTH_USER,
+          pass: MAIL_AUTH_PASS,
+        },
+      });
+
+      const message = {
+        from: `"${MAIL_AUTH_NAME}" <${MAIL_AUTH_USER}>`,
+        to: email,
+        subject: "HIIII",
+        text: "HIIIIIIIII",
+        html: "<h1>HIIIIIIIII</h1>",
+      };
+
+      const info = await transporter.sendMail(message);
+      resolve({
+        success: true,
+        message: `Message sent: ${info.messageId}`,
+      });
+    } catch (error) {
+      console.log("Email not sent! in Nodemailer => ", error.message);
+      reject({ message: error.message, code: error.code });
+    }
+  });
+};
+
+export default sendNodeMailer;
