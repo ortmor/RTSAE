@@ -4,13 +4,7 @@ import sendEmail from '@/utils/sendMail';
 import connectDB from '@/config/db';
 import Subscription from '@/models/Subscription';
 
-const {
-  EMAILJS_SUBSCRIBE_TEMPLATE_ID,
-  EMAILJS_UNSUBSCRIBE_TEMPLATE_ID,
-  EMAILJS_SUBSCRIBED_MAIL_TEMPLATE_ID,
-  RTS_USERNAME,
-  RTS_PASSWORD,
-} = process.env;
+const { RTS_USERNAME, RTS_PASSWORD } = process.env;
 
 // This api to get all subscribers
 export const GET = async (req, res) => {
@@ -59,6 +53,7 @@ export const POST = async (req, res) => {
         statusCode: 400,
       };
     }
+
     await connectDB();
     const subscriptionExist = await Subscription.findOne({ email });
     if (subscriptionExist && subscriptionExist.status === 'ACTIVE') {
@@ -77,7 +72,7 @@ export const POST = async (req, res) => {
     }
 
     // Send the "subscribed successfully" email to the user
-    await sendEmail('SUBSCRIPTION_MAIL', EMAILJS_SUBSCRIBE_TEMPLATE_ID, {
+    await sendEmail('SUBSCRIBE_MAIL', {
       email,
     });
 
@@ -200,7 +195,7 @@ export const DELETE = async (req, res) => {
     }
 
     // Send the unsubscribed message to user
-    await sendEmail('UNSUBSCRIPTION_MAIL', EMAILJS_UNSUBSCRIBE_TEMPLATE_ID, {
+    await sendEmail('UNSUBSCRIPTION_MAIL', {
       email,
     });
 
