@@ -4,34 +4,11 @@ import sendEmail from '@/utils/sendMail';
 import connectDB from '@/config/db';
 import Subscription from '@/models/Subscription';
 
-const {
-  EMAILJS_SUBSCRIBE_TEMPLATE_ID,
-  EMAILJS_UNSUBSCRIBE_TEMPLATE_ID,
-  EMAILJS_SUBSCRIBED_MAIL_TEMPLATE_ID,
-  RTS_USERNAME,
-  RTS_PASSWORD,
-} = process.env;
+const { RTS_USERNAME, RTS_PASSWORD } = process.env;
 
 // This api to get all subscribers
 export const GET = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
-
   try {
-    await sendEmail('DEP_MAIL', 'DEP_MAIL', {
-      name: 'HIIIIIIIIIIIiiiiiiii',
-      email: 'gokulsreejith25@gmail.com',
-    });
-    return NextResponse.json({
-      message: 'Subscribed successfully',
-      // subscriptions: {
-      //   activeSubscriptions,
-      //   inactiveSubscriptions,
-      // },
-    });
-
     const username = req.nextUrl.searchParams.get('username');
     const password = req.nextUrl.searchParams.get('password');
     if (username === RTS_USERNAME && password === RTS_PASSWORD) {
@@ -67,11 +44,6 @@ export const GET = async (req, res) => {
 
 // This api to do subscribe
 export const POST = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
   try {
     const { email } = await req.json();
 
@@ -100,7 +72,7 @@ export const POST = async (req, res) => {
     }
 
     // Send the "subscribed successfully" email to the user
-    await sendEmail('SUBSCRIPTION_MAIL', EMAILJS_SUBSCRIBE_TEMPLATE_ID, {
+    await sendEmail('SUBSCRIBE_MAIL', {
       email,
     });
 
@@ -118,10 +90,6 @@ export const POST = async (req, res) => {
 
 // This api for check the email is subscribed or not subscribed
 export const PUT = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
   try {
     const { username, password, email } = req.json();
     if (
@@ -162,10 +130,6 @@ export const PUT = async (req, res) => {
 
 // This api to sent a mail to subscribers
 export const PATCH = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
   try {
     const { username, password } = await req.json();
     if (username === RTS_USERNAME && password === RTS_PASSWORD) {
@@ -205,10 +169,6 @@ export const PATCH = async (req, res) => {
 
 // This api to do unsubscribe
 export const DELETE = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
   try {
     const email = req.nextUrl.searchParams.get('email');
 
@@ -235,7 +195,7 @@ export const DELETE = async (req, res) => {
     }
 
     // Send the unsubscribed message to user
-    await sendEmail('UNSUBSCRIPTION_MAIL', EMAILJS_UNSUBSCRIBE_TEMPLATE_ID, {
+    await sendEmail('UNSUBSCRIPTION_MAIL', {
       email,
     });
 

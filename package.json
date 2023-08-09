@@ -12,7 +12,6 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@emailjs/nodejs": "^2.2.0",
     "axios": "^1.4.0",
     "mongoose": "^7.4.1",
     "next": "13.4.4",

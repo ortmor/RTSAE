@@ -1,62 +1,45 @@
-import emailjs from '@emailjs/nodejs';
 import nodemailer from 'nodemailer';
+import {
+  generateContactInqiryMailTemplate,
+  generateContactReplyMailTemplate,
+  generateSubscribeMailTemplate,
+} from './generateTemplates';
 
-const { EMAILJS_SERVICE_ID, EMAILJS_PUBLIC_KEY, EMAILJS_PRIVATE_KEY } =
-  process.env;
-
-const sendEmail = (name, templateId, emailParams) => {
-  return new Promise(async (resolve, reject) => {
-    try {
-      if (!templateId || !emailParams) {
-        reject({
-          name: 'SEND_EMAIL_ERROR',
-          message: 'Please provide templateId and emailParams',
-          statusCode: 400,
-        });
-      }
-      await emailjs.send(EMAILJS_SERVICE_ID, templateId, emailParams, {
-        publicKey: EMAILJS_PUBLIC_KEY,
-        privateKey: EMAILJS_PRIVATE_KEY,
-      });
-      console.log('Mail sent with ', emailParams);
-      resolve({
-        success: true,
-        message: 'Email sent successfully',
-      });
-    } catch (error) {
-      reject({
-        name: name || 'SEND_EMAIL_ERROR',
-        message: error.message,
-        statusCode: error.statusCode || 500,
-      });
-    }
-  });
-};
-
-const MAIL_SERVICE_HOST = 'smtp.office365.com';
-const MAIL_SERVICE_PORT = '25';
-const MAIL_AUTH_USER = 'test.rtsweb@rtsit.ae';
-const MAIL_AUTH_PASS = 'Dubai@2020$';
-const MAIL_AUTH_NAME = 'RTS';
+const MAIL_SERVICE_HOST = process.env.MAIL_SERVICE_HOST || 'MAIL_SERVICE_HOST';
+const MAIL_SERVICE_PORT = process.env.MAIL_SERVICE_PORT || '25';
+const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER || 'MAIL_AUTH_USER';
+const MAIL_AUTH_PASS = process.env.MAIL_AUTH_PASS || 'MAIL_AUTH_PASS';
+const MAIL_AUTH_NAME = process.env.MAIL_AUTH_NAME || 'RTS';
 
 /**
  * To send a mail through nodemailer
- * @param {Object} body - { name, email, role, password } | { name, email, token }
+ * @param {Object} data - { name, type, deptMailId, email, phone, message }
  * @returns success message
  */
-export const sendNodeMailer = (samp, type, body) => {
+export const sendNodeMailer = (mailType, data) => {
   return new Promise(async (resolve, reject) => {
     try {
+      const { name, type, deptMailId, email, phone, message } = data;
+
       if (
-        !type ||
-        !['DEP_MAIL', 'REPLY_MAIL', 'SUBSCRIBE_MAIL'].includes(type)
+        !mailType ||
+        ![
+          'CONTACT_INQUIRY_MAIL',
+          'CONTACT_REPLY_MAIL',
+          'SUBSCRIBE_MAIL',
+          'UNSUBSCRIBE_MAIL',
+        ].includes(mailType) ||
+        (mailType === 'CONTACT_INQUIRY_MAIL' &&
+          (!name || !type || !email || !phone || !message || !deptMailId)) ||
+        (mailType === 'CONTACT_REPLY_MAIL' && !name) ||
+        (mailType === 'SUBSCRIBE_MAIL' && !email) ||
+        (mailType === 'UNSUBSCRIBE_MAIL' && !email)
       ) {
         return reject({
           message:
-            'Provide type(DEP_MAIL, REPLY_MAIL, SUBSCRIBE_MAIL) and body',
+            'Provide mailType(CONTACT_INQUIRY_MAIL, CONTACT_REPLY_MAIL, SUBSCRIBE_MAIL) and name, type, email, phone, message',
         });
       }
-      const { email } = body;
 
       // create reusable transporter object using the default SMTP transport
       const transporter = nodemailer.createTransport({
@@ -75,19 +58,44 @@ export const sendNodeMailer = (samp, type, body) => {
         },
       });
 
-      console.log(transporter);
-
-      const message = {
+      const body = {
         from: `"${MAIL_AUTH_NAME}" <${MAIL_AUTH_USER}>`,
-        to: email,
-        subject: 'HIIII',
-        text: 'HIIIIIIIII',
-        html: '<h1>HIIIIIIIII</h1>',
+        to: type === 'CONTACT_INQUIRY_MAIL' ? deptMailId : email,
+        subject:
+          type === 'CONTACT_INQUIRY_MAIL'
+            ? 'New Contact Inquiry from Your Website'
+            : type === 'CONTACT_REPLY_MAIL'
+            ? 'Thank you for Your Inquiry - RTS Customer Support'
+            : 'Welcome Aboard! Get Ready for an Epic Tech Adventure!',
+        text:
+          type === 'CONTACT_INQUIRY_MAIL'
+            ? generateContactInqiryMailTemplate('text', {
+                name,
+                type,
+                email,
+                phone,
+                message,
+              })
+            : type === 'CONTACT_REPLY_MAIL'
+            ? generateContactReplyMailTemplate('text', { name })
+            : generateSubscribeMailTemplate('text', { email }),
+        html:
+          type === 'CONTACT_INQUIRY_MAIL'
+            ? generateContactInqiryMailTemplate('text', {
+                name,
+                type,
+                email,
+                phone,
+                message,
+              })
+            : type === 'CONTACT_REPLY_MAIL'
+            ? generateContactReplyMailTemplate('html', { name })
+            : generateSubscribeMailTemplate('html', { email }),
       };
 
-      console.log(message);
+      console.log(body);
 
-      const info = await transporter.sendMail(message);
+      const info = await transporter.sendMail(body);
 
       console.log(info);
 
@@ -98,7 +106,7 @@ export const sendNodeMailer = (samp, type, body) => {
     } catch (error) {
       console.log('Email not sent! in Nodemailer => ', error.message);
       console.log(error);
-      reject({ message: error.message, code: error.code });
+      reject({ message: error.message, code: error.code, name: mailType });
     }
   });
 };

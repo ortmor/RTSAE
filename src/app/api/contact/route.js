@@ -6,31 +6,25 @@ import Contact from '@/models/Contact';
 
 // Retrieve values from environment variables or provide default values
 const {
-  EMAILJS_CONTACT_MAIL_TEMPLATE_ID,
-  EMAILJS_CONTACT_REPLY_MAIL_TEMPLATE_ID,
-  GENERAL_EMAIL_ID,
+  SALES_ENQUIRY_EMAIL_ID,
   SUPPORT_EMAIL_ID,
-  IT_PROJECT_EMAIL_ID,
-  ELV_PROJECTS_EMAIL_ID,
-  SOLUTION_ENQUIRY_EMAIL_ID,
+  // IT_PROJECT_EMAIL_ID,
+  // ELV_PROJECTS_EMAIL_ID,
+  // SOLUTION_ENQUIRY_EMAIL_ID,
   RTS_USERNAME,
   RTS_PASSWORD,
 } = process.env;
 
 const departmentEmails = {
-  SalesEnquiries: GENERAL_EMAIL_ID,
+  SalesEnquiries: SALES_ENQUIRY_EMAIL_ID,
   SupportServices: SUPPORT_EMAIL_ID,
-  'IT Project': IT_PROJECT_EMAIL_ID,
-  'ELV Projects': ELV_PROJECTS_EMAIL_ID,
-  'Solution Enquiry': SOLUTION_ENQUIRY_EMAIL_ID,
+  // 'IT Project': IT_PROJECT_EMAIL_ID,
+  // 'ELV Projects': ELV_PROJECTS_EMAIL_ID,
+  // 'Solution Enquiry': SOLUTION_ENQUIRY_EMAIL_ID,
 };
 
 // This api to get all contacts from db
 export const GET = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
   try {
     const username = req.nextUrl.searchParams.get('username');
     const password = req.nextUrl.searchParams.get('password');
@@ -71,10 +65,6 @@ export const GET = async (req, res) => {
 
 // This api to create a contact in db
 export const POST = async (req, res) => {
-  // Set the X-Frame-Options header to DENY
-  // res.setHeader('X-Frame-Options', 'DENY');
-  // Set the "Server" header to a custom value (e.g., "CustomServer")
-  // res.setHeader('Server', 'CustomServer');
   const { fname, lname, email, phone, type, message } = await req.json();
   try {
     await connectDB();
@@ -90,9 +80,9 @@ export const POST = async (req, res) => {
       ![
         'SalesEnquiries',
         'SupportServices',
-        'IT Project',
-        'ELV Projects',
-        'Solution Enquiry',
+        // 'IT Project',
+        // 'ELV Projects',
+        // 'Solution Enquiry',
       ].includes(type) ||
       !message
     ) {
@@ -100,7 +90,7 @@ export const POST = async (req, res) => {
         statusCode: 400,
         message: !validator.isEmail(email)
           ? 'Invalid email address'
-          : "Provide fname, lname, email, phone, type - ['SalesEnquiries', 'SupportServices', 'IT Project', 'ELV Projects', 'Solution Enquiry'], message",
+          : "Provide fname, lname, email, phone, type - ['SalesEnquiries', 'SupportServices'], message",
       };
     }
 
@@ -129,18 +119,14 @@ export const POST = async (req, res) => {
     });
 
     // send the email to the department mail id and handle the mail logs
-    await sendEmail(
-      'CONTACT_DEPARTMENT_MAIL',
-      EMAILJS_CONTACT_MAIL_TEMPLATE_ID,
-      {
-        name: `${fname} ${lname}`,
-        type: type,
-        email: email,
-        phone: phone,
-        deptMailId: departmentEmails[type],
-        message: message,
-      }
-    );
+    await sendEmail('CONTACT_INQUIRY_MAIL', {
+      name: `${fname} ${lname}`,
+      type: type,
+      email: email,
+      phone: phone,
+      message: message,
+      deptMailId: departmentEmails[type],
+    });
 
     // Update email log
     await Contact.findOneAndUpdate(
@@ -153,25 +139,20 @@ export const POST = async (req, res) => {
     );
 
     // send reply to the user
-    // await sendEmail(
-    //   'CONTACT_REPLY_MAIL',
-    //   EMAILJS_CONTACT_REPLY_MAIL_TEMPLATE_ID,
-    //   {
-    //     name: `${fname} ${lname}`,
-    //     type: type,
-    //     email: email,
-    //   }
-    // );
+    await sendEmail('CONTACT_REPLY_MAIL', {
+      name: `${fname} ${lname}`,
+      email: email,
+    });
 
     // Update email reply log
-    // await Contact.findOneAndUpdate(
-    //   { type: type, email: email, phone: phone },
-    //   {
-    //     'mailLog.repliedMailSend': true,
-    //     'mailLog.repliedMailSendAt': new Date(),
-    //   },
-    //   { new: true }
-    // );
+    await Contact.findOneAndUpdate(
+      { type: type, email: email, phone: phone },
+      {
+        'mailLog.repliedMailSend': true,
+        'mailLog.repliedMailSendAt': new Date(),
+      },
+      { new: true }
+    );
 
     // Return a success response
     return NextResponse.json(
@@ -184,7 +165,7 @@ export const POST = async (req, res) => {
     );
   } catch (error) {
     // Handle email failed error
-    if (error.name === 'CONTACT_DEPARTMENT_MAIL') {
+    if (error.name === 'CONTACT_INQUIRY_MAIL') {
       await Contact.findOneAndUpdate(
         { type: type, email: email, phone: phone },
         {
@@ -194,19 +175,18 @@ export const POST = async (req, res) => {
         },
         { new: true }
       );
+    } else if (error.name === 'CONTACT_REPLY_MAIL') {
+      await Contact.findOneAndUpdate(
+        { type: type, email: email, phone: phone },
+        {
+          'mailLog.repliedMailFailed': true,
+          'mailLog.repliedMailFailedAt': new Date(),
+          'mailLog.repliedMailFailedReason':
+            error.message || 'Email sent failed',
+        },
+        { new: true }
+      );
     }
-    //  else if (error.name === 'CONTACT_REPLY_MAIL') {
-    //   await Contact.findOneAndUpdate(
-    //     { type: type, email: email, phone: phone },
-    //     {
-    //       'mailLog.repliedMailFailed': true,
-    //       'mailLog.repliedMailFailedAt': new Date(),
-    //       'mailLog.repliedMailFailedReason':
-    //         error.message || 'Email sent failed',
-    //     },
-    //     { new: true }
-    //   );
-    // }
 
     // Return an error response
     return NextResponse.json(
