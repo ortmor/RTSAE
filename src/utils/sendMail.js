@@ -6,7 +6,7 @@ import {
 } from './generateTemplates';
 
 const MAIL_SERVICE_HOST = process.env.MAIL_SERVICE_HOST || 'smtp.office365.com';
-const MAIL_SERVICE_PORT = process.env.MAIL_SERVICE_PORT || '25';
+const MAIL_SERVICE_PORT = process.env.MAIL_SERVICE_PORT || '587';
 const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER || 'test.rtsweb@rtsit.ae';
 const MAIL_AUTH_PASS = process.env.MAIL_AUTH_PASS || 'Dubai@2020$';
 const MAIL_AUTH_NAME = process.env.MAIL_AUTH_NAME || 'RTS';
@@ -58,8 +58,6 @@ export const sendNodeMailer = (mailType, data) => {
         },
       });
 
-      console.log(1, type);
-
       const body = {
         from: `"${MAIL_AUTH_NAME}" <${MAIL_AUTH_USER}>`,
         to: mailType === 'CONTACT_INQUIRY_MAIL' ? deptMailId : email,
@@ -95,11 +93,7 @@ export const sendNodeMailer = (mailType, data) => {
             : generateSubscribeMailTemplate('html', { email }),
       };
 
-      console.log(body);
-
       const info = await transporter.sendMail(body);
-
-      console.log(info);
 
       resolve({
         success: true,

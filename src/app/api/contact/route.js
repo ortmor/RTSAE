@@ -65,8 +65,6 @@ export const GET = async (req, res) => {
 export const POST = async (req, res) => {
   const { fname, lname, email, phone, type, message } = await req.json();
   try {
-    console.log(SALES_ENQUIRY_EMAIL_ID, SUPPORT_EMAIL_ID);
-
     await connectDB();
 
     // Input validation
@@ -112,7 +110,6 @@ export const POST = async (req, res) => {
       deptMailId: departmentEmails[type],
     });
 
-    console.log('CONTACT_INQUIRY_MAIL');
     // send the email to the department mail id and handle the mail logs
     await sendEmail('CONTACT_INQUIRY_MAIL', {
       name: `${fname} ${lname}`,
@@ -133,7 +130,6 @@ export const POST = async (req, res) => {
       { new: true }
     );
 
-    console.log('CONTACT_REPLY_MAIL');
     // send reply to the user
     await sendEmail('CONTACT_REPLY_MAIL', {
       name: `${fname} ${lname}`,
