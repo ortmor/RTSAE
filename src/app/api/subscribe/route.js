@@ -4,7 +4,12 @@ import sendEmail from '@/utils/sendMail';
 import connectDB from '@/config/db';
 import Subscription from '@/models/Subscription';
 
-const { RTS_USERNAME, RTS_PASSWORD } = process.env;
+const RTS_USERNAME =
+  process.env.RTS_USERNAME ||
+  '5ca3a96aaed87c2987a97503cbb34d5aed08b15ff09c1e1f0ef250acfe1358371af367805203313ebe452cf3997d26d7a07bfbbae64054c7473fdab3a61027ef';
+const RTS_PASSWORD =
+  process.env.RTS_PASSWORD ||
+  '8bf76950ec7456e2d160cd271df0c4e095cbf2937370ca3984541704b3b460dd91038a5f136e80b72a98b3e8eafdf719e53b92c7c7d93253d2e0c538ff0d08c9';
 
 // This api to get all subscribers
 export const GET = async (req, res) => {

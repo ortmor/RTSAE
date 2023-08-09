@@ -5,22 +5,20 @@ import connectDB from '@/config/db';
 import Contact from '@/models/Contact';
 
 // Retrieve values from environment variables or provide default values
-const {
-  SALES_ENQUIRY_EMAIL_ID,
-  SUPPORT_EMAIL_ID,
-  // IT_PROJECT_EMAIL_ID,
-  // ELV_PROJECTS_EMAIL_ID,
-  // SOLUTION_ENQUIRY_EMAIL_ID,
-  RTS_USERNAME,
-  RTS_PASSWORD,
-} = process.env;
+const SALES_ENQUIRY_EMAIL_ID =
+  process.env.SALES_ENQUIRY_EMAIL_ID || 'rekhil@ortmoragency.com';
+const SUPPORT_EMAIL_ID =
+  process.env.SUPPORT_EMAIL_ID || 'vysakh@ortmoragency.com';
+const RTS_USERNAME =
+  process.env.RTS_USERNAME ||
+  '5ca3a96aaed87c2987a97503cbb34d5aed08b15ff09c1e1f0ef250acfe1358371af367805203313ebe452cf3997d26d7a07bfbbae64054c7473fdab3a61027ef';
+const RTS_PASSWORD =
+  process.env.RTS_PASSWORD ||
+  '8bf76950ec7456e2d160cd271df0c4e095cbf2937370ca3984541704b3b460dd91038a5f136e80b72a98b3e8eafdf719e53b92c7c7d93253d2e0c538ff0d08c9';
 
 const departmentEmails = {
   SalesEnquiries: SALES_ENQUIRY_EMAIL_ID,
   SupportServices: SUPPORT_EMAIL_ID,
-  // 'IT Project': IT_PROJECT_EMAIL_ID,
-  // 'ELV Projects': ELV_PROJECTS_EMAIL_ID,
-  // 'Solution Enquiry': SOLUTION_ENQUIRY_EMAIL_ID,
 };
 
 // This api to get all contacts from db
@@ -67,6 +65,8 @@ export const GET = async (req, res) => {
 export const POST = async (req, res) => {
   const { fname, lname, email, phone, type, message } = await req.json();
   try {
+    console.log(SALES_ENQUIRY_EMAIL_ID, SUPPORT_EMAIL_ID);
+
     await connectDB();
 
     // Input validation
@@ -77,13 +77,7 @@ export const POST = async (req, res) => {
       !validator.isEmail(email) ||
       !phone ||
       !type ||
-      ![
-        'SalesEnquiries',
-        'SupportServices',
-        // 'IT Project',
-        // 'ELV Projects',
-        // 'Solution Enquiry',
-      ].includes(type) ||
+      !['SalesEnquiries', 'SupportServices'].includes(type) ||
       !message
     ) {
       throw {
@@ -118,6 +112,7 @@ export const POST = async (req, res) => {
       deptMailId: departmentEmails[type],
     });
 
+    console.log('CONTACT_INQUIRY_MAIL');
     // send the email to the department mail id and handle the mail logs
     await sendEmail('CONTACT_INQUIRY_MAIL', {
       name: `${fname} ${lname}`,
@@ -138,6 +133,7 @@ export const POST = async (req, res) => {
       { new: true }
     );
 
+    console.log('CONTACT_REPLY_MAIL');
     // send reply to the user
     await sendEmail('CONTACT_REPLY_MAIL', {
       name: `${fname} ${lname}`,

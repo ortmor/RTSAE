@@ -10,7 +10,7 @@ export const generateContactInqiryMailTemplate = (
 ) => {
   if (gtype && gtype === 'text') {
     return `
-    Dear RTS Team,'\n
+    Dear RTS Team,\n
     We hope this message finds you well. We are writing to inform you that your website has received a new contact inquiry. Below are the details:\n
       \tName: \t${name}
       \tType: \t${type}
@@ -38,17 +38,13 @@ export const generateContactInqiryMailTemplate = (
           your website has received a new contact inquiry. Below are the details:
         </p>
     
-        <h2>Name:</h2>
-        <p>${name}</p>
+        <h2>Name: <span style="font-size: 16px;">${name}</span></h2> 
     
-        <h2>Inquiry Type:</h2>
-        <p>${type}</p>
+        <h2>Inquiry Type: <span style="font-size: 16px;">${type}</span></h2>
     
-        <h2>Email:</h2>
-        <p>${email}</p>
+        <h2>Email: <span style="font-size: 16px;">${email}</span></h2>
     
-        <h2>Phone:</h2>
-        <p>${phone}</p>
+        <h2>Phone: <span style="font-size: 16px;">${phone}</span></h2>
     
         <h2>Message:</h2>
     
@@ -73,7 +69,7 @@ export const generateContactInqiryMailTemplate = (
  * @param {Object} { name }
  * @returns
  */
-export const generateContactReplyMailTemplate = (type, { name }) => {
+export const generateContactReplyMailTemplate = (type, { name, email }) => {
   if (type && type === 'text') {
     return `
     Dear ${name}!,
@@ -95,7 +91,7 @@ export const generateContactReplyMailTemplate = (type, { name }) => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </head>
       <body style="text-align: left">
-        <h2>Dear ${email},</h2>
+        <h2>Dear ${name},</h2>
 
         <p>Greetings from the RTS Team! </p>
 

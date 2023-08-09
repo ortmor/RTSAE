@@ -5,10 +5,10 @@ import {
   generateSubscribeMailTemplate,
 } from './generateTemplates';
 
-const MAIL_SERVICE_HOST = process.env.MAIL_SERVICE_HOST || 'MAIL_SERVICE_HOST';
+const MAIL_SERVICE_HOST = process.env.MAIL_SERVICE_HOST || 'smtp.office365.com';
 const MAIL_SERVICE_PORT = process.env.MAIL_SERVICE_PORT || '25';
-const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER || 'MAIL_AUTH_USER';
-const MAIL_AUTH_PASS = process.env.MAIL_AUTH_PASS || 'MAIL_AUTH_PASS';
+const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER || 'test.rtsweb@rtsit.ae';
+const MAIL_AUTH_PASS = process.env.MAIL_AUTH_PASS || 'Dubai@2020$';
 const MAIL_AUTH_NAME = process.env.MAIL_AUTH_NAME || 'RTS';
 
 /**
@@ -58,17 +58,19 @@ export const sendNodeMailer = (mailType, data) => {
         },
       });
 
+      console.log(1, type);
+
       const body = {
         from: `"${MAIL_AUTH_NAME}" <${MAIL_AUTH_USER}>`,
-        to: type === 'CONTACT_INQUIRY_MAIL' ? deptMailId : email,
+        to: mailType === 'CONTACT_INQUIRY_MAIL' ? deptMailId : email,
         subject:
-          type === 'CONTACT_INQUIRY_MAIL'
+          mailType === 'CONTACT_INQUIRY_MAIL'
             ? 'New Contact Inquiry from Your Website'
-            : type === 'CONTACT_REPLY_MAIL'
+            : mailType === 'CONTACT_REPLY_MAIL'
             ? 'Thank you for Your Inquiry - RTS Customer Support'
             : 'Welcome Aboard! Get Ready for an Epic Tech Adventure!',
         text:
-          type === 'CONTACT_INQUIRY_MAIL'
+          mailType === 'CONTACT_INQUIRY_MAIL'
             ? generateContactInqiryMailTemplate('text', {
                 name,
                 type,
@@ -76,20 +78,20 @@ export const sendNodeMailer = (mailType, data) => {
                 phone,
                 message,
               })
-            : type === 'CONTACT_REPLY_MAIL'
-            ? generateContactReplyMailTemplate('text', { name })
+            : mailType === 'CONTACT_REPLY_MAIL'
+            ? generateContactReplyMailTemplate('text', { name, email })
             : generateSubscribeMailTemplate('text', { email }),
         html:
-          type === 'CONTACT_INQUIRY_MAIL'
-            ? generateContactInqiryMailTemplate('text', {
+          mailType === 'CONTACT_INQUIRY_MAIL'
+            ? generateContactInqiryMailTemplate('html', {
                 name,
                 type,
                 email,
                 phone,
                 message,
               })
-            : type === 'CONTACT_REPLY_MAIL'
-            ? generateContactReplyMailTemplate('html', { name })
+            : mailType === 'CONTACT_REPLY_MAIL'
+            ? generateContactReplyMailTemplate('html', { name, email })
             : generateSubscribeMailTemplate('html', { email }),
       };
 
