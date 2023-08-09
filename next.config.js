@@ -13,8 +13,18 @@ const nextConfig = {
             value: "DENY",
           },
           {
+            key: "Content-Security-Policy",
+            value: "",
+          },
+
+          {
             key: "X-Content-Type-Options",
             value: "nosniff",
+          },
+          {
+            key: "Permissions-Policy",
+            value:
+              "camera=(); battery=(self); geolocation=(); microphone=('https://a-domain.com')",
           },
           {
             key: "Referrer-Policy",
