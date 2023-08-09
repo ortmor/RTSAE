@@ -28,5 +28,9 @@
     "swiper": "^9.3.2",
     "typewriter-effect": "^2.20.1",
     "validator": "^13.9.0"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.19",
+    "typescript": "5.1.6"
   }
 }

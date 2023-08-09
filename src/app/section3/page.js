@@ -38,7 +38,7 @@ const page = () => {
             </div>
 
             <div className={Styles.Bloginnercommoncontainertext}>
-              <h2>(A) SAccelerating Technological Advancements:</h2>
+              <h2>(A) Accelerating Technological Advancements:</h2>
             </div>
 
             <div className={Styles.Bloginnercommoncontaineraparagraph}>
