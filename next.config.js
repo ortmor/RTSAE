@@ -3,10 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-    // SALES_ENQUIRY_EMAIL_ID: "info@rts.ae",
-    // SUPPORT_EMAIL_ID: "service.support@rts.ae",
-    SALES_ENQUIRY_EMAIL_ID:"rekhil@ortmoragency.com",
-    SUPPORT_EMAIL_ID:"vysakh@ortmoragency.com",
+    SALES_ENQUIRY_EMAIL_ID: "info@rts.ae",
+    SUPPORT_EMAIL_ID: "service.support@rts.ae",
     RTS_USERNAME:
       "5ca3a96aaed87c2987a97503cbb34d5aed08b15ff09c1e1f0ef250acfe1358371af367805203313ebe452cf3997d26d7a07bfbbae64054c7473fdab3a61027ef",
     RTS_PASSWORD:
