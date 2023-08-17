@@ -5,11 +5,11 @@ import {
   generateSubscribeMailTemplate,
 } from "./generateTemplates";
 
-const MAIL_SERVICE_HOST = process.env.MAIL_SERVICE_HOST || "smtp.office365.com";
-const MAIL_SERVICE_PORT = process.env.MAIL_SERVICE_PORT || "587";
-const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER || "test.rtsweb@rtsit.ae";
-const MAIL_AUTH_PASS = process.env.MAIL_AUTH_PASS || "Dubai@2020$";
-const MAIL_AUTH_NAME = process.env.MAIL_AUTH_NAME || "RTS";
+const MAIL_SERVICE_HOST = process.env.MAIL_SERVICE_HOST;
+const MAIL_SERVICE_PORT = process.env.MAIL_SERVICE_PORT;
+const MAIL_AUTH_USER = process.env.MAIL_AUTH_USER;
+const MAIL_AUTH_PASS = process.env.MAIL_AUTH_PASS;
+const MAIL_AUTH_NAME = process.env.MAIL_AUTH_NAME;
 
 /**
  * To send a mail through nodemailer
