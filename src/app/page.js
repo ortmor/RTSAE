@@ -1,5 +1,5 @@
-import { config } from 'dotenv';
-config(); 
+import { config } from "dotenv";
+config();
 import Layout from "@/components/Layout";
 import Landing from "@/components/Home/Landing";
 import Homemain from "@/components/Home/Homemain";
