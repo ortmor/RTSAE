@@ -12,7 +12,7 @@ const RTS_PASSWORD = process.env.RTS_PASSWORD;
 
 const departmentEmails = {
   SalesEnquiries: SALES_ENQUIRY_EMAIL_ID,
-  SupportServices: SUPPORT_EMAIL_ID,
+  SupportServices: SUPPORT_EMAIL_ID, 
 };
 
 // This api to get all contacts from db
