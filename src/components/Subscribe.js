@@ -5,8 +5,11 @@ import "react-toastify/dist/ReactToastify.css";
 import Styles from "../styles/footer.module.scss";
 import { doSubscribe, doUnsubscribe } from "@/services/subscriptionService";
 
+
 const Subscribe = () => {
   const emailRef = useRef("");
+
+
   const toastId = useRef(null);
 
   const handleSubmitForSubscribe = async (e) => {
@@ -55,6 +58,7 @@ const Subscribe = () => {
       alert(message);
     }
   };
+
   return (
     <div className={Styles.subscribemaincontainer}>
       <ToastContainer />
@@ -70,7 +74,7 @@ const Subscribe = () => {
 
         <div className={Styles.subchildtwo}>
           <form autoComplete="off">
-            {/* <input
+            <input
               id={Styles.inputbutton1}
               type="email"
               placeholder="Your email goes here"
@@ -81,10 +85,8 @@ const Subscribe = () => {
               id={Styles.inputbutton2}
               type="button"
               value="Subscribe"
-              onClick={handleSubmitForSubscribe}
-            /> */}
-
-            
+              onClick={() => window.location.assign("/comingsoon")}
+            />
           </form>
         </div>
       </div>
