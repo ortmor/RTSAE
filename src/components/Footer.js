@@ -44,21 +44,36 @@ function Footer() {
           </div>
           <br />
         </div>
-
         <div className={Styles.middle_container}>
           <h1>Head Office</h1>
 
           <div>
             <p>
-              Ministries Complex, <br />
-              Royal Group Building, 1st Floor
+              Royal Technology Solutions
               <br />
-              P.O.Box 112847, Abu Dhabi, UAE
+              1st Floor, Royal Group Building
               <br />
-              Tel: <span>   <a style={{fontSize:"0.8rem"}} href="tel:+97102-8111333">+971 02-8111333</a>  </span> / <span>  <a style={{fontSize:"0.8rem"}} href="tel:+97102-8111345">+971  02-8111345</a>      </span>
+              Ministries Complex,
+              <br />
+              Abu Dhabi, U.A.E, PO BOX 112847,
+              <br />
+              Tel:{" "}
+              <span>
+                {" "}
+                <a style={{ fontSize: "0.8rem" }} href="tel:+97128111333">
+                  +971-28111333
+                </a>{" "}
+              </span>{" "}
+              /{" "}
+              <span>
+                {" "}
+                <a style={{ fontSize: "0.8rem" }} href="tel:+97128111345">
+                  +971-28111345
+                </a>{" "}
+              </span>
             </p>
           </div>
-        
+
           <div className={Styles.linkiconcontainer}>
             <Link href="https://twitter.com/i/flow/login?redirect_after_login=%2Frts_ae">
               <FaTwitter size="1em" />
@@ -81,7 +96,6 @@ function Footer() {
             </Link>
           </div>
         </div>
-
         <div className={Styles.last_container}>
           <h1>Quick Link</h1>
           <div className={Styles.linkcontainer}>

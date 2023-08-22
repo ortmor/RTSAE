@@ -80,7 +80,7 @@ const Job = () => {
       style="object-fit: contain;"
         width='100%'
         height='500px'
-        src="/jobs/ps.jpg"
+        src="/jobs/PS.jpg"
       ></img>
       <a style="display: inline-block;
           background-color: #d33;
@@ -88,7 +88,7 @@ const Job = () => {
           padding: 10px 20px;
           text-decoration: none;
           border-radius: 5px;"
-   href="/jobs/ps.jpg"
+   href="/jobs/PS.jpg"
    target="_blank">view</a>
     </div>
        
@@ -148,7 +148,7 @@ const Job = () => {
       style="object-fit: contain;"
         width='100%'
         height='500px'
-        src="/jobs/nse.png"
+        src="/jobs/NSE.png"
       ></img>
       <a style="display: inline-block;
           background-color: #d33;
@@ -156,7 +156,7 @@ const Job = () => {
           padding: 10px 20px;
           text-decoration: none;
           border-radius: 5px;"
-   href="/jobs/nse.png"
+   href="/jobs/NSE.png"
    target="_blank">view</a>
     </div>
        

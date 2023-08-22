@@ -426,16 +426,7 @@ Experience the convenience of a Single Point of Contact for all your communicati
        <br />
        <br />
        <p style="color:#999999">
-    
-
-      
-
-       Streamline your procurement and licensing processes effortlessly with our expert guidance. Unlock the best deals on licensing packages and applications, ensuring cost-effective solutions that meet your organization's unique requirements. Trust our specialized expertise to optimize your procurement strategies and maximize the value of your IT investments.
-
-
-
-
- 
+       Ensure the optimal performance of your software systems with our top-notch Software Management & Maintenance services. Our team of experts is dedicated to delivering regular updates, necessary fixes, and seamless integration of new applications, guaranteeing peak performance for your business operations. Experience worry-free software management as we take care of every aspect to keep your systems running smoothly and efficiently.
        </p>
        </div>
        

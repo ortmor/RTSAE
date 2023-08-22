@@ -1043,3 +1043,114 @@
     outline: none !important;
   }
 }
+
+.sendinganimationdot1,
+.sendinganimationdot2,
+.sendinganimationdot3,
+.sendinganimationdot4 {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: white;
+  margin: 0 2px;
+  animation-duration: 2s;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
+.sendinganimationdot1 {
+  animation-name: bounce1;
+}
+
+.sendinganimationdot2 {
+  animation-name: bounce2;
+}
+
+.sendinganimationdot3 {
+  animation-name: bounce3;
+}
+
+.sendinganimationdot4 {
+  animation-name: bounce4;
+}
+
+@keyframes bounce1 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes bounce2 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+@keyframes bounce3 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-2px);
+  }
+}
+
+@keyframes bounce4 {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(2px);
+  }
+}
+
+// .loadingbutton {
+//   position: relative;
+//   font-size: 16px;
+//   padding: 1em 3em;
+//   border: none;
+//   background-color: transparent;
+//   color: rgb(255, 0, 0);
+//   cursor: pointer;
+//   overflow: hidden;
+// }
+
+// .loadingbutton::after {
+//   content: '';
+//   position: absolute;
+//   top: 50%;
+//   left: 50%;
+//   transform: translate(-50%, -50%);
+//   width: 25px;
+//   height: 25px;
+//   border: 2px solid transparent;
+//   border-top-color: rgb(255, 0, 0);
+//   border-radius: 50%;
+//   animation: spin 0.6s linear infinite, fadeOut 0.6s ease-in-out infinite;
+//   opacity: 0;
+// }
+
+// .loadingbutton.loading::after {
+//   opacity: 1;
+// }
+
+// @keyframes spin {
+//   0% { transform: translate(-50%, -50%) rotate(0deg); }
+//   100% { transform: translate(-50%, -50%) rotate(360deg); }
+// }
+
+// @keyframes fadeOut {
+//   0%, 100% { opacity: 0; }
+//   50% { opacity: 1; }
+// }

@@ -7,7 +7,7 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 import Styles from "../../styles/contact.module.scss";
-import { Fragment, useRef } from "react";
+import { Fragment, useRef, useState } from "react";
 import sendContactForm from "@/services/contactService";
 
 const Contactmain = () => {
@@ -18,9 +18,11 @@ const Contactmain = () => {
   const emailRef = useRef("");
   const phoneRef = useRef("");
   const messageRef = useRef("");
+  const [loading, setloading] = useState(false);
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    setloading(true);
     const { isSuccess, message } = await sendContactForm({
       fname: fnameRef.current.value,
       lname: lnameRef.current.value,
@@ -29,6 +31,7 @@ const Contactmain = () => {
       type: typeRef.current.value,
       message: messageRef.current.value,
     });
+
     if (isSuccess) {
       if (!toast.isActive(toastId.current)) {
         toastId.current = toast.success(message, {
@@ -48,6 +51,8 @@ const Contactmain = () => {
       phoneRef.current.value = "";
       typeRef.current.value = "SalesEnquiries";
       messageRef.current.value = "";
+
+      setloading(false);
     } else {
       if (!toast.isActive(toastId.current)) {
         toastId.current = toast.error(message, {
@@ -61,8 +66,11 @@ const Contactmain = () => {
           theme: "light",
         });
       }
+
+      setloading(false);
     }
   };
+
   return (
     <Fragment>
       <ToastContainer />
@@ -88,7 +96,6 @@ const Contactmain = () => {
                 <option value="ELV Projects">ELV Projects</option>
                 <option value="Solution Enquiry">Solution Enquiry</option> */}
               </select>
-
               <div className={Styles.contactformfirstcontainer}>
                 <div className={Styles.contactformboxone}>
                   <label>First Name</label>
@@ -102,7 +109,6 @@ const Contactmain = () => {
                   <input name="lname" type="text" ref={lnameRef} required />
                 </div>
               </div>
-
               <div className={Styles.contactformfirstcontainer}>
                 <div className={Styles.contactformboxone}>
                   <label>Email Address</label>
@@ -116,10 +122,19 @@ const Contactmain = () => {
                   <input name="phone" type="tel" ref={phoneRef} required />
                 </div>
               </div>
-
               <textarea name="message" ref={messageRef} />
-              <br />
-              <button onClick={handleSubmit}>Send Message</button>
+              <br />{" "}
+              {loading ? (
+                <button className={Styles.loadingbutton}>
+                  Sending &nbsp;
+                  <span className={Styles.sendinganimationdot1}></span>
+                  <span className={Styles.sendinganimationdot2}></span>
+                  <span className={Styles.sendinganimationdot3}></span>
+                  <span className={Styles.sendinganimationdot4}></span>
+                </button>
+              ) : (
+                <button onClick={handleSubmit}>Send Message</button>
+              )}
             </div>
           </div>
         </div>
@@ -226,7 +241,7 @@ const Contactmain = () => {
 
       <div className={Styles.mapcontainermain}>
         <iframe
-          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.5973658025514!2d54.46135621499433!3d24.430051684258682!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e4244f796919b%3A0x55796374d17aa3d4!2sRoyal%20Group!5e0!3m2!1sen!2sin!4v1687456295987!5m2!1sen!2sin"
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3632.6000386098017!2d54.46101457535716!3d24.429958878212783!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e43a3385e703b%3A0x1693598d06e6860d!2sRoyal%20Technology%20Solutions%20LLC!5e0!3m2!1sen!2sin!4v1692254598436!5m2!1sen!2sin"
           allowFullScreen=""
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"

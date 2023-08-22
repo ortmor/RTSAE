@@ -16,15 +16,9 @@ const nextConfig = {
             key: "Content-Security-Policy",
             value: "",
           },
-
           {
             key: "X-Content-Type-Options",
             value: "nosniff",
-          },
-          {
-            key: "Permissions-Policy",
-            value:
-              "camera=(); battery=(self); geolocation=(); microphone=('https://a-domain.com')",
           },
           {
             key: "Referrer-Policy",
@@ -41,3 +35,5 @@ const nextConfig = {
 };
 
 module.exports = nextConfig;
+
+// default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline';

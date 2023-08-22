@@ -1,6 +1,5 @@
 import axios from 'axios';
 import validator from 'validator';
-
 const API_ENDPOINT = '/api/contact';
 
 const checkEmptyFields = (fields) => {
