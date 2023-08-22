@@ -1,16 +1,17 @@
 "use client";
 import Link from "next/link";
+import ReCAPTCHA from "react-google-recaptcha";
 import { MdEmail } from "react-icons/md";
 import { MdPhone } from "react-icons/md";
 import { TbMapPinFilled } from "react-icons/tb";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
-
 import Styles from "../../styles/contact.module.scss";
 import { Fragment, useRef, useState } from "react";
 import sendContactForm from "@/services/contactService";
 
 const Contactmain = () => {
+  const CONTACT_CAPTCHA_SECRET = process.env.CONTACT_CAPTCHA_SECRET;
   const toastId = useRef(null);
   const fnameRef = useRef("");
   const lnameRef = useRef("");
@@ -19,43 +20,69 @@ const Contactmain = () => {
   const phoneRef = useRef("");
   const messageRef = useRef("");
   const [loading, setloading] = useState(false);
+  const [isCaptchaVerified, setIsCaptchaVerified] = useState(false);
+  const [captchaResponse, setCaptchaResponse] = useState("");
+
+  const handleCaptchaVerify = (response) => {
+    setIsCaptchaVerified(true);
+    setCaptchaResponse(response);
+  };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setloading(true);
-    const { isSuccess, message } = await sendContactForm({
-      fname: fnameRef.current.value,
-      lname: lnameRef.current.value,
-      email: emailRef.current.value,
-      phone: phoneRef.current.value,
-      type: typeRef.current.value,
-      message: messageRef.current.value,
-    });
 
-    if (isSuccess) {
-      if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.success(message, {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
+    if (isCaptchaVerified) {
+      const { isSuccess, message } = await sendContactForm({
+        fname: fnameRef.current.value,
+        lname: lnameRef.current.value,
+        email: emailRef.current.value,
+        phone: phoneRef.current.value,
+        type: typeRef.current.value,
+        message: messageRef.current.value,
+        "g-recaptcha-response": captchaResponse,
+      });
+
+      if (isSuccess) {
+        if (!toast.isActive(toastId.current)) {
+          toastId.current = toast.success(message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+        fnameRef.current.value = "";
+        lnameRef.current.value = "";
+        emailRef.current.value = "";
+        phoneRef.current.value = "";
+        typeRef.current.value = "SalesEnquiries";
+        messageRef.current.value = "";
+
+        setloading(false);
+      } else {
+        if (!toast.isActive(toastId.current)) {
+          toastId.current = toast.error(message, {
+            position: "top-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+
+        setloading(false);
       }
-      fnameRef.current.value = "";
-      lnameRef.current.value = "";
-      emailRef.current.value = "";
-      phoneRef.current.value = "";
-      typeRef.current.value = "SalesEnquiries";
-      messageRef.current.value = "";
-
-      setloading(false);
     } else {
       if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.error(message, {
+        toastId.current = toast.error("Please verify the reCAPTCHA.", {
           position: "top-right",
           autoClose: 5000,
           hideProgressBar: true,
@@ -123,6 +150,13 @@ const Contactmain = () => {
                 </div>
               </div>
               <textarea name="message" ref={messageRef} />
+              <br />
+              <div>
+                <ReCAPTCHA
+                  sitekey={CONTACT_CAPTCHA_SECRET}
+                  onChange={handleCaptchaVerify}
+                />
+              </div>
               <br />{" "}
               {loading ? (
                 <button className={Styles.loadingbutton}>

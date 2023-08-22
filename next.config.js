@@ -2,6 +2,9 @@
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  env: {
+  CONTACT_CAPTCHA_SECRET:"6LcLS8gnAAAAANS4TjOlgYfg61ZJLHEHpBH72NX0",
+  },
   // Adding policies:
   async headers() {
     return [
