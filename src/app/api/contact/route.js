@@ -3,6 +3,7 @@ import validator from 'validator';
 import sendEmail from '@/utils/sendMail';
 import connectDB from '@/config/db';
 import Contact from '@/models/Contact';
+import axios from 'axios';
 
 // Retrieve values from environment variables or provide default values
 const SALES_ENQUIRY_EMAIL_ID =
@@ -63,12 +64,21 @@ export const GET = async (req, res) => {
 
 // This api to create a contact in db
 export const POST = async (req, res) => {
-  const { fname, lname, email, phone, type, message } = await req.json();
+  const {
+    'g-recaptcha-response': captchaResponse,
+    fname,
+    lname,
+    email,
+    phone,
+    type,
+    message,
+  } = await req.json();
   try {
     await connectDB();
 
     // Input validation
     if (
+      !captchaResponse ||
       !fname ||
       !lname ||
       !email ||
@@ -82,22 +92,28 @@ export const POST = async (req, res) => {
         statusCode: 400,
         message: !validator.isEmail(email)
           ? 'Invalid email address'
-          : "Provide fname, lname, email, phone, type - ['SalesEnquiries', 'SupportServices'], message",
+          : "Provide captcha, fname, lname, email, phone, type - ['SalesEnquiries', 'SupportServices'], message",
       };
     }
 
-    // Check if the contact exists in db in same type
-    // const contactExist = await Contact.findOne({
-    //   type,
-    //   $or: [{ email }, { phone }],
-    // });
+    const response = await axios.post(
+      'https://www.google.com/recaptcha/api/siteverify',
+      null,
+      {
+        params: {
+          secret:
+            'f89b0df0fdb0756db09fb2e65095d6e8f2e5ae67f2dea7faeb69cb0da30b383c007333004ce41caeefc7f538b597b86d2836c0bdebe2cf5bfb9e18e0949c2073',
+          response: captchaResponse,
+        },
+      }
+    );
 
-    // if (contactExist) {
-    //   throw {
-    //     statusCode: 400,
-    //     message: "Your contact already submited",
-    //   };
-    // }
+    if (!response.data.success) {
+      throw {
+        statusCode: 400,
+        message: 'CAPTCHA verification failed',
+      };
+    }
 
     // Save contact details to the database
     await Contact.create({
