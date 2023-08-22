@@ -91,26 +91,26 @@ export const POST = async (req, res) => {
       };
     }
 
-    // const response = await axios.post(
-    //   'https://www.google.com/recaptcha/api/siteverify',
-    //   null,
-    //   {
-    //     params: {
-    //       secret: CAPTCHA_SECRET,
-    //       response: captchaResponse,
+    const response = await axios.post(
+      'https://www.google.com/recaptcha/api/siteverify',
+      null,
+      {
+        params: {
+          secret: CAPTCHA_SECRET,
+          response: captchaResponse,
           
-    //     },
+        },
         
-    //   }
+      }
       
-    // );
+    );
 
-    // if (!response.data.success) {
-    //   throw {
-    //     statusCode: 400,
-    //     message: 'CAPTCHA verification failed',
-    //   };
-    // }
+    if (!response.data.success) {
+      throw {
+        statusCode: 400,
+        message: 'CAPTCHA verification failed',
+      };
+    }
 
     // Save contact details to the database
     await Contact.create({

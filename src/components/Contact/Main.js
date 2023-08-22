@@ -10,8 +10,9 @@ import Styles from "../../styles/contact.module.scss";
 import { Fragment, useRef, useState } from "react";
 import sendContactForm from "@/services/contactService";
 
+const CONTACT_CAPTCHA_SITEKEY = process.env.CONTACT_CAPTCHA_SITEKEY;
+
 const Contactmain = () => {
-  const CONTACT_CAPTCHA_SECRET = process.env.CONTACT_CAPTCHA_SECRET;
   const toastId = useRef(null);
   const fnameRef = useRef("");
   const lnameRef = useRef("");
@@ -153,7 +154,7 @@ const Contactmain = () => {
               <br />
               <div>
                 <ReCAPTCHA
-                  sitekey={CONTACT_CAPTCHA_SECRET}
+                  sitekey={CONTACT_CAPTCHA_SITEKEY}
                   onChange={handleCaptchaVerify}
                 />
               </div>
