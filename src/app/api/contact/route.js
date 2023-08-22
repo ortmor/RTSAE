@@ -10,6 +10,7 @@ const SALES_ENQUIRY_EMAIL_ID = process.env.SALES_ENQUIRY_EMAIL_ID;
 const SUPPORT_EMAIL_ID = process.env.SUPPORT_EMAIL_ID;
 const RTS_USERNAME = process.env.RTS_USERNAME;
 const RTS_PASSWORD = process.env.RTS_PASSWORD;
+const CAPTCHA_SECRET = process.env.CONTACT_CAPTCHA_SECRET;
 
 const departmentEmails = {
   SalesEnquiries: SALES_ENQUIRY_EMAIL_ID,
@@ -95,8 +96,7 @@ export const POST = async (req, res) => {
       null,
       {
         params: {
-          secret:
-            'f89b0df0fdb0756db09fb2e65095d6e8f2e5ae67f2dea7faeb69cb0da30b383c007333004ce41caeefc7f538b597b86d2836c0bdebe2cf5bfb9e18e0949c2073',
+          secret: CAPTCHA_SECRET,
           response: captchaResponse,
         },
       }
