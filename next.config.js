@@ -3,7 +3,7 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-  CONTACT_CAPTCHA_SITEKEY:"6LcLS8gnAAAAANS4TjOlgYfg61ZJLHEHpBH72NX0",
+  CONTACT_CAPTCHA_SITEKEY:"6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
   },
   // Adding policies:
   async headers() {
