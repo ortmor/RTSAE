@@ -114,7 +114,7 @@ const Job = () => {
       style="object-fit: contain;"
         width='100%'
         height='500px'
-        src="/jobs/RTSJob0723a.png"
+        src="/jobs/RTS.png"
       ></img>
       <a style="display: inline-block;
           background-color: #d33;
@@ -122,7 +122,7 @@ const Job = () => {
           padding: 10px 20px;
           text-decoration: none;
           border-radius: 5px;"
-   href="/jobs/RTSJob0723a.png"
+   href="/jobs/RTS.png"
    target="_blank">view</a>
     </div>
        
