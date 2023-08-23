@@ -14,6 +14,7 @@ const CONTACT_CAPTCHA_SITEKEY = process.env.CONTACT_CAPTCHA_SITEKEY;
 
 const Contactmain = () => {
   const toastId = useRef(null);
+  const reCaptchaRef = useRef(null);
   const fnameRef = useRef("");
   const lnameRef = useRef("");
   const typeRef = useRef("SalesEnquiries");
@@ -32,7 +33,6 @@ const Contactmain = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setloading(true);
-
     if (isCaptchaVerified) {
       const { isSuccess, message } = await sendContactForm({
         fname: fnameRef.current.value,
@@ -64,6 +64,7 @@ const Contactmain = () => {
         typeRef.current.value = "SalesEnquiries";
         messageRef.current.value = "";
 
+        reCaptchaRef.current.reset();
         setloading(false);
       } else {
         if (!toast.isActive(toastId.current)) {
@@ -156,6 +157,7 @@ const Contactmain = () => {
                 <ReCAPTCHA
                   sitekey={CONTACT_CAPTCHA_SITEKEY}
                   onChange={handleCaptchaVerify}
+                  ref={reCaptchaRef}
                 />
               </div>
               <br />{" "}
