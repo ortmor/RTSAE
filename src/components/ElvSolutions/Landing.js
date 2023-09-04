@@ -17,7 +17,7 @@ const Landing = () => {
 
           <button onClick={scrollToMain}>Discover More</button>
         </div>
-        <img id={Styles.img} width="100%" poster="/" src="/elvsolutions/01/Structured Cabling.webp" />
+        <img id={Styles.img} width="100%" poster="/" src="/elvsolutions/01/Structured Cablingbg.webp" />
       </div>
       <div id="main"></div>
     </div>
