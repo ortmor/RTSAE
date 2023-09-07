@@ -1,10 +1,10 @@
 //Fontsize
-$xxlfont: 4rem;
-$xlfont: 3rem;
-$mfont: 2.5rem;
-$msfont: 2rem;
+$xxlfont: 3.5rem;
+$xlfont: 2.8rem;
+$mfont: 2.2rem;
+$msfont: 1.8rem;
 $sfont: 1.1rem;
-$xsfont: 0.9rem;
+$xsfont: 0.8rem;
 
 //Home landing page
 .homelandingcontainer {
@@ -22,7 +22,7 @@ $xsfont: 0.9rem;
   img {
     width: 100%;
     object-fit: cover;
-    display: none !important;
+    
   }
 }
 .homelandingcontainerslide {
@@ -99,11 +99,17 @@ $xsfont: 0.9rem;
       font-size: $xlfont;
     }
 
+    
+    p{
+      font-size: $xsfont;
+    }
+
     .homelandingcontainerparagraph {
       text-align: justify;
       letter-spacing: 0px;
       margin-top: 1em;
       width: 468px;
+
     }
 
     button {
@@ -299,6 +305,9 @@ $xsfont: 0.9rem;
       p {
         margin-top: 1em;
         text-align: justify;
+      
+          font-size: $xsfont !important;
+     
       }
     }
 
