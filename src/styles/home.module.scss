@@ -3,8 +3,8 @@ $xxlfont: 4rem;
 $xlfont: 3rem;
 $mfont: 2.5rem;
 $msfont: 2rem;
-$sfont: 1.2rem;
-$xsfont: 1rem;
+$sfont: 1.1rem;
+$xsfont: 0.9rem;
 
 //Home landing page
 .homelandingcontainer {
@@ -22,6 +22,7 @@ $xsfont: 1rem;
   img {
     width: 100%;
     object-fit: cover;
+    display: none !important;
   }
 }
 .homelandingcontainerslide {
