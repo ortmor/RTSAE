@@ -22,7 +22,6 @@ $xsfont: 0.8rem;
   img {
     width: 100%;
     object-fit: cover;
-    
   }
 }
 .homelandingcontainerslide {
@@ -99,8 +98,7 @@ $xsfont: 0.8rem;
       font-size: $xlfont;
     }
 
-    
-    p{
+    p {
       font-size: $xsfont;
     }
 
@@ -109,7 +107,6 @@ $xsfont: 0.8rem;
       letter-spacing: 0px;
       margin-top: 1em;
       width: 468px;
-
     }
 
     button {
@@ -145,7 +142,6 @@ $xsfont: 0.8rem;
     }
   }
 }
-
 @media screen and (max-width: 1100px) {
   .homelandingcontainerheading {
     text-align: left;
@@ -154,7 +150,7 @@ $xsfont: 0.8rem;
     h5 {
       letter-spacing: -3.5px;
       line-height: 1.3em;
-      font-size: $mfont;
+      font-size: 3.5rem;
     }
 
     .homelandingcontainerparagraph {
@@ -165,7 +161,7 @@ $xsfont: 0.8rem;
     }
 
     button {
-      font-size: $xsfont;
+      font-size: 1.1rem;
       padding: 0.9em 1.5em;
       margin-top: 1em;
     }
@@ -199,7 +195,7 @@ $xsfont: 0.8rem;
     h5 {
       letter-spacing: -3.5px;
       line-height: 1.3em;
-      font-size: $msfont;
+      font-size: 3rem;
     }
 
     .homelandingcontainerparagraph {
@@ -210,7 +206,7 @@ $xsfont: 0.8rem;
     }
 
     button {
-      font-size: $xsfont;
+      font-size: 1.1rem;
       padding: 0.9em 1.5em;
       margin-top: 1em;
     }
@@ -226,7 +222,7 @@ $xsfont: 0.8rem;
     h5 {
       letter-spacing: -3.5px;
       line-height: 1.3em;
-      font-size: $msfont;
+      font-size: 2.5rem;
     }
 
     .homelandingcontainerparagraph {
@@ -237,7 +233,7 @@ $xsfont: 0.8rem;
     }
 
     button {
-      font-size: $xsfont;
+      font-size: 1.1rem;
       padding: 0.9em 1.5em;
       margin-top: 1em;
     }
@@ -253,7 +249,7 @@ $xsfont: 0.8rem;
     h5 {
       letter-spacing: -3.5px;
       line-height: 1.3em;
-      font-size: $msfont;
+      font-size: 2rem;
     }
 
     .homelandingcontainerparagraph {
@@ -264,7 +260,7 @@ $xsfont: 0.8rem;
     }
 
     button {
-      font-size: $xsfont;
+      font-size: 1.1rem;
       padding: 0.9em 1.5em;
       margin-top: 1em;
     }
@@ -305,9 +301,8 @@ $xsfont: 0.8rem;
       p {
         margin-top: 1em;
         text-align: justify;
-      
-          font-size: $xsfont !important;
-     
+
+        font-size: $xsfont !important;
       }
     }
 
@@ -383,7 +378,7 @@ $xsfont: 0.8rem;
 
         h1 {
           letter-spacing: -1.5px;
-          font-size: $xlfont;
+          font-size: 3rem;
         }
       }
 
@@ -402,7 +397,7 @@ $xsfont: 0.8rem;
         border-radius: 25px;
         border: none;
         outline: none;
-        font-size: $xsfont;
+        font-size: 1.1rem;
         padding: 0.9em 1.5em;
         color: #ffffff;
         cursor: pointer;
@@ -457,7 +452,7 @@ $xsfont: 0.8rem;
 
         h1 {
           letter-spacing: -1.5px;
-          font-size: $msfont;
+          font-size: 2.5rem;
         }
       }
 
@@ -476,7 +471,7 @@ $xsfont: 0.8rem;
         border-radius: 25px;
         border: none;
         outline: none;
-        font-size: $xsfont;
+        font-size: 1.1rem;
         padding: 0.9em 1.5em;
         color: #ffffff;
         cursor: pointer;
@@ -711,6 +706,7 @@ $xsfont: 0.8rem;
     }
   }
 }
+
 @media screen and (max-width: 1000px) {
   .MiddlehomeselectionApproachhome {
     width: 100%;
@@ -721,7 +717,7 @@ $xsfont: 0.8rem;
     margin-top: 2em;
     h1 {
       margin-top: 1em;
-      font-size: $msfont;
+      font-size: 3.5rem;
     }
   }
   // Grid
@@ -737,11 +733,11 @@ $xsfont: 0.8rem;
       height: 300px;
       margin-bottom: 2em;
       .Middlehomeselectioniconbox {
-        font-size: $xxlfont;
+        font-size: 5rem;
       }
 
       .Middlehomeselectionicontext {
-        font-size: $xsfont;
+        font-size: 1.2rem;
       }
 
       .Middlehomeselectioniconlink {
@@ -790,7 +786,6 @@ $xsfont: 0.8rem;
     }
   }
 }
-
 @media screen and (max-width: 600px) {
   .MiddlehomeselectionApproachhome {
     width: 100%;
@@ -801,7 +796,7 @@ $xsfont: 0.8rem;
     width: 200px;
     margin: 2em auto;
     h1 {
-      font-size: $msfont;
+      font-size: 3rem;
     }
   }
   // Grid
@@ -818,11 +813,11 @@ $xsfont: 0.8rem;
       border: none;
       margin-bottom: 2em;
       .Middlehomeselectioniconbox {
-        font-size: $xxlfont;
+        font-size: 5rem;
       }
 
       .Middlehomeselectionicontext {
-        font-size: $xsfont;
+        font-size: 1.2rem;
       }
 
       .Middlehomeselectioniconlink {
@@ -874,11 +869,11 @@ $xsfont: 0.8rem;
       border: none;
       margin-bottom: 2em;
       .Middlehomeselectioniconbox {
-        font-size: $xxlfont;
+        font-size: 5rem;
       }
 
       .Middlehomeselectionicontext {
-        font-size: $xsfont;
+        font-size: 1.2rem;
       }
 
       .Middlehomeselectioniconlink {
@@ -922,7 +917,7 @@ $xsfont: 0.8rem;
     width: 200px;
     margin: 2em auto;
     h1 {
-      font-size: $msfont;
+      font-size: 2rem;
     }
   }
   // Grid
@@ -939,11 +934,11 @@ $xsfont: 0.8rem;
       border: none;
       margin-bottom: 2em;
       .Middlehomeselectioniconbox {
-        font-size: $xxlfont;
+        font-size: 5rem;
       }
 
       .Middlehomeselectionicontext {
-        font-size: $xsfont;
+        font-size: 1.2rem;
       }
 
       .Middlehomeselectioniconlink {
@@ -1204,6 +1199,7 @@ $xsfont: 0.8rem;
         width: 70%;
         margin-top: 1em;
         p {
+          font-size: 3rem;
           font-weight: 600;
           letter-spacing: -1.5px;
           text-align: center;
@@ -1220,6 +1216,7 @@ $xsfont: 0.8rem;
         text-align: center;
 
         h2 {
+          font-size: 2rem;
           text-align: center;
           letter-spacing: 0px;
           color: #000000;
@@ -1272,6 +1269,7 @@ $xsfont: 0.8rem;
         width: 100%;
         margin-top: 1em;
         p {
+          font-size: 2rem;
           font-weight: 600;
           letter-spacing: -1.5px;
           text-align: center;
@@ -1288,6 +1286,7 @@ $xsfont: 0.8rem;
         text-align: center;
 
         h2 {
+          font-size: 1.5rem;
           text-align: center;
           letter-spacing: 0px;
           color: #000000;
@@ -1300,6 +1299,7 @@ $xsfont: 0.8rem;
           color: #999999;
           opacity: 1;
           margin-top: 1em;
+          font-size: 1rem;
         }
       }
 
@@ -1336,6 +1336,7 @@ $xsfont: 0.8rem;
         width: 100%;
         margin-top: 1em;
         p {
+          font-size: 2rem;
           font-weight: 600;
           letter-spacing: -1.5px;
           text-align: center;
@@ -1352,6 +1353,7 @@ $xsfont: 0.8rem;
         text-align: center;
 
         h2 {
+          font-size: 1.5rem;
           text-align: center;
           letter-spacing: 0px;
           color: #000000;
@@ -1364,6 +1366,7 @@ $xsfont: 0.8rem;
           color: #999999;
           opacity: 1;
           margin-top: 1em;
+          font-size: 1rem;
         }
       }
 
@@ -1608,7 +1611,7 @@ $xsfont: 0.8rem;
   .TestimonialsVirtualRealitysliderboxparagraph {
     p {
       .blockquote {
-        font-size: $xsfont !important;
+        font-size: 1em !important;
       }
     }
   }
@@ -1628,7 +1631,7 @@ $xsfont: 0.8rem;
   .TestimonialsVirtualRealityheading {
     h1 {
       font-weight: 800;
-      font-size: $sfont;
+      font-size: 1.5rem;
       margin-top: 1.5em;
       text-align: center;
     }
@@ -1641,7 +1644,7 @@ $xsfont: 0.8rem;
   }
 
   .blockquote {
-    font-size: $xsfont !important;
+    font-size: 0.9rem !important;
   }
 
   .TestimonialsVirtualRealitysliderparent2 {
@@ -1652,13 +1655,13 @@ $xsfont: 0.8rem;
     }
     .TestimonialsVirtualRealitysliderboxparagraph {
       h1 {
-        font-size: $sfont;
+        font-size: 1.3rem;
       }
       p {
         text-align: center;
       }
       h2 {
-        font-size: $xsfont;
+        font-size: 0.8rem;
       }
     }
   }
@@ -1716,7 +1719,6 @@ $xsfont: 0.8rem;
     animation: countAnimation 1s ease-in-out;
   }
 }
-
 @media screen and (max-width: 1000px) {
   .Gethomedata {
     width: 100%;
@@ -1741,13 +1743,13 @@ $xsfont: 0.8rem;
           align-items: center;
 
           h1 {
-            font-size: $msfont;
+            font-size: 5rem;
             font-weight: 600;
             margin-right: 0.2em;
           }
 
           p {
-            font-size: $xsfont;
+            font-size: 1.5rem;
             font-weight: 700;
           }
         }
@@ -1780,13 +1782,13 @@ $xsfont: 0.8rem;
           align-items: center;
 
           h1 {
-            font-size: $sfont;
+            font-size: 3rem;
             font-weight: 600;
             margin-right: 0.2em;
           }
 
           p {
-            font-size: $xsfont;
+            font-size: 1.1rem;
             font-weight: 700;
           }
         }
@@ -1794,6 +1796,8 @@ $xsfont: 0.8rem;
     }
   }
 }
+
+//gethomedata ends
 
 //gethomedata ends
 
@@ -2042,7 +2046,6 @@ $xsfont: 0.8rem;
     }
   }
 }
-
 @media screen and (max-width: 1000px) {
   .Bloglandingpageparent {
     width: 100%;
@@ -2052,6 +2055,7 @@ $xsfont: 0.8rem;
       text-align: center;
 
       h1 {
+        font-size: 3rem;
         font-weight: 600;
         letter-spacing: -1.5px;
 
@@ -2092,7 +2096,7 @@ $xsfont: 0.8rem;
 
           h1 {
             font-weight: 600;
-
+            font-size: 1.2rem;
             text-align: left;
           }
 
@@ -2101,7 +2105,7 @@ $xsfont: 0.8rem;
             margin-bottom: 1em;
             text-align: justify;
             color: #878787;
-
+            font-size: 0.9rem;
             font-weight: 400;
           }
 
@@ -2129,7 +2133,7 @@ $xsfont: 0.8rem;
 
         h1 {
           font-weight: 600;
-
+          font-size: 1.2rem;
           text-align: left;
         }
 
