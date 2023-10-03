@@ -46,8 +46,9 @@ const Main = () => {
 
         <div className={Styles.innersolutionhomemainboxthree}>
           <div className={Styles.innersolutionhomemainboxthreeheading}>
-            <h1>FF&E Elevating Spaces with </h1>
-            <h1>Finest Furniture Solutions</h1>
+            <h1>Furniture, Fixtures  </h1>
+            <h1>and Equipment Elevating Spaces with Finest </h1>
+            <h1> Furniture Solutions</h1>
           </div>
 
           <div className={Styles.innersolutionpointsmain}>

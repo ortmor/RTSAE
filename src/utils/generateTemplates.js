@@ -8,7 +8,7 @@ export const generateContactInqiryMailTemplate = (
   gtype,
   { name, type, email, phone, message }
 ) => {
-  if (gtype && gtype === 'text') {
+  if (gtype && gtype === "text") {
     return `
     Dear RTS Team,\n
     We hope this message finds you well. We are writing to inform you that your website has received a new contact inquiry. Below are the details:\n
@@ -70,17 +70,14 @@ export const generateContactInqiryMailTemplate = (
  * @returns
  */
 export const generateContactReplyMailTemplate = (type, { name, email }) => {
-  if (type && type === 'text') {
+  if (type && type === "text") {
     return `
     Dear ${name}!,
-    \n Greetings from the RTS Team! \n
-    \n We hope this email finds you well. We want to extend our heartfelt gratitude to you for taking the time to reach out to us with your insightful questions.
-    \n Rest assured, our dedicated team of customer experts is already on the case! They are eagerly working to gather all the necessary information and provide you with comprehensive and timely answers to your inquiries.
-    \n At RTS, we are driven by our commitment to delivering top-notch customer service, and your satisfaction is our ultimate goal. Hence, we encourage you to share any additional questions or thoughts that come to mind. Our team is well-equipped to handle any concerns you might have, and we are dedicated to resolving them promptly.
-    \n Your choice to rely on RTS for your needs is truly valued, and we can't wait to demonstrate our dedication to your satisfaction. We are determined to make your experience with us seamless and rewarding.
-    \n Thank you once again for choosing RTS. We look forward to serving you!
-    \n\n Best regards,
-    \n Team RTS 
+    \n Greetings from Royal Technology Solutions and thank you for taking the time to reach out to us. \n
+    \n Our dedicated team of customer experts is already on the case to address your inquiry and will contact you very shortly.
+    \n RTS is committed to delivering superior customer service, and your satisfaction is our ultimate goal.  
+    \n\n We look forward to serving you.,
+    \n Best regards from Royal Technology Solutions.
           `;
   } else {
     return `
@@ -92,43 +89,19 @@ export const generateContactReplyMailTemplate = (type, { name, email }) => {
       </head>
       <body style="text-align: left">
         <h2>Dear ${name},</h2>
-
-        <p>Greetings from the RTS Team! </p>
-
+        <p>Greetings from Royal Technology Solutions and thank you for taking the time to reach out to us.</p>
         <p>
-          We hope this email finds you well. We want to extend our heartfelt
-          gratitude to you for taking the time to reach out to us with your
-          insightful questions.
+        Our dedicated team of customer experts is already on the case to address your inquiry and will contact you very shortly.
         </p>
-
         <p>
-          Rest assured, our dedicated team of customer experts is already on the
-          case! They are eagerly working to gather all the necessary information and
-          provide you with comprehensive and timely answers to your inquiries.
+        RTS is committed to delivering superior customer service, and your satisfaction is our ultimate goal.
         </p>
-
         <p>
-          At RTS, we are driven by our commitment to delivering top-notch customer
-          service, and your satisfaction is our ultimate goal. Hence, we encourage
-          you to share any additional questions or thoughts that come to mind. Our
-          team is well-equipped to handle any concerns you might have, and we are
-          dedicated to resolving them promptly.
+        We look forward to serving you.
         </p>
-
         <p>
-          Your choice to rely on RTS for your needs is truly valued, and we can't
-          wait to demonstrate our dedication to your satisfaction. We are determined
-          to make your experience with us seamless and rewarding.
+        Best regards from Royal Technology Solutions.
         </p>
-
-        <p>
-          Thank you once again for choosing RTS. We look forward to serving you!
-        </p>
-
-        <p>Best regards,</p>
-
-        <p>Team RTS </p>
-
       </body>
     </html>
     `;
@@ -142,7 +115,7 @@ export const generateContactReplyMailTemplate = (type, { name, email }) => {
  * @returns
  */
 export const generateSubscribeMailTemplate = (type, { email }) => {
-  if (type && type === 'text') {
+  if (type && type === "text") {
     return `
     Hey ${email},
     \n Congratulations, a warm welcome to the RTS family!
@@ -207,7 +180,7 @@ export const generateSubscribeMailTemplate = (type, { email }) => {
  * @returns
  */
 export const generateUnsubscribeMailTemplate = (type, { email }) => {
-  if (type && type === 'text') {
+  if (type && type === "text") {
     return `
       Hey ${email},
       \n Congratulations, a warm welcome to the RTS family!
