@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-import { MdLanguage } from "react-icons/md";
+// import { MdLanguage } from "react-icons/md";
 import Link from "next/link";
 function Nav() {
   const [Navbackground, setNavbackground] = useState(false);
@@ -157,8 +157,8 @@ function Nav() {
                 CONTACT
               </Link>
             </li>
-
-            <li>
+            {/* lang */}
+            {/* <li>
               <Link
                 className="link-show-grad"
                 onClick={Removing}
@@ -167,7 +167,7 @@ function Nav() {
                 <MdLanguage style={{transform: 'translateY(0.3rem)'}}  size={"1em"} />{" "}
                 <span style={{ fontSize: "1.5em" }}>عربي</span>
               </Link>
-            </li>
+            </li> */}
           </ul>
 
           <label htmlFor="menu-btn" className="btn menu-btn">
