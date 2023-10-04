@@ -1,5 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
+import { MdLanguage } from "react-icons/md";
 import Link from "next/link";
 function Nav() {
   const [Navbackground, setNavbackground] = useState(false);
@@ -34,7 +35,6 @@ function Nav() {
 
   return (
     <div className="navcontainer">
-
       <nav className={Navbackground ? "navcolor" : "navbar"}>
         <div className="wrapper" id={Navbackground ? "line" : "line1"}>
           <div className={Navbackground ? "logo1" : "logo"}>
@@ -75,7 +75,6 @@ function Nav() {
                   className={Navbackground ? "content" : "content  margin-box1"}
                 >
                   <div className="row">
-
                     <ul className="mega-links">
                       <li>
                         <Link onClick={Removing} href="/ictsolutions">
@@ -119,26 +118,54 @@ function Nav() {
             </li>
 
             <li>
-              <Link className="link-show-grad" onClick={Removing} href="/services&support">
+              <Link
+                className="link-show-grad"
+                onClick={Removing}
+                href="/services&support"
+              >
                 SERVICES & SUPPORT
               </Link>
             </li>
 
             <li>
-              <Link className="link-show-grad" onClick={Removing} href="/insights">
+              <Link
+                className="link-show-grad"
+                onClick={Removing}
+                href="/insights"
+              >
                 INSIGHT
               </Link>
             </li>
 
             <li>
-              <Link className="link-show-grad" onClick={Removing} href="/career">
+              <Link
+                className="link-show-grad"
+                onClick={Removing}
+                href="/career"
+              >
                 CAREERS
               </Link>
             </li>
 
             <li>
-              <Link id="contactbox" className="link-show-grad" onClick={Removing} href="/contact">
+              <Link
+                id="contactbox"
+                className="link-show-grad"
+                onClick={Removing}
+                href="/contact"
+              >
                 CONTACT
+              </Link>
+            </li>
+
+            <li>
+              <Link
+                className="link-show-grad"
+                onClick={Removing}
+                href="https://rtsaearabic.netlify.app/"
+              >
+                <MdLanguage style={{transform: 'translateY(0.3rem)'}}  size={"1em"} />{" "}
+                <span style={{ fontSize: "1.5em" }}>عربي</span>
               </Link>
             </li>
           </ul>
