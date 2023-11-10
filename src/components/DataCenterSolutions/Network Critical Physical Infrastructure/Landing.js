@@ -13,7 +13,8 @@ const Landing = () => {
         <div className={Styles.solutioninnerhomelandingcontainerheading}>
           <div className={Styles.solutioninnerhomelandingcontanerheadinginner}>
             <h5>
-            Network Critical 
+            Data Center Critical
+
    <br /> Physical Infrastructure
             </h5>
           </div>

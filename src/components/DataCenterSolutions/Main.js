@@ -5,7 +5,7 @@ import { Fragment } from "react";
 const Main = () => {
   return (
     <Fragment>
-         <br />
+      <br />
       <br />
       <div className={Styles.icthomemainparentdiv}>
         <div className={Styles.icthomemainboxone}>
@@ -14,7 +14,9 @@ const Main = () => {
             <h1>Infrastructure</h1>
           </div>
           <br />
-          <Link href="/datacentersolutions/datacentersolutionsinfrastructure">Read More</Link>
+          <Link href="/datacentersolutions/datacentersolutionsinfrastructure">
+            Read More
+          </Link>
         </div>
         <div className={Styles.icthomemainboxtwo}>
           <img src="datacentersolutions/01/Data Center Solutions.webp"></img>
@@ -30,18 +32,20 @@ const Main = () => {
 
         <div className={Styles.icthomemainboxthree}>
           <div className={Styles.icthomemainboxthreeheading}>
-            <h1>Network Critical</h1>
-            <h1>Physical Infrastructure</h1>
+            <h1>Data Center Critical</h1>
+            <h1> Physical Infrastructure</h1>
           </div>
           <br />
-          <Link href="/datacentersolutions/networkcriticalphysicalinfrastructure">Read More</Link>
+          <Link href="/datacentersolutions/networkcriticalphysicalinfrastructure">
+            Read More
+          </Link>
         </div>
       </div>
 
       <div className={Styles.icthomemainparentdiv}>
         <div className={Styles.icthomemainboxone}>
           <div className={Styles.icthomemainboxoneheading}>
-            <h1>DCIM</h1>
+            <h1>Data Center Infrastructure Management </h1>
           </div>
           <br />
           <Link href="/datacentersolutions/dcim">Read More</Link>
@@ -64,7 +68,9 @@ const Main = () => {
             <h1>Maintenance Services</h1>
           </div>
           <br />
-          <Link href="/datacentersolutions/datacentremaintenanceservices">Read More</Link>
+          <Link href="/datacentersolutions/datacentremaintenanceservices">
+            Read More
+          </Link>
         </div>
       </div>
     </Fragment>

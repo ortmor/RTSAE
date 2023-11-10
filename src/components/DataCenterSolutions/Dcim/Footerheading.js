@@ -6,35 +6,27 @@ const Footerheading = () => {
     <div className={Styles.innersolutionfooterlandingheadingparent}>
       <div className={Styles.innersolutionfooterlandingparentmain}>
         <div className={Styles.innersolutionfooterlandingparenthead}>
-          <h1>
-            {" "}
-            Streamline Your Data Center <br />
-            Infrastructure with DCIM Software
-          </h1>
+        <h1> Tailored Cooling Solutions and
+         <br /> Resilient Critical Infrastructures</h1>
         </div>
 
         <div className={Styles.innersolutionfooterlandingparentheadparagraph}>
-          <p>
-            Enhance the efficiency and reliability of your data center
-            operations with our cutting-edge Data Center Infrastructure
-            Management (DCIM) solutions. DCIM is a comprehensive software suite
-            designed to provide holistic management and control over all aspects
-            of your data center infrastructure.
+        <p>
+            At Royal Technology Solutions, we partner with top product
+            manufacturers and brands to deliver customized and reliable cooling
+            solutions. Our team of experienced mechanical engineers ensures that
+            our solutions are designed and installed to minimize carbon impact
+            and maintain uptime, providing cost-effective and environmentally
+            friendly options for your business. 
           </p>
           <br />
 
-          <p>
-            Our DCIM software provides real-time alerts and notifications,
-            empowering you to take proactive measures to prevent downtime and
-            ensure business continuity. With our software, you'll have a
-            complete overview of your data center's power and cooling systems,
-            IT assets, and environmental conditions, enabling you to make
-            informed decisions and streamline your operations. Unlock the full
-            potential of your data center infrastructure with our DCIM
-            solutions.
-          </p>
-
-          <br />
+          <p>In addition to our cooling
+            solutions, we also specialize in critical infrastructure services.
+            Our knowledgeable team works closely with a diverse range of clients
+            to ensure that their data centers and critical facilities are
+            resilient, sustainable, and well-protected.</p>
+            <br />
         </div>
       </div>
     </div>

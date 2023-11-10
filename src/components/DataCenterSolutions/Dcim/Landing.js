@@ -13,7 +13,7 @@ const Landing = () => {
         <div className={Styles.solutioninnerhomelandingcontainerheading}>
           <div className={Styles.solutioninnerhomelandingcontanerheadinginner}>
             <h5>
-            DCIM
+            Data Center Infrastructure <br />Management
 
             </h5>
           </div>
