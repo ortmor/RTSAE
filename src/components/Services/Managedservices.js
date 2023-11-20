@@ -11,7 +11,7 @@ const Managedservice = () => {
        <img src="/services/service/service_desk.png" />
       <br />
       <br />
-       <p style="color:#999999">At our RTS, we offer a comprehensive Service Desk that ensures your organization receives unwavering support for all your IT requirements, available 24/7.  Our dedicated team is committed to providing round-the-clock assistance, so you can rely on us at any time, day or night. With our Service Desk 24/7, you can rest assured that your business will never face an IT hurdle alone. Our experts are equipped with the knowledge and experience to handle a wide range of technical challenges, ensuring minimal disruption to your operations. 
+       <p style="color:#999999">
        </p>
        </div>
        
