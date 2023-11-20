@@ -10,7 +10,7 @@ const Partners = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(ApiPoint + "/en/partner/public");
+        const response = await fetch(ApiPoint + "/en/client/public");
         const result = await response.json();
         setData(result.results);
       } catch (error) {
@@ -86,9 +86,13 @@ const Partners = () => {
                 modules={[Autoplay, Pagination]}
                 className={Styles.mySwiper}
               >
-                {data.map((data) => {
+                {data.map((data, index) => {
                   return (
                     <SwiperSlide>
+                      <div className={Styles.PartnersSlideSlidermain}>
+                        <img src={data.image} loading="lazy" alt="client.png" />
+                      </div>
+
                       <div className={Styles.PartnersSlideSlidermain}>
                         <img src={data.image} loading="lazy" alt="client.png" />
                       </div>
