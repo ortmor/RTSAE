@@ -1,10 +1,26 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
 
 import Styles from "../../styles/about.module.scss";
 
 const Industriesabout = () => {
+  const ApiPoint = process.env.API_KEY;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(ApiPoint + "/en/industry/public");
+        const result = await response.json();
+        setData(result.results);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   return (
     <div className={Styles.Industrieshome}>
       <div className={Styles.Industrieshomeparentheading}>
@@ -69,225 +85,17 @@ const Industriesabout = () => {
                 modules={[Autoplay, Pagination]}
                 className={Styles.mySwiper}
               >
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/education.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
+                {data.map((data) => {
+                  return (
+                    <SwiperSlide>
+                      <div className={Styles.IndustriesSlideSlidermain}>
+                        <img src={data.image} loading="lazy" alt="client.png" />
 
-                    <h2>Education</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/healthcare.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Healthcare</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/manufacturing.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Manufacturing</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/media.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Media</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/transport.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Transport</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/hospitality.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Hospitality</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/banks.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Financials</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/oil.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Oil & Gas</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/com.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Safe City</h2>
-                  </div>
-                </SwiperSlide>
-            
-            
-            
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/education.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Education</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/healthcare.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Healthcare</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/manufacturing.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Manufacturing</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/media.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Media</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/transport.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Transport</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/hospitality.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Hospitality</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/banks.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Financials</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/oil.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Oil & Gas</h2>
-                  </div>
-                </SwiperSlide>
-
-                <SwiperSlide>
-                  <div className={Styles.IndustriesSlideSlidermain}>
-                    <img
-                      src="/about/ind/com.png"
-                      loading="lazy"
-                      alt="client.png"
-                    />
-
-                    <h2>Safe City</h2>
-                  </div>
-                </SwiperSlide>
-            
-            
+                        <h2>{data.name}</h2>
+                      </div>
+                    </SwiperSlide>
+                  );
+                })}
               </Swiper>
             </div>
           </div>
