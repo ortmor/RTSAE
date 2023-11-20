@@ -1,12 +1,27 @@
 "use client";
-import React, { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay, EffectFade, Navigation,Pagination } from "swiper";
+import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import Link from "next/link";
 import Styles from "../../styles/insights.module.scss";
 
 const Landing = () => {
+  const ApiPoint = process.env.API_KEY;
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(ApiPoint + "/en/award/public");
+        const result = await response.json();
+        setData(result.results);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -29,95 +44,36 @@ const Landing = () => {
           dynamicBullets: true,
           clickable: true,
         }}
-        modules={[Autoplay, EffectFade, Navigation,Pagination]}
+        modules={[Autoplay, EffectFade, Navigation, Pagination]}
         className={Styles.mySwiper}
       >
-        <SwiperSlide>
-          <div className={Styles.blogmainlandingcontainerslide}>
-            <div className={Styles.blogmainlandingcontainerheading}>
-              <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>Coveted Best Partner Awards</h5>
+        {data.map((data) => {
+          return (
+            <SwiperSlide key={data.id}>
+              <div className={Styles.blogmainlandingcontainerslide}>
+                <div className={Styles.blogmainlandingcontainerheading}>
+                  <div className={Styles.blogmainlandingcontainerparagraph}>
+                    <h5>{data.title}</h5>
+                  </div>
+
+                  <button className={Styles.buttonmain}>
+                    <Link href="/awards">Read Article</Link>
+                  </button>
+
+                  <div className={Styles.customarrowcomponent}>
+                    <button className="Nextslide">
+                      <BsArrowLeftShort color="#ffffff" size="3em" />
+                    </button>
+                    <button className="Backslide">
+                      <BsArrowRightShort color="#ffffff" size="3em" />
+                    </button>
+                  </div>
+                </div>
+                <img id={Styles.img} width="100%" poster="/" src={data.image} />
               </div>
-
-              <button className={Styles.buttonmain}>
-                <Link href="/awards">Read Article</Link>
-              </button>
-
-              <div className={Styles.customarrowcomponent}>
-                <button className="Nextslide">
-                  <BsArrowLeftShort color="#ffffff" size="3em" />
-                </button>
-                <button className="Backslide">
-                  <BsArrowRightShort color="#ffffff" size="3em" />
-                </button>
-              </div>
-            </div>
-            <img
-              id={Styles.img}
-              width="100%"
-              poster="/"
-              src="/blog/awards_hero.webp"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className={Styles.blogmainlandingcontainerslide}>
-            <div className={Styles.blogmainlandingcontainerheading}>
-              <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>HPE Rising Star of the Year 2023</h5>
-              </div>
-
-              <button className={Styles.buttonmain}>
-                <Link href="/awards01">Read Article</Link>
-              </button>
-
-              <div className={Styles.customarrowcomponent}>
-                <button className="Nextslide">
-                  <BsArrowLeftShort color="#ffffff" size="3em" />
-                </button>
-                <button className="Backslide">
-                  <BsArrowRightShort color="#ffffff" size="3em" />
-                </button>
-              </div>
-            </div>
-            <img
-              id={Styles.img}
-              width="100%"
-              poster="/"
-              src="/blog/rts-shines.webp"
-            />
-          </div>
-        </SwiperSlide>
-
-        <SwiperSlide>
-          <div className={Styles.blogmainlandingcontainerslide}>
-            <div className={Styles.blogmainlandingcontainerheading}>
-              <div className={Styles.blogmainlandingcontainerparagraph}>
-                <h5>2T- Partner of the Year – 2022</h5>
-              </div>
-
-              <button className={Styles.buttonmain}>
-                <Link href="/awards02">Read Article</Link>
-              </button>
-
-              <div className={Styles.customarrowcomponent}>
-                <button className="Nextslide">
-                  <BsArrowLeftShort color="#ffffff" size="3em" />
-                </button>
-                <button className="Backslide">
-                  <BsArrowRightShort color="#ffffff" size="3em" />
-                </button>
-              </div>
-            </div>
-            <img
-              id={Styles.img}
-              width="100%"
-              poster="/"
-              src="/blog/Cisco.webp"
-            />
-          </div>
-        </SwiperSlide>
+            </SwiperSlide>
+          );
+        })}
       </Swiper>
     </div>
   );

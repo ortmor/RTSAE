@@ -1,5 +1,4 @@
 "use client";
-import Image from "next/image";
 import Styles from "../../styles/home.module.scss";
 
 const Landing = () => {
@@ -27,7 +26,7 @@ const Landing = () => {
           </div>
 
           <button  onClick={scrollToMain}>
-            {/* <Link href="#main">Explore more</Link> */}
+            
             Explore more
                  
           </button>

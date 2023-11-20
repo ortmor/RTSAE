@@ -3,7 +3,8 @@ const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
-  CONTACT_CAPTCHA_SITEKEY:"6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
+    CONTACT_CAPTCHA_SITEKEY: "6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
+    API_KEY: "http://localhost:5000/api/v1",
   },
   // Adding policies:
   async headers() {

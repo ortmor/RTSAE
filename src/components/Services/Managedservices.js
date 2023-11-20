@@ -1,8 +1,24 @@
 "use client";
 import Swal from "sweetalert2";
+import { useEffect, useState } from "react";
 import Styles from "../../styles/services.module.scss";
 
 const Managedservice = () => {
+  const ApiPoint = process.env.API_KEY;
+  const [data, setData] = useState(null);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(ApiPoint + "/en/service/public");
+        const result = await response.json();
+        setData(result);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+    fetchData();
+  }, []);
+
   const Boxone = () => {
     Swal.fire({
       html: `
@@ -860,6 +876,11 @@ Experience the convenience of a Single Point of Contact for all your communicati
             <button onClick={Boxfiften}>View more</button>
           </div>
         </div>
+      </div>
+
+      <div>
+        <h1>Sample Next.js API Integration</h1>
+        {console.log(data)}
       </div>
     </div>
   );

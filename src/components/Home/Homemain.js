@@ -1,9 +1,7 @@
 import Link from "next/link";
 import Styles from "../../styles/home.module.scss";
 
-
 const Homemain = () => {
-  
   return (
     <div className={Styles.homemainparentdiv}>
       <div className={Styles.homemainboxone}>
@@ -29,9 +27,8 @@ const Homemain = () => {
         </div>
         <br />
         <br />
-       
-          <Link href="/contact">Explore more</Link>
-   
+
+        <Link href="/contact">Explore more</Link>
       </div>
 
       <div className={Styles.homemainboxtwo}>
