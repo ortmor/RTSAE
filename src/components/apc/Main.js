@@ -1,26 +1,81 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Styles from "../../styles/solution.module.scss";
 import { Fragment } from "react";
 
 const Main = () => {
+  const ApiPoint = process.env.API_KEY;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(ApiPoint + "/en/solution/public");
+        const result = await response.json();
+
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Fragment>
-         <br />
       <br />
-      <div className={Styles.icthomemainparentdiv}>
-        <div className={Styles.icthomemainboxone}>
-          <div className={Styles.icthomemainboxoneheading}>
-            <h1>Designing, Building,   </h1>
-            <h1> and Infrastructure</h1>
-          </div>
-          <br />
-          <Link href="/apcturnkeyprojects/designingbuildingandinfrastructure">Read More</Link>
-        </div>
-        <div className={Styles.icthomemainboxtwo}>
-          <img src="/apc/Designing, Building, and Infrastructure_hero.webp"></img>
-          <div className={Styles.icthomemainboxtwoimg}></div>
-        </div>
-      </div>
+      <br />
+      {data.map((sol, index) => {
+        if (sol.type === "APC_TURNKEY_PROJECTS") {
+          const isEven = index % 2 === 0;
+
+          return (
+            <div key={sol.id}>
+              {isEven ? (
+                <div className={Styles.icthomemainparentdivthree}>
+                  <div className={Styles.icthomemainboxthree}>
+                    <img src={sol.image} alt={sol.title}></img>
+                    <div className={Styles.icthomemainboxthreeimg}></div>
+                  </div>
+
+                  <div className={Styles.icthomemainboxthree}>
+                    <div className={Styles.icthomemainboxthreeheading}>
+                      <h1>{sol.title} </h1>
+                    </div>
+                    <br />
+                    <Link href="">Read More</Link>
+                  </div>
+                </div>
+              ) : (
+                <div className={Styles.icthomemainparentdiv}>
+                  <div className={Styles.icthomemainboxone}>
+                    <div className={Styles.icthomemainboxoneheading}>
+                      <h1>{sol.title}</h1>
+                    </div>
+                    <br />
+                    <Link href="">Read More</Link>
+                  </div>
+                  <div className={Styles.icthomemainboxtwo}>
+                    <img src={sol.image} alt={sol.title}></img>
+                    <div className={Styles.icthomemainboxtwoimg}></div>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        } else {
+          return null;
+        }
+      })}
     </Fragment>
   );
 };

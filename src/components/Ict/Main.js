@@ -1,112 +1,81 @@
+"use client";
+
 import Link from "next/link";
+import { useEffect, useState } from "react";
 import Styles from "../../styles/solution.module.scss";
 import { Fragment } from "react";
 
 const Main = () => {
+  const ApiPoint = process.env.API_KEY;
+  const [data, setData] = useState([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await fetch(ApiPoint + "/en/solution/public");
+        const result = await response.json();
+
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
   return (
     <Fragment>
       <br />
       <br />
-      <div className={Styles.icthomemainparentdiv}>
-        <div className={Styles.icthomemainboxone}>
-          <div className={Styles.icthomemainboxoneheading}>
-            <h1>Data Centre </h1>
-            <h1>Infrastructure</h1>
-          </div>
-          <br />
-          <Link href="/ictsolutions/datacenterinfrastructure">Read More</Link>
-        </div>
-        <div className={Styles.icthomemainboxtwo}>
-          <img src="/ict/01/hero.webp"></img>
-          <div className={Styles.icthomemainboxtwoimg}></div>
-        </div>
-      </div>
+      {data.map((sol, index) => {
+        if (sol.type === "ICT") {
+          const isEven = index % 2 === 0;
 
-      <div className={Styles.icthomemainparentdivthree}>
-        <div className={Styles.icthomemainboxthree}>
-          <img src="/ict/02/Virtualization & Cloud Solutions.webp"></img>
-          <div className={Styles.icthomemainboxthreeimg}></div>
-        </div>
+          return (
+            <div key={sol.id}>
+              {isEven ? (
+                <div className={Styles.icthomemainparentdivthree}>
+                  <div className={Styles.icthomemainboxthree}>
+                    <img src={sol.image} alt={sol.title}></img>
+                    <div className={Styles.icthomemainboxthreeimg}></div>
+                  </div>
 
-        <div className={Styles.icthomemainboxthree}>
-          <div className={Styles.icthomemainboxthreeheading}>
-            <h1>Virtualization & Cloud </h1>
-            <h1>Solutions</h1>
-          </div>
-          <br />
-          <Link href="/ictsolutions/virtualization&cloudsolutions">
-            Read More
-          </Link>
-        </div>
-      </div>
-
-      <div className={Styles.icthomemainparentdiv}>
-        <div className={Styles.icthomemainboxone}>
-          <div className={Styles.icthomemainboxoneheading}>
-            <h1>IT & Network </h1>
-            <h1>Security</h1>
-          </div>
-          <br />
-          <Link href="/ictsolutions/it&networksecurity">Read More</Link>
-        </div>
-        <div className={Styles.icthomemainboxtwo}>
-          <img src="/ict/03/IT & Network Security.webp"></img>
-          <div className={Styles.icthomemainboxtwoimg}></div>
-        </div>
-      </div>
-
-      <div className={Styles.icthomemainparentdivthree}>
-        <div className={Styles.icthomemainboxthree}>
-          <img src="/ict/04/Information & Cyber Security Solutions.webp"></img>
-          <div className={Styles.icthomemainboxthreeimg}></div>
-        </div>
-
-        <div className={Styles.icthomemainboxthree}>
-          <div className={Styles.icthomemainboxthreeheading}>
-            <h1>Information & Cyber </h1>
-            <h1>Security Solutions</h1>
-          </div>
-          <br />
-          <Link href="/ictsolutions/information&cybersecuritysolutions">
-            Read More
-          </Link>
-        </div>
-      </div>
-
-      <div className={Styles.icthomemainparentdiv}>
-        <div className={Styles.icthomemainboxone}>
-          <div className={Styles.icthomemainboxoneheading}>
-            <h1>Wired & Wireless </h1>
-            <h1>Network Infrastructure</h1>
-          </div>
-          <br />
-          <Link href="/ictsolutions/wired&wirelessnetworkinfrastructure">
-            Read More
-          </Link>
-        </div>
-        <div className={Styles.icthomemainboxtwo}>
-          <img src="/ict/05/Wired & Wireless Network Infrastructure.webp"></img>
-          <div className={Styles.icthomemainboxtwoimg}></div>
-        </div>
-      </div>
-
-      <div className={Styles.icthomemainparentdivthree}>
-        <div className={Styles.icthomemainboxthree}>
-          <img src="/ict/06/Unified Communication & Collaboration.webp"></img>
-          <div className={Styles.icthomemainboxthreeimg}></div>
-        </div>
-
-        <div className={Styles.icthomemainboxthree}>
-          <div className={Styles.icthomemainboxthreeheading}>
-            <h1>Unified Communication </h1>
-            <h1> & Collaboration</h1>
-          </div>
-          <br />
-          <Link href="/ictsolutions/unifiedcommunication&collaboration">
-            Read More
-          </Link>
-        </div>
-      </div>
+                  <div className={Styles.icthomemainboxthree}>
+                    <div className={Styles.icthomemainboxthreeheading}>
+                      <h1>{sol.title} </h1>
+                    </div>
+                    <br />
+                    <Link href="">Read More</Link>
+                  </div>
+                </div>
+              ) : (
+                <div className={Styles.icthomemainparentdiv}>
+                  <div className={Styles.icthomemainboxone}>
+                    <div className={Styles.icthomemainboxoneheading}>
+                      <h1>{sol.title}</h1>
+                    </div>
+                    <br />
+                    <Link href="">Read More</Link>
+                  </div>
+                  <div className={Styles.icthomemainboxtwo}>
+                    <img src={sol.image} alt={sol.title}></img>
+                    <div className={Styles.icthomemainboxtwoimg}></div>
+                  </div>
+                </div>
+              )}
+            </div>
+          );
+        } else {
+          return null;
+        }
+      })}
     </Fragment>
   );
 };
