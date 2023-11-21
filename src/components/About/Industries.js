@@ -1,19 +1,28 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
-
 import Styles from "../../styles/about.module.scss";
 
 const Industriesabout = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/industry/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -85,17 +94,18 @@ const Industriesabout = () => {
                 modules={[Autoplay, Pagination]}
                 className={Styles.mySwiper}
               >
-                {data.map((data) => {
-                  return (
-                    <SwiperSlide>
-                      <div className={Styles.IndustriesSlideSlidermain}>
-                        <img src={data.image} loading="lazy" alt="client.png" />
-
-                        <h2>{data.name}</h2>
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
+                {data.map((industry) => (
+                  <SwiperSlide key={industry.id}>
+                    <div className={Styles.IndustriesSlideSlidermain}>
+                      <img
+                        src={industry.image}
+                        loading="lazy"
+                        alt="client.png"
+                      />
+                      <h2>{industry.name}</h2>
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>

@@ -12,7 +12,6 @@ export default function Careers() {
       <Main />
       <Middlesection />
       <Job />
-
       <Footercareer />
     </Layout>
   );

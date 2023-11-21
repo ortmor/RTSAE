@@ -275,8 +275,6 @@ const Values = () => {
         </div>
       </div>
 
-
-
       <div className={Styles.valuesfootercontainermain}>
         {/* <div className={Styles.valuefooterimgboxone}>
      
@@ -284,7 +282,7 @@ const Values = () => {
 
         <div className={Styles.valuefooterboxtwo}>
           <div className={Styles.valuefooterboxsectionone}>
-          <img src="/blog/planning.png" alt="Quality" />
+            <img src="/blog/planning.png" alt="Quality" />
             <h1>Planning & Strategy</h1>
             <p>
               Planning and strategy form the backbone of our approach. By
@@ -316,7 +314,7 @@ const Values = () => {
 
         <div className={Styles.valuefooterboxtwo}>
           <div className={Styles.valuefooterboxsectionone}>
-          <img
+            <img
               className={Styles.valueimganime}
               src="/blog/teamwork.png"
               alt="Quality"
@@ -352,7 +350,6 @@ const Values = () => {
           </div> */}
         </div>
       </div>
-
 
       {/* <div className={Styles.valuesfootercontainermainsecond}>
         <div className={Styles.valuefooterboxsecondboxone}>

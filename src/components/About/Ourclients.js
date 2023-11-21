@@ -1,4 +1,5 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
 import { Autoplay } from "swiper";
@@ -7,12 +8,21 @@ import Styles from "../../styles/about.module.scss";
 const Ourclients = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/client/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -77,15 +87,13 @@ const Ourclients = () => {
               modules={[Autoplay]}
               className={Styles.mySwiper}
             >
-              {data.map((data) => {
-                return (
-                  <SwiperSlide>
-                    <div className={Styles.AboutourSlideSlidermain}>
-                      <img src={data.image} loading="lazy" alt="client.png" />
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
+              {data.map((client) => (
+                <SwiperSlide key={client.id}>
+                  <div className={Styles.AboutourSlideSlidermain}>
+                    <img src={client.image} loading="lazy" alt="client.png" />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>

@@ -7,12 +7,21 @@ import Styles from "../../styles/careers.module.scss";
 const Job = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/career/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -57,35 +66,31 @@ const Job = () => {
   return (
     <div className={Styles.careersmanagedserviceshome}>
       <div className={Styles.careersmanagedservicesparent}>
-        {data.map((data) => {
-          return (
-            <div
-              key={data.id}
-              onClick={() => Box(data)}
-              className={Styles.careersmanagedservicesbox}
-            >
-              <div className={Styles.careersmanagedservicescontentmain}>
+        {data.map((job) => (
+          <div
+            key={job.id}
+            onClick={() => Box(job)}
+            className={Styles.careersmanagedservicesbox}
+          >
+            <div className={Styles.careersmanagedservicescontentmain}>
+              <div className={Styles.careersmanagedservicescontentmainboxmain}>
                 <div
-                  className={Styles.careersmanagedservicescontentmainboxmain}
+                  className={
+                    Styles.careersmanagedservicescontentmainboxmainparagraph
+                  }
                 >
-                  <div
-                    className={
-                      Styles.careersmanagedservicescontentmainboxmainparagraph
-                    }
-                  >
-                    <h2>{data.title}</h2>
-                  </div>
-
-                  <button>{data.type}</button>
+                  <h2>{job.title}</h2>
                 </div>
 
-                <p>{data.description}</p>
+                <button>{job.type}</button>
               </div>
 
-              <h5 className={Styles.linka}>View & Apply</h5>
+              <p>{job.description}</p>
             </div>
-          );
-        })}
+
+            <h5 className={Styles.linka}>View & Apply</h5>
+          </div>
+        ))}
       </div>
 
       <div className={Styles.viewmorecontainer}>

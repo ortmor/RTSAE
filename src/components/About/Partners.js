@@ -7,12 +7,21 @@ import Styles from "../../styles/about.module.scss";
 const Partners = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/client/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -86,26 +95,30 @@ const Partners = () => {
                 modules={[Autoplay, Pagination]}
                 className={Styles.mySwiper}
               >
-                {data.map((data, index) => {
-                  return (
-                    <SwiperSlide>
-                      <div className={Styles.PartnersSlideSlidermain}>
-                        <img src={data.image} loading="lazy" alt="client.png" />
-                      </div>
+                {data.map((partner, index) => (
+                  <SwiperSlide key={partner.id}>
+                    <div className={Styles.PartnersSlideSlidermain}>
+                      <img
+                        src={partner.image}
+                        loading="lazy"
+                        alt={`partner${index + 1}.png`}
+                      />
+                    </div>
 
-                      <div className={Styles.PartnersSlideSlidermain}>
-                        <img src={data.image} loading="lazy" alt="client.png" />
-                      </div>
-                    </SwiperSlide>
-                  );
-                })}
+                    <div className={Styles.PartnersSlideSlidermain}>
+                      <img
+                        src={partner.image}
+                        loading="lazy"
+                        alt={`partner${index + 2}.png`}
+                      />
+                    </div>
+                  </SwiperSlide>
+                ))}
               </Swiper>
             </div>
           </div>
         </div>
       </div>
-
-      {/* slider */}
     </div>
   );
 };

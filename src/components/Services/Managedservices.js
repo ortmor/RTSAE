@@ -6,12 +6,21 @@ import Styles from "../../styles/services.module.scss";
 const Managedservice = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/service/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -77,22 +86,20 @@ const Managedservice = () => {
       </div>
 
       <div className={Styles.managedservicesparent}>
-        {data.map((data) => {
-          return (
-            <div className={Styles.managedservicesbox}>
-              <div className={Styles.managedservicescontentmain}>
-                <img src={data.image} />
-                <h2>{data.title}</h2>
-              </div>
-
-              <p>{data.shortDescription}</p>
-
-              <div className={Styles.managedserviceboxlink}>
-                <button onClick={() => Box(data)}>View more</button>
-              </div>
+        {data.map((service) => (
+          <div className={Styles.managedservicesbox} key={service.id}>
+            <div className={Styles.managedservicescontentmain}>
+              <img src={service.image} alt={service.title} />
+              <h2>{service.title}</h2>
             </div>
-          );
-        })}
+
+            <p>{service.shortDescription}</p>
+
+            <div className={Styles.managedserviceboxlink}>
+              <button onClick={() => Box(service)}>View more</button>
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   );

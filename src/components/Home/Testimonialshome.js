@@ -9,12 +9,21 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 function Testimonials() {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/testimonial/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -26,7 +35,6 @@ function Testimonials() {
     <div className={Styles.TestimonialsVirtualRealityhome}>
       <div className={Styles.TestimonialsVirtualRealityheading}>
         <h1>
-          {" "}
           <span>Find out</span> <br />
           what clients say
         </h1>
@@ -41,10 +49,6 @@ function Testimonials() {
               disableOnInteraction: false,
               pauseOnMouseEnter: true,
             }}
-            // navigation={{
-            //   nextEl: ".Next-slide",
-            //   prevEl: ".Back-slide",
-            // }}
             pagination={{
               dynamicBullets: true,
               clickable: true,
@@ -56,8 +60,8 @@ function Testimonials() {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
-            {data.map((data) => {
-              <SwiperSlide>
+            {data.map((testimonial) => (
+              <SwiperSlide key={testimonial.id}>
                 <div className={Styles.TestimonialsVirtualRealitysliderbox2}>
                   <div
                     className={
@@ -67,21 +71,21 @@ function Testimonials() {
                     <div className={Styles.avatarmain}>
                       <Avatar
                         className={Styles.avatarbg}
-                        src={data.image}
+                        src={testimonial.image}
                         size="100"
                         round={true}
                       />
                     </div>
 
-                    <h1>{data.title}</h1>
-                    <h2>{data.subTitle}</h2>
+                    <h1>{testimonial.title}</h1>
+                    <h2>{testimonial.subTitle}</h2>
                     <p className={Styles.blockquote}>
-                    {data.description}
+                      {testimonial.description}
                     </p>
                   </div>
                 </div>
-              </SwiperSlide>;
-            })}
+              </SwiperSlide>
+            ))}
           </Swiper>
         </div>
       </div>
@@ -90,3 +94,4 @@ function Testimonials() {
 }
 
 export default Testimonials;
+

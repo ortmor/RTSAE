@@ -8,12 +8,24 @@ import Styles from "../../styles/home.module.scss";
 const Bloglandingpage = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/award/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        // Take the first three elements
+        const firstThreeResults = sortedResults.slice(0, 3);
+
+        setData(firstThreeResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -46,36 +58,33 @@ const Bloglandingpage = () => {
         modules={[Autoplay, Navigation, Pagination]}
         className={Styles.mySwiper}
       >
-        {data.map((data) => {
-          return (
-            <SwiperSlide>
-              <div className={Styles.Bloglandingpageparentcontainer}>
-                {/* chlid one */}
-
-                <div className={Styles.Bloglandingpageboxonemain}>
-                  <div
-                    id={Styles.blogimgone}
-                    className={Styles.Bloglandingpageboxoneimg}
-                  ></div>
-                  <div className={Styles.Bloglandingpageoneparagraph}>
-                    <div className={Styles.Bloglandingpageoneparagraphcontent}>
-                      <h1>{data.title}</h1>
-                      <p>{data.description}</p>
-                      <Link href={`/awards/ ${data.id}`}>Read more</Link>
-                    </div>
+        {data.map((blog) => (
+          <SwiperSlide key={blog.id}>
+            <div className={Styles.Bloglandingpageparentcontainer}>
+              {/* chlid one */}
+              <div className={Styles.Bloglandingpageboxonemain}>
+                <div
+                  id={Styles.blogimgone}
+                  className={Styles.Bloglandingpageboxoneimg}
+                ></div>
+                <div className={Styles.Bloglandingpageoneparagraph}>
+                  <div className={Styles.Bloglandingpageoneparagraphcontent}>
+                    <h1>{blog.title}</h1>
+                    <p>{blog.description}</p>
+                    <Link href={`/awards/${blog.id}`}>Read more</Link>
                   </div>
                 </div>
               </div>
-            </SwiperSlide>
-          );
-        })}
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
       <div className={Styles.blogCustombuttondiv}>
         <button className="Backslide">
-          <img src="/blog/btnleft.png" />
+          <img src="/blog/btnleft.png" alt="Previous" />
         </button>
         <button className="Nextslide">
-          <img src="/blog/btnright.png" />
+          <img src="/blog/btnright.png" alt="Next" />
         </button>
       </div>
     </div>

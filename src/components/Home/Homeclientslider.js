@@ -7,12 +7,21 @@ import Styles from "../../styles/home.module.scss";
 function Homeclientslider() {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(ApiPoint + "/en/client/public");
         const result = await response.json();
-        setData(result.results);
+
+        // Sort the results based on the createdAt property
+        const sortedResults = result.results.sort((a, b) => {
+          const dateA = new Date(a.createdAt);
+          const dateB = new Date(b.createdAt);
+          return dateA - dateB;
+        });
+
+        setData(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -74,15 +83,13 @@ function Homeclientslider() {
               modules={[Autoplay, Pagination]}
               className={Styles.mySwiper}
             >
-              {data.map((data) => {
-                return (
-                  <SwiperSlide>
-                    <div className={Styles.SlideSlidermain}>
-                      <img src={data.image} loading="lazy" alt="client.png" />
-                    </div>
-                  </SwiperSlide>
-                );
-              })}
+              {data.map((client) => (
+                <SwiperSlide key={client.id}>
+                  <div className={Styles.SlideSlidermain}>
+                    <img src={client.image} loading="lazy" alt="client.png" />
+                  </div>
+                </SwiperSlide>
+              ))}
             </Swiper>
           </div>
         </div>
