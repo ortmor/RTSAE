@@ -36,6 +36,7 @@ const Main = () => {
               {isEven ? (
                 <div className={Styles.icthomemainparentdivthree}>
                   <div className={Styles.icthomemainboxthree}>
+                    {console.log("SOL",sol.image)}
                     <img src={sol.image} alt={sol.title}></img>
                     <div className={Styles.icthomemainboxthreeimg}></div>
                   </div>
