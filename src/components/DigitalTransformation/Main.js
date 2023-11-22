@@ -15,13 +15,7 @@ const Main = () => {
         const response = await fetch(ApiPoint + "/en/solution/public");
         const result = await response.json();
 
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
-
-        setData(sortedResults);
+        setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -52,7 +46,10 @@ const Main = () => {
                       <h1>{sol.title} </h1>
                     </div>
                     <br />
-                    <Link href={`/digitaltransformation/${sol.id}`}> Readmore </Link>
+                    <Link href={`/digitaltransformation/${sol.id}`}>
+                      {" "}
+                      Readmore{" "}
+                    </Link>
                   </div>
                 </div>
               ) : (
@@ -62,7 +59,10 @@ const Main = () => {
                       <h1>{sol.title}</h1>
                     </div>
                     <br />
-                    <Link href={`/digitaltransformation/${sol.id}`}> Readmore </Link>
+                    <Link href={`/digitaltransformation/${sol.id}`}>
+                      {" "}
+                      Readmore{" "}
+                    </Link>
                   </div>
                   <div className={Styles.icthomemainboxtwo}>
                     <img src={sol.image} alt={sol.title}></img>

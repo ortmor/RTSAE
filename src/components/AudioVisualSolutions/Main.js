@@ -15,13 +15,9 @@ const Main = () => {
         const response = await fetch(ApiPoint + "/en/solution/public");
         const result = await response.json();
 
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
+       
 
-        setData(sortedResults);
+        setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
