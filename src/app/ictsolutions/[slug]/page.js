@@ -1,5 +1,6 @@
 "use client";
-import { useEffect, useState, Fragment } from "react";
+import { useEffect, useState } from "react";
+import axios from "axios";
 import Layout from "@/components/Layout";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
@@ -23,16 +24,15 @@ export default function Page({ params }) {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(
+        const response = await axios.get(
           ApiPoint + "/en/solution-body/solution/public/" + SolID
         );
-        const result = await response.json();
-
-        setData(result.results);
-
-        setMain(result.results[0].solution);
-
-        console.log("RESULT", result);
+        const allData = response.data.results;
+        const filteredData = allData.filter(
+          (item) => item.solution.type === "ICT"
+        );
+        setData(filteredData);
+        setMain(filteredData[0]?.solution || {});
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -49,7 +49,14 @@ export default function Page({ params }) {
             <div
               className={Styles.solutioninnerhomelandingcontanerheadinginner}
             >
-              <h5> {main.title} </h5>
+              <h5
+                dangerouslySetInnerHTML={{
+                  __html:
+                    typeof main.title === "string"
+                      ? main.title.replace(/\n/g, "<br/>")
+                      : main.title,
+                }}
+              />
             </div>
 
             <button onClick={scrollToMain}>Discover More</button>
@@ -66,26 +73,37 @@ export default function Page({ params }) {
       <div className={Styles.landingheadingparent}>
         <div className={Styles.landingparentmain}>
           <div className={Styles.landingparenthead}>
-            <h1>{main.headerTitle}</h1>
+            <h1
+              dangerouslySetInnerHTML={{
+                __html:
+                  typeof main.headerTitle === "string"
+                    ? main.headerTitle.replace(/\n/g, "<br/>")
+                    : main.headerTitle,
+              }}
+            />
           </div>
 
           <div className={Styles.landingparentheadparagraph}>
-            <p>{main.headerDescription}</p>
+            <p
+              dangerouslySetInnerHTML={{
+                __html:
+                  typeof main.headerDescription === "string"
+                    ? main.headerDescription.replace(/\n/g, "<br/>")
+                    : main.headerDescription,
+              }}
+            />
           </div>
         </div>
       </div>
 
-      {/* Points */}
-
       <div>
         {data.map((sol, index) => {
           const isEven = index % 2 === 0;
-          {console.log(sol)}
 
           if (isEven) {
             return (
               <div
-                key={sol.key}
+                key={sol.id}
                 className={Styles.innersolutionhomemainparentdivthree}
               >
                 <div className={Styles.innersolutionhomemainboxthree}>
@@ -99,17 +117,18 @@ export default function Page({ params }) {
                   <div className={Styles.innersolutionhomemainboxthreeheading}>
                     <h1>{sol.title}</h1>
                   </div>
-
                   <div className={Styles.innersolutionpointsmain}>
                     <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      {sol.description
+                        .split(".")
+                        .map((sentence, index, array) => (
+                          <li key={index}>
+                            {sentence.trim()}
+                            {index < array.length - 1 && "."}
+                          </li>
+                        ))}
                     </ul>
                   </div>
-
                   <br />
                   <Link href="/contact">Let’s Talk</Link>
                 </div>
@@ -121,17 +140,17 @@ export default function Page({ params }) {
                 <div className={Styles.innersolutionhomemainboxone}>
                   <div className={Styles.innersolutionhomemainboxoneheading}>
                     <h1>{sol.title}</h1>
-                   
                   </div>
-
                   <div className={Styles.innersolutionpointsmain}>
                     <ul>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
-                      <li></li>
+                      {sol.description
+                        .split(".")
+                        .map((sentence, index, array) => (
+                          <li key={index}>
+                            {sentence.trim()}
+                            {index < array.length - 1 && "."}
+                          </li>
+                        ))}
                     </ul>
                   </div>
                   <br />
@@ -144,6 +163,7 @@ export default function Page({ params }) {
 
                 <div className={Styles.innersolutionhomemainboxtwo}>
                   <img src={sol.image}></img>
+
                   <div className={Styles.innersolutionhomemainboxtwoimg}></div>
                 </div>
               </div>
@@ -155,7 +175,14 @@ export default function Page({ params }) {
       <div className={Styles.innersolutionfooterlandingheadingparent}>
         <div className={Styles.innersolutionfooterlandingparentmain}>
           <div className={Styles.innersolutionfooterlandingparenthead}>
-            <h1>{main.footerTitle}</h1>
+            <h1
+              dangerouslySetInnerHTML={{
+                __html:
+                  typeof main.footerTitle === "string"
+                    ? main.footerTitle.replace(/\n/g, "<br/>")
+                    : main.footerTitle,
+              }}
+            />
           </div>
 
           <div className={Styles.innersolutionfooterlandingparentheadparagraph}>
