@@ -16,7 +16,7 @@
     object-fit: cover;
   }
 }
-.icthomelandingcontainerslide {    
+.icthomelandingcontainerslide {
   display: flex;
   position: relative;
   width: 100%;
@@ -25,12 +25,9 @@
   background-color: #000000;
   border: none !important;
   outline: none !important;
-
 }
 
-
-#main{
-
+#main {
   height: 40vh;
 }
 
@@ -248,7 +245,7 @@
 
 //Home main page
 
-.icthomemainparentdiv {  
+.icthomemainparentdiv {
   position: relative;
   width: 90%;
   margin: -3em auto;
@@ -427,14 +424,6 @@
     }
   }
 }
-
-
-
-
-
-
-
-
 
 @media screen and (max-width: 1100px) {
   .icthomemainparentdiv {
@@ -729,17 +718,7 @@
 
 //footer slider
 
-
-
-
-
-
-
-
-
-
-
-
+//Ends
 
 .footerslidermainhome {
   background-color: #ffffff;
@@ -1140,15 +1119,3 @@
     }
   }
 }
-
-//Ends
-
-
-
-
-
-
-
-
-
-

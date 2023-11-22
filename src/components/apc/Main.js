@@ -52,7 +52,10 @@ const Main = () => {
                       <h1>{sol.title} </h1>
                     </div>
                     <br />
-                    <Link href="">Read More</Link>
+                    <Link href={`/apcturnkeyprojects/${sol.id}`}>
+                      {" "}
+                      Readmore{" "}
+                    </Link>
                   </div>
                 </div>
               ) : (
@@ -62,7 +65,10 @@ const Main = () => {
                       <h1>{sol.title}</h1>
                     </div>
                     <br />
-                    <Link href="">Read More</Link>
+                    <Link href={`/apcturnkeyprojects/${sol.id}`}>
+                      {" "}
+                      Readmore{" "}
+                    </Link>
                   </div>
                   <div className={Styles.icthomemainboxtwo}>
                     <img src={sol.image} alt={sol.title}></img>
