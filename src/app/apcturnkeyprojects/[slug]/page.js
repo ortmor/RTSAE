@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState, Fragment } from "react";
+import Layout from "@/components/Layout";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Navigation } from "swiper";
 import { AiOutlineArrowLeft } from "react-icons/ai";
@@ -13,7 +14,7 @@ export default function Page({ params }) {
 
   const SolID = params.slug;
 
-  console.log(SolID)
+  console.log(SolID);
 
   const scrollToMain = () => {
     const element = document.getElementById("main");
@@ -35,7 +36,7 @@ export default function Page({ params }) {
         });
 
         setData(sortedResults);
-        console.log(sortedResults)
+        console.log(sortedResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
@@ -45,7 +46,7 @@ export default function Page({ params }) {
   }, []);
 
   return (
-    <Fragment>
+    <Layout>
       <div className={Styles.solutioninnerhomelandingcontainer}>
         <div className={Styles.solutioninnerhomelandingcontainerslide}>
           <div className={Styles.solutioninnerhomelandingcontainerheading}>
@@ -99,7 +100,7 @@ export default function Page({ params }) {
           </div>
         </div>
       </div>
-{console.log(data.results)}
+      {console.log(data.results)}
       <div className={Styles.innersolutionhomemainparentdiv}>
         <div className={Styles.innersolutionhomemainboxone}>
           <div className={Styles.innersolutionhomemainboxoneheading}>
@@ -593,6 +594,6 @@ export default function Page({ params }) {
           </div>
         </div>
       </div>
-    </Fragment>
+    </Layout>
   );
 }
