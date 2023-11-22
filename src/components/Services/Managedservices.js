@@ -2,32 +2,28 @@
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/services.module.scss";
+import axios from "axios";
 
 const Managedservice = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
-
+  
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(ApiPoint + "/en/service/public");
-        const result = await response.json();
-
-        // Sort the results based on the createdAt property
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
-
-        setData(sortedResults);
+        const response = await axios.get(ApiPoint + "/en/service/public");
+        const result = response.data;
+  
+        setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+  
     fetchData();
   }, []);
 
+ 
   const Box = (data) => {
     Swal.fire({
       html: `

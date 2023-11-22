@@ -1,5 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
 import Link from "next/link";
@@ -12,24 +13,14 @@ const Bloglandingpage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(ApiPoint + "/en/award/public");
-        const result = await response.json();
-
-        // Sort the results based on the createdAt property
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
-
-        // Take the first three elements
-        const firstThreeResults = sortedResults.slice(0, 3);
-
+        const response = await axios.get(ApiPoint + "/en/award/public");
+        const firstThreeResults = response.data.results.slice(0, 3);
         setData(firstThreeResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+  
     fetchData();
   }, []);
 

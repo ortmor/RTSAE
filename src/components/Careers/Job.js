@@ -3,6 +3,7 @@ import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import Styles from "../../styles/careers.module.scss";
+import axios from "axios";
 
 const Job = () => {
   const ApiPoint = process.env.API_KEY;
@@ -11,23 +12,19 @@ const Job = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(ApiPoint + "/en/career/public");
-        const result = await response.json();
-
-        // Sort the results based on the createdAt property
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
-
-        setData(sortedResults);
+        const response = await axios.get(ApiPoint + "/en/career/public");
+        const result = response.data;
+  
+        setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+  
     fetchData();
   }, []);
+
+
 
   const Box = (data) => {
     Swal.fire({
