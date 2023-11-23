@@ -59,9 +59,9 @@ const Bloglandingpage = () => {
                   className={Styles.Bloglandingpageboxoneimg}
                 ></div>
                 <div className={Styles.Bloglandingpageoneparagraph}>
-                  <div className={Styles.Bloglandingpageoneparagraphcontent}>
-                    <h1>{blog.title}</h1>
-                    <p>{blog.description}</p>
+                  <div className={Styles.Bloglandingpageoneparagraphcontent}> 
+                    <h1>{blog.title.trim().substring(0, 40)} ...</h1>
+                    <p>{blog.description.trim().substring(0, 400)} ...</p>
                     <Link href={`/awards/${blog.id}`}>Read more</Link>
                   </div>
                 </div>
