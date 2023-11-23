@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import axios from "axios";
 import { BsArrowLeftShort, BsArrowRightShort } from "react-icons/bs";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
@@ -13,28 +14,20 @@ const Landing = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(ApiPoint + "/en/award/public");
-        const result = await response.json();
-
-        // Sort the results based on the createdAt property
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
-
-        setData(sortedResults);
+        const response = await axios.get(ApiPoint + "/en/award/public");
+        const result = response.data;
+        setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+
     fetchData();
   }, []);
 
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
-
   return (
     <div className={Styles.blogmainlandingcontainer}>
       <Swiper
@@ -59,13 +52,18 @@ const Landing = () => {
             <div className={Styles.blogmainlandingcontainerslide}>
               <div className={Styles.blogmainlandingcontainerheading}>
                 <div className={Styles.blogmainlandingcontainerparagraph}>
-                  <h5>{data.title}</h5>
+                  <h5
+                    dangerouslySetInnerHTML={{
+                      __html:
+                        typeof data.title === "string"
+                          ? data.title.replace(/\n/g, "<br/>")
+                          : data.title,
+                    }}
+                  />
                 </div>
 
                 <button className={Styles.buttonmain}>
-                  <Link href={`/awards/[slug]`} as={`/awards/${data.id}`}>
-                    Read Article
-                  </Link>
+                  <Link href={`/awards/${data.id}`}>Read Article </Link>
                 </button>
 
                 <div className={Styles.customarrowcomponent}>

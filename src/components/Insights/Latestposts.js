@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/insights.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -11,24 +12,17 @@ const Latestposts = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await fetch(ApiPoint + "/en/insight-news/latest");
-        const result = await response.json();
+        const response = await axios.get(ApiPoint + "/en/insight-news/public");
+        const result = response.data;
 
-        // Sort the results based on the createdAt property
-        const sortedResults = result.results.sort((a, b) => {
-          const dateA = new Date(a.createdAt);
-          const dateB = new Date(b.createdAt);
-          return dateA - dateB;
-        });
-
-        // Take the first three elements
-        const firstThreeResults = sortedResults.slice(0, 3);
+        const firstThreeResults = result.results.slice(0, 3);
 
         setData(firstThreeResults);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+
     fetchData();
   }, []);
 
@@ -43,21 +37,15 @@ const Latestposts = () => {
 
         {data.map((posts) => {
           return (
-            <div className={Styles.childtwo}>
+            <div key={posts.id} className={Styles.childtwo}>
               <div className={Styles.topnewscardcontainer}>
-                <img src="/blog/blog_inner.webp" alt="img" />
-
+                <img src={posts.image} alt="img" />
                 <div className={Styles.topnewscardparagraph}>
-                  <h6>JAN 02, 2023</h6>
-                  <h2>Our Commitment to Corporate Social Responsibility...</h2>
-                  <p>
-                    At RTS, we believe that success extends beyond financial
-                    achievements. As responsible corporate citizen, we are
-                    committed to making a positive impact on society and
-                    contributing to the sustainable development of the United
-                    Arab Emirates (UAE).
-                  </p>
-                  <Link href="/section1">
+                  <h6>{new Date(posts.createdAt).toLocaleString()}</h6>
+                  <h2>{posts.title.trim().substring(0, 50)} ...</h2>
+
+                  <p>{posts.description.trim().substring(0, 300)}...</p>
+                  <Link href={`/news/${posts.id}`}>
                     READ{" "}
                     <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}
                   </Link>
