@@ -5,6 +5,8 @@ const nextConfig = {
   env: {
     CONTACT_CAPTCHA_SITEKEY: "6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
     API_KEY: "http://localhost:5000/api/v1",
+    ENG_WEBSITE_LINK: "",
+    AR_WEBSITE_LINK: "",
   },
   // Adding policies:
   async headers() {

@@ -80,7 +80,7 @@ export default function Page({ params }) {
               </div>
 
               <div className={Styles.homemainboxtwo}>
-                {console.log(award)}
+              
                 <img src={award.image}></img>
                 <div className={Styles.homemainboxtwoimg}></div>
               </div>

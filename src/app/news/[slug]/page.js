@@ -41,10 +41,10 @@ const page = ({ params }) => {
 
           <div className={Styles.Bloginnercommoncontainer}>
             <div className={Styles.Bloginnercommoncontaineraparagraph}>
-              {description.split(".").map((sentence, index, array) => (
+              {description.split(",").map((sentence, index, array) => (
                 <p key={index}>
                   {sentence.trim()}
-                  {index < array.length - 1 && "."}
+                  {index < array.length - 1 && ","}
                 </p>
               ))}
             </div>
