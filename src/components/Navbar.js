@@ -1,6 +1,6 @@
 "use client";
 import React, { useState, useEffect } from "react";
-// import { MdLanguage } from "react-icons/md";
+import { MdLanguage } from "react-icons/md";
 import Link from "next/link";
 function Nav() {
   const AR_WEBSITE_LINK = process.env.AR_WEBSITE_LINK;
