@@ -84,10 +84,13 @@ const Ourclients = () => {
               className={Styles.mySwiper}
             >
               {data.map((client) => (
+
+               
                 <SwiperSlide key={client.id}>
                   <div className={Styles.AboutourSlideSlidermain}>
                     <img src={client.image} loading="lazy" alt="client.png" />
                   </div>
+                  
                 </SwiperSlide>
               ))}
             </Swiper>

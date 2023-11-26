@@ -8,8 +8,8 @@ import Styles from "../../styles/about.module.scss";
 
 const Industriesabout = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.API_KEY + "/image/"
   const [data, setData] = useState([]);
-
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -96,6 +96,8 @@ const Industriesabout = () => {
                         loading="lazy"
                         alt="client.png"
                       />
+
+                      {console.log(IMGURL + industry.image)}
                       <h2>{industry.name}</h2>
                     </div>
                   </SwiperSlide>

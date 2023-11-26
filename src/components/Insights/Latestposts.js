@@ -44,7 +44,14 @@ const Latestposts = () => {
                   <h6>{new Date(posts.createdAt).toLocaleString()}</h6>
                   <h2>{posts.title.trim().substring(0, 50)} ...</h2>
 
-                  <p>{posts.description.trim().substring(0, 300)}...</p>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `<p>${posts.description
+                        .trim()
+                        .substring(0, 300)}</p>`,
+                    }}
+                  />
+
                   <Link href={`/news/${posts.id}`}>
                     READ{" "}
                     <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}

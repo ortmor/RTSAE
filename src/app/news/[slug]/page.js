@@ -7,7 +7,6 @@ import Styles from "../../../styles/insights.module.scss";
 const page = ({ params }) => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
-  const [description, setDescription] = useState("");
   const SolID = params.slug;
 
   useEffect(() => {
@@ -41,12 +40,9 @@ const page = ({ params }) => {
 
           <div className={Styles.Bloginnercommoncontainer}>
             <div className={Styles.Bloginnercommoncontaineraparagraph}>
-              {description.split(",").map((sentence, index, array) => (
-                <p key={index}>
-                  {sentence.trim()}
-                  {index < array.length - 1 && ","}
-                </p>
-              ))}
+              <div
+                dangerouslySetInnerHTML={{ __html: `${data.description}` }}
+              />
             </div>
           </div>
         </div>
