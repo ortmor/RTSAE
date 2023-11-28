@@ -11,6 +11,7 @@ import Link from "next/link";
 
 export default function Page({ params }) {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
   const [main, setMain] = useState({});
 
@@ -61,7 +62,7 @@ export default function Page({ params }) {
 
             <button onClick={scrollToMain}>Discover More</button>
           </div>
-          <img id={Styles.img} width="100%" poster="/" src={main.image} />
+          <img id={Styles.img} width="100%" poster="/" src={IMGURL + main.image} />
         </div>
         <div className={Styles.solutioninnerhomelandingcontainerheading}></div>
 
@@ -101,13 +102,13 @@ export default function Page({ params }) {
           const isEven = index % 2 === 0;
 
           if (isEven) {
-            return (
+            return sol.visibility === "Show" ? (
               <div
                 key={sol.id}
                 className={Styles.innersolutionhomemainparentdivthree}
               >
                 <div className={Styles.innersolutionhomemainboxthree}>
-                  <img src={sol.image}></img>
+                  <img src={IMGURL + sol.image}></img>
                   <div
                     className={Styles.innersolutionhomemainboxthreeimg}
                   ></div>
@@ -133,9 +134,9 @@ export default function Page({ params }) {
                   <Link href="/contact">Let’s Talk</Link>
                 </div>
               </div>
-            );
+            ) : null;
           } else {
-            return (
+            return sol.visibility === "Show" ? (
               <div className={Styles.innersolutionhomemainparentdiv}>
                 <div className={Styles.innersolutionhomemainboxone}>
                   <div className={Styles.innersolutionhomemainboxoneheading}>
@@ -162,12 +163,12 @@ export default function Page({ params }) {
                 </div>
 
                 <div className={Styles.innersolutionhomemainboxtwo}>
-                  <img src={sol.image}></img>
-                 
+                  <img src={IMGURL + sol.image}></img>
+
                   <div className={Styles.innersolutionhomemainboxtwoimg}></div>
                 </div>
               </div>
-            );
+            ) : null;
           }
         })}
       </div>
