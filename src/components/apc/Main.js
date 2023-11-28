@@ -8,6 +8,7 @@ import { Fragment } from "react";
 
 const Main = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -31,54 +32,56 @@ const Main = () => {
     <Fragment>
       <br />
       <br />
-      {data.map((sol, index) => (
-        <div key={sol.id}>
-          {index % 2 === 0 ? (
-            <div className={Styles.icthomemainparentdivthree}>
-              <div className={Styles.icthomemainboxthree}>
-                <img src={sol.image} alt={sol.title}></img>
-                <div className={Styles.icthomemainboxthreeimg}></div>
-              </div>
+      {data.map((sol, index) =>
+        sol.visibility === "Show" ? (
+          <div key={sol.id}>
+            {index % 2 === 0 ? (
+              <div className={Styles.icthomemainparentdivthree}>
+                <div className={Styles.icthomemainboxthree}>
+                  <img src={IMGURL + sol.image} alt={sol.title}></img>
+                  <div className={Styles.icthomemainboxthreeimg}></div>
+                </div>
 
-              <div className={Styles.icthomemainboxthree}>
-                <div className={Styles.icthomemainboxthreeheading}>
-                  <h1
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        typeof sol.title === "string"
-                          ? sol.title.replace(/\n/g, "<br/>")
-                          : sol.title,
-                    }}
-                  />
+                <div className={Styles.icthomemainboxthree}>
+                  <div className={Styles.icthomemainboxthreeheading}>
+                    <h1
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          typeof sol.title === "string"
+                            ? sol.title.replace(/\n/g, "<br/>")
+                            : sol.title,
+                      }}
+                    />
+                  </div>
+                  <br />
+                  <Link href={`/apcturnkeyprojects/${sol.id}`}>Readmore</Link>
                 </div>
-                <br />
-                <Link href={`/apcturnkeyprojects/${sol.id}`}>Readmore</Link>
               </div>
-            </div>
-          ) : (
-            <div className={Styles.icthomemainparentdiv}>
-              <div className={Styles.icthomemainboxone}>
-                <div className={Styles.icthomemainboxoneheading}>
-                  <h1
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        typeof sol.title === "string"
-                          ? sol.title.replace(/\n/g, "<br/>")
-                          : sol.title,
-                    }}
-                  />
+            ) : (
+              <div className={Styles.icthomemainparentdiv}>
+                <div className={Styles.icthomemainboxone}>
+                  <div className={Styles.icthomemainboxoneheading}>
+                    <h1
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          typeof sol.title === "string"
+                            ? sol.title.replace(/\n/g, "<br/>")
+                            : sol.title,
+                      }}
+                    />
+                  </div>
+                  <br />
+                  <Link href={`/apcturnkeyprojects/${sol.id}`}>Readmore</Link>
                 </div>
-                <br />
-                <Link href={`/apcturnkeyprojects/${sol.id}`}>Readmore</Link>
+                <div className={Styles.icthomemainboxtwo}>
+                  <img src={IMGURL + sol.image} alt={sol.title}></img>
+                  <div className={Styles.icthomemainboxtwoimg}></div>
+                </div>
               </div>
-              <div className={Styles.icthomemainboxtwo}>
-                <img src={sol.image} alt={sol.title}></img>
-                <div className={Styles.icthomemainboxtwoimg}></div>
-              </div>
-            </div>
-          )}
-        </div>
-      ))}
+            )}
+          </div>
+        ) : null
+      )}
     </Fragment>
   );
 };
