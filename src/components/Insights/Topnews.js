@@ -41,7 +41,7 @@ const Topnews = () => {
           posts.visibility === "Show" ? (
             <div key={posts.id} className={Styles.childtwo}>
               <div className={Styles.topnewscardcontainer}>
-                <img src={posts.image} alt="img" />
+                <img src={IMGURL + posts.image} alt="img" />
                 <div className={Styles.topnewscardparagraph}>
                   <h6>{new Date(posts.createdAt).toLocaleString()}</h6>
                   <h2>{posts.title.trim().substring(0, 50)} ...</h2>
