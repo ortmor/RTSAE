@@ -7,6 +7,7 @@ import Styles from "../../styles/home.module.scss";
 
 function Homeclientslider() {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -14,13 +15,13 @@ function Homeclientslider() {
       try {
         const response = await axios.get(ApiPoint + "/en/client/public");
         const result = response.data;
-  
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -78,13 +79,19 @@ function Homeclientslider() {
               modules={[Autoplay, Pagination]}
               className={Styles.mySwiper}
             >
-              {data.map((client) => (
-                <SwiperSlide key={client.id}>
-                  <div className={Styles.SlideSlidermain}>
-                    <img src={client.image} loading="lazy" alt="client.png" />
-                  </div>
-                </SwiperSlide>
-              ))}
+              {data.map((client) =>
+                client.visibility === "Show" ? (
+                  <SwiperSlide key={client.id}>
+                    <div className={Styles.SlideSlidermain}>
+                      <img
+                        src={IMGURL + client.image}
+                        loading="lazy"
+                        alt="client.png"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ) : null
+              )}
             </Swiper>
           </div>
         </div>

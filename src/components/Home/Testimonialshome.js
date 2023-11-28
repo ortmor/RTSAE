@@ -9,6 +9,7 @@ import { Pagination, Autoplay, Navigation } from "swiper";
 
 function Testimonials() {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -16,13 +17,13 @@ function Testimonials() {
       try {
         const response = await axios.get(ApiPoint + "/en/testimonial/public");
         const result = response.data;
-  
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -55,32 +56,34 @@ function Testimonials() {
             modules={[Autoplay, Pagination, Navigation]}
             className="mySwiper"
           >
-            {data.map((testimonial) => (
-              <SwiperSlide key={testimonial.id}>
-                <div className={Styles.TestimonialsVirtualRealitysliderbox2}>
-                  <div
-                    className={
-                      Styles.TestimonialsVirtualRealitysliderboxparagraph
-                    }
-                  >
-                    <div className={Styles.avatarmain}>
-                      <Avatar
-                        className={Styles.avatarbg}
-                        src={testimonial.image}
-                        size="100"
-                        round={true}
-                      />
-                    </div>
+            {data.map((testimonial) =>
+              testimonial.visibility === "Show" ? (
+                <SwiperSlide key={testimonial.id}>
+                  <div className={Styles.TestimonialsVirtualRealitysliderbox2}>
+                    <div
+                      className={
+                        Styles.TestimonialsVirtualRealitysliderboxparagraph
+                      }
+                    >
+                      <div className={Styles.avatarmain}>
+                        <Avatar
+                          className={Styles.avatarbg}
+                          src={IMGURL + testimonial.image}
+                          size="100"
+                          round={true}
+                        />
+                      </div>
 
-                    <h1>{testimonial.title}</h1>
-                    <h2>{testimonial.subTitle}</h2>
-                    <p className={Styles.blockquote}>
-                      {testimonial.description}
-                    </p>
+                      <h1>{testimonial.title}</h1>
+                      <h2>{testimonial.subTitle}</h2>
+                      <p className={Styles.blockquote}>
+                        {testimonial.description}
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </SwiperSlide>
-            ))}
+                </SwiperSlide>
+              ) : null
+            )}
           </Swiper>
         </div>
       </div>

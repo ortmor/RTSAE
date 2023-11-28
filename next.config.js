@@ -1,12 +1,15 @@
+require("dotenv").config();
+
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
   env: {
     CONTACT_CAPTCHA_SITEKEY: "6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
-    API_KEY: "http://localhost:5000/api/v1",
-    ENG_WEBSITE_LINK: "",
-    AR_WEBSITE_LINK: "",
+    API_KEY: process.env.API_KEY,
+    SERVER_URL: process.env.SERVER_URL,
+    ENG_WEBSITE_LINK: process.env.ENG_WEBSITE_LINK,
+    AR_WEBSITE_LINK: process.env.AR_WEBSITE_LINK,
   },
   // Adding policies:
   async headers() {

@@ -8,6 +8,7 @@ import Styles from "../../styles/home.module.scss";
 
 const Bloglandingpage = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -20,7 +21,7 @@ const Bloglandingpage = () => {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -49,27 +50,30 @@ const Bloglandingpage = () => {
         modules={[Autoplay, Navigation, Pagination]}
         className={Styles.mySwiper}
       >
-        {data.map((blog) => (
-          <SwiperSlide key={blog.id}>
-            <div className={Styles.Bloglandingpageparentcontainer}>
-              {/* chlid one */}
-              <div className={Styles.Bloglandingpageboxonemain}>
-                <div
-                  id={Styles.blogimgone}
-                  className={Styles.Bloglandingpageboxoneimg}
-                ></div>
-                <div className={Styles.Bloglandingpageoneparagraph}>
-                  <div className={Styles.Bloglandingpageoneparagraphcontent}> 
-                    <h1>{blog.title.trim().substring(0, 40)} ...</h1>
-                    <p>{blog.description.trim().substring(0, 400)} ...</p>
-                    <Link href={`/awards/${blog.id}`}>Read more</Link>
+        {data.map((blog) =>
+          blog.visibility === "Show" ? (
+            <SwiperSlide key={blog.id}>
+              <div className={Styles.Bloglandingpageparentcontainer}>
+                {/* chlid one */}
+                <div className={Styles.Bloglandingpageboxonemain}>
+                  <div
+                    id={Styles.blogimgone}
+                    className={Styles.Bloglandingpageboxoneimg}
+                  ></div>
+                  <div className={Styles.Bloglandingpageoneparagraph}>
+                    <div className={Styles.Bloglandingpageoneparagraphcontent}>
+                      <h1>{blog.title.trim().substring(0, 40)} ...</h1>
+                      <p>{blog.description.trim().substring(0, 400)} ...</p>
+                      <Link href={`/awards/${blog.id}`}>Read more</Link>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ) : null
+        )}
       </Swiper>
+
       <div className={Styles.blogCustombuttondiv}>
         <button className="Backslide">
           <img src="/blog/btnleft.png" alt="Previous" />
