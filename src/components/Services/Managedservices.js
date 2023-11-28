@@ -6,30 +6,30 @@ import axios from "axios";
 
 const Managedservice = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
-  
+
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(ApiPoint + "/en/service/public");
         const result = response.data;
-  
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
- 
   const Box = (data) => {
     Swal.fire({
       html: `
        <div>
        <br />
-       <img width="50px" height="50px" src=${data.image} />
+       <img width="50px" height="50px" src=${IMGURL + data.image} />
       <br />
       <br />
        <p style="color:#999999">
@@ -82,20 +82,21 @@ const Managedservice = () => {
       </div>
 
       <div className={Styles.managedservicesparent}>
-        {data.map((service) => (
-          <div className={Styles.managedservicesbox} key={service.id}>
-            <div className={Styles.managedservicescontentmain}>
-              <img src={service.image} alt={service.title} />
-              <h2>{service.title}</h2>
-            </div>
+        {data.map((service) =>
+          service.visibility === "Show" ? (
+            <div className={Styles.managedservicesbox} key={service.id}>
+              <div className={Styles.managedservicescontentmain}>
+                <img src={IMGURL + service.image} alt={service.title} />
+                <h2>{service.title}</h2>
+              </div>
+              <p>{service.shortDescription}</p>
 
-            <p>{service.shortDescription}</p>
-
-            <div className={Styles.managedserviceboxlink}>
-              <button onClick={() => Box(service)}>View more</button>
+              <div className={Styles.managedserviceboxlink}>
+                <button onClick={() => Box(service)}>View more</button>
+              </div>
             </div>
-          </div>
-        ))}
+          ) : null
+        )}
       </div>
     </div>
   );
