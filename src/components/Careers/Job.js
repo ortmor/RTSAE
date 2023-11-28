@@ -7,6 +7,7 @@ import axios from "axios";
 
 const Job = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -14,17 +15,15 @@ const Job = () => {
       try {
         const response = await axios.get(ApiPoint + "/en/career/public");
         const result = response.data;
-  
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
-
-
 
   const Box = (data) => {
     Swal.fire({
@@ -34,7 +33,7 @@ const Job = () => {
       style="object-fit: contain;"
         width='100%'
         height='500px'
-        src=${data.image}
+        src=${IMGURL + data.image}
       ></img>
       <a style="display: inline-block;
           background-color: #d33;
@@ -42,7 +41,7 @@ const Job = () => {
           padding: 10px 20px;
           text-decoration: none;
           border-radius: 5px;"
-   href=${data.image}
+   href=${IMGURL + data.image}
    target="_blank">view</a>
     </div>
        
@@ -63,31 +62,35 @@ const Job = () => {
   return (
     <div className={Styles.careersmanagedserviceshome}>
       <div className={Styles.careersmanagedservicesparent}>
-        {data.map((job) => (
-          <div
-            key={job.id}
-            onClick={() => Box(job)}
-            className={Styles.careersmanagedservicesbox}
-          >
-            <div className={Styles.careersmanagedservicescontentmain}>
-              <div className={Styles.careersmanagedservicescontentmainboxmain}>
+        {data.map((job) =>
+          job.visibility === "Show" ? (
+            <div
+              key={job.id}
+              onClick={() => Box(job)}
+              className={Styles.careersmanagedservicesbox}
+            >
+              <div className={Styles.careersmanagedservicescontentmain}>
                 <div
-                  className={
-                    Styles.careersmanagedservicescontentmainboxmainparagraph
-                  }
+                  className={Styles.careersmanagedservicescontentmainboxmain}
                 >
-                  <h2>{job.title}</h2>
+                  <div
+                    className={
+                      Styles.careersmanagedservicescontentmainboxmainparagraph
+                    }
+                  >
+                    <h2>{job.title}</h2>
+                  </div>
+
+                  <button>{job.type}</button>
                 </div>
 
-                <button>{job.type}</button>
+                <p>{job.description}</p>
               </div>
 
-              <p>{job.description}</p>
+              <h5 className={Styles.linka}>View & Apply</h5>
             </div>
-
-            <h5 className={Styles.linka}>View & Apply</h5>
-          </div>
-        ))}
+          ) : null
+        )}
       </div>
 
       <div className={Styles.viewmorecontainer}>
