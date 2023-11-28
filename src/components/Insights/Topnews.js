@@ -7,6 +7,7 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Topnews = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -36,29 +37,31 @@ const Topnews = () => {
             Top <br /> News
           </h1>
         </div>
-        {data.map((posts) => (
-          <div key={posts.id} className={Styles.childtwo}>
-            <div className={Styles.topnewscardcontainer}>
-              <img src={posts.image} alt="img" />
-              <div className={Styles.topnewscardparagraph}>
-                <h6>{new Date(posts.createdAt).toLocaleString()}</h6>
-                <h2>{posts.title.trim().substring(0, 50)} ...</h2>
-                <div
-                  dangerouslySetInnerHTML={{
-                    __html: `<p>${posts.description
-                      .trim()
-                      .substring(0, 300)}</p>`,
-                  }}
-                />
+        {data.map((posts) =>
+          posts.visibility === "Show" ? (
+            <div key={posts.id} className={Styles.childtwo}>
+              <div className={Styles.topnewscardcontainer}>
+                <img src={posts.image} alt="img" />
+                <div className={Styles.topnewscardparagraph}>
+                  <h6>{new Date(posts.createdAt).toLocaleString()}</h6>
+                  <h2>{posts.title.trim().substring(0, 50)} ...</h2>
+                  <div
+                    dangerouslySetInnerHTML={{
+                      __html: `<p>${posts.description
+                        .trim()
+                        .substring(0, 300)}</p>`,
+                    }}
+                  />
 
-                <Link href={`/news/${posts.id}`}>
-                  READ{" "}
-                  <AiOutlineArrowRight className={Styles.topnewscardarrow} />
-                </Link>
+                  <Link href={`/news/${posts.id}`}>
+                    READ{" "}
+                    <AiOutlineArrowRight className={Styles.topnewscardarrow} />
+                  </Link>
+                </div>
               </div>
             </div>
-          </div>
-        ))}
+          ) : null
+        )}
       </div>
     </div>
   );

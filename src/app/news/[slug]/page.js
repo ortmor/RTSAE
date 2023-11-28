@@ -6,6 +6,7 @@ import Styles from "../../../styles/insights.module.scss";
 
 const page = ({ params }) => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
   const SolID = params.slug;
 
@@ -35,7 +36,7 @@ const page = ({ params }) => {
             <h1>{data.title}</h1>
             <span>{new Date(data.createdAt).toLocaleString()}</span>
 
-            <img src={data.image} alt="" />
+            <img src={IMGURL + data.image} alt="" />
           </div>
 
           <div className={Styles.Bloginnercommoncontainer}>

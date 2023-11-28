@@ -9,6 +9,7 @@ import Styles from "../../styles/insights.module.scss";
 
 const Landing = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -47,38 +48,45 @@ const Landing = () => {
         modules={[Autoplay, EffectFade, Navigation, Pagination]}
         className={Styles.mySwiper}
       >
-        {data.map((data) => (
-          <SwiperSlide key={data.id}>
-            <div className={Styles.blogmainlandingcontainerslide}>
-              <div className={Styles.blogmainlandingcontainerheading}>
-                <div className={Styles.blogmainlandingcontainerparagraph}>
-                  <h5
-                    dangerouslySetInnerHTML={{
-                      __html:
-                        typeof data.title === "string"
-                          ? data.title.replace(/\n/g, "<br/>")
-                          : data.title,
-                    }}
-                  />
-                </div>
+        {data.map((data) =>
+          data.visibility === "Show" ? (
+            <SwiperSlide key={data.id}>
+              <div className={Styles.blogmainlandingcontainerslide}>
+                <div className={Styles.blogmainlandingcontainerheading}>
+                  <div className={Styles.blogmainlandingcontainerparagraph}>
+                    <h5
+                      dangerouslySetInnerHTML={{
+                        __html:
+                          typeof data.title === "string"
+                            ? data.title.replace(/\n/g, "<br/>")
+                            : data.title,
+                      }}
+                    />
+                  </div>
 
-                <button className={Styles.buttonmain}>
-                  <Link href={`/awards/${data.id}`}>Read Article </Link>
-                </button>
+                  <button className={Styles.buttonmain}>
+                    <Link href={`/awards/${data.id}`}>Read Article </Link>
+                  </button>
 
-                <div className={Styles.customarrowcomponent}>
-                  <button className="Nextslide">
-                    <BsArrowLeftShort color="#ffffff" size="3em" />
-                  </button>
-                  <button className="Backslide">
-                    <BsArrowRightShort color="#ffffff" size="3em" />
-                  </button>
+                  <div className={Styles.customarrowcomponent}>
+                    <button className="Nextslide">
+                      <BsArrowLeftShort color="#ffffff" size="3em" />
+                    </button>
+                    <button className="Backslide">
+                      <BsArrowRightShort color="#ffffff" size="3em" />
+                    </button>
+                  </div>
                 </div>
+                <img
+                  id={Styles.img}
+                  width="100%"
+                  poster="/"
+                  src={IMGURL + data.image}
+                />
               </div>
-              <img id={Styles.img} width="100%" poster="/" src={data.image} />
-            </div>
-          </SwiperSlide>
-        ))}
+            </SwiperSlide>
+          ) : null
+        )}
       </Swiper>
     </div>
   );

@@ -6,6 +6,7 @@ import Styles from "../../../styles/home.module.scss";
 
 export default function Page({ params }) {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
   const [Title, setTitle] = useState("");
   const [Image, setImage] = useState("");
@@ -50,10 +51,10 @@ export default function Page({ params }) {
                 }}
               />
             </div>
-            {console.log(Image)}
+
             <button onClick={scrollToMain}>Explore more</button>
           </div>
-          <img id={Styles.img} width="100%" poster="/" src={Image} />
+          <img id={Styles.img} width="100%" poster="/" src={IMGURL + Image} />
         </div>
         <div id="main"></div>
       </div>
@@ -62,7 +63,7 @@ export default function Page({ params }) {
         const isEven = index % 2 === 0;
 
         if (isEven) {
-          return (
+          return award.visibility === "Show" ? (
             <div key={award.id} className={Styles.homemainparentdiv}>
               <div className={Styles.homemainboxone}>
                 <div className={Styles.homemainboxonepara}>
@@ -80,17 +81,16 @@ export default function Page({ params }) {
               </div>
 
               <div className={Styles.homemainboxtwo}>
-              
-                <img src={award.image}></img>
+                <img src={IMGURL + Image}></img>
                 <div className={Styles.homemainboxtwoimg}></div>
               </div>
             </div>
-          );
+          ) : null;
         } else {
-          return (
+          return award.visibility === "Show" ? (
             <div className={Styles.homemainparentdiv}>
               <div className={Styles.homemainboxtwo}>
-                <img src={award.image}></img>
+                <img src={IMGURL + Image}></img>
                 <div className={Styles.homemainboxtwoimg}></div>
               </div>
               <div className={Styles.homemainboxone}>
@@ -108,7 +108,7 @@ export default function Page({ params }) {
                 <br />
               </div>
             </div>
-          );
+          ) : null;
         }
       })}
     </Layout>

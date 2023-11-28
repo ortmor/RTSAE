@@ -7,12 +7,15 @@ import { AiOutlineArrowRight } from "react-icons/ai";
 
 const Latestposts = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/insight-news/public");
+        const response = await axios.get(
+          ApiPoint + "/en/insight-news/latest/public"
+        );
         const result = response.data;
 
         const firstThreeResults = result.results.slice(0, 3);
@@ -36,10 +39,10 @@ const Latestposts = () => {
         </div>
 
         {data.map((posts) => {
-          return (
+          return posts.visibility === "Show" ? (
             <div key={posts.id} className={Styles.childtwo}>
               <div className={Styles.topnewscardcontainer}>
-                <img src={posts.image} alt="img" />
+                <img src={IMGURL + posts.image} alt="img" />
                 <div className={Styles.topnewscardparagraph}>
                   <h6>{new Date(posts.createdAt).toLocaleString()}</h6>
                   <h2>{posts.title.trim().substring(0, 50)} ...</h2>
@@ -59,7 +62,7 @@ const Latestposts = () => {
                 </div>
               </div>
             </div>
-          );
+          ) : null;
         })}
       </div>
 
