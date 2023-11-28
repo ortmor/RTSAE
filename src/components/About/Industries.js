@@ -8,7 +8,7 @@ import Styles from "../../styles/about.module.scss";
 
 const Industriesabout = () => {
   const ApiPoint = process.env.API_KEY;
-  const IMGURL = process.env.SERVER_URL + "/image/"
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
@@ -88,20 +88,20 @@ const Industriesabout = () => {
                 modules={[Autoplay, Pagination]}
                 className={Styles.mySwiper}
               >
-                {data.map((industry) => (
-                  <SwiperSlide key={industry.id}>
-                    <div className={Styles.IndustriesSlideSlidermain}>
-                      <img
-                        src={IMGURL + industry.image}
-                        loading="lazy"
-                        alt="client.png"
-                      />
-
-                    
-                      <h2>{industry.name}</h2>
-                    </div>
-                  </SwiperSlide>
-                ))}
+                {data.map((industry) =>
+                  industry.visibility === "Show" ? (
+                    <SwiperSlide key={industry.id}>
+                      <div className={Styles.IndustriesSlideSlidermain}>
+                        <img
+                          src={IMGURL + industry.image}
+                          loading="lazy"
+                          alt="client.png"
+                        />
+                        <h2>{industry.name}</h2>
+                      </div>
+                    </SwiperSlide>
+                  ) : null
+                )}
               </Swiper>
             </div>
           </div>

@@ -8,6 +8,7 @@ import axios from "axios";
 
 const Ourclients = () => {
   const ApiPoint = process.env.API_KEY;
+  const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
   useEffect(() => {
@@ -15,16 +16,15 @@ const Ourclients = () => {
       try {
         const response = await axios.get(ApiPoint + "/en/client/public");
         const result = response.data;
-  
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
-  
 
   return (
     <div className={Styles.Aboutourclientslidermain}>
@@ -83,16 +83,19 @@ const Ourclients = () => {
               modules={[Autoplay]}
               className={Styles.mySwiper}
             >
-              {data.map((client) => (
-
-               
-                <SwiperSlide key={client.id}>
-                  <div className={Styles.AboutourSlideSlidermain}>
-                    <img src={client.image} loading="lazy" alt="client.png" />
-                  </div>
-                  
-                </SwiperSlide>
-              ))}
+              {data.map((client) =>
+                client.visibility === "Show" ? (
+                  <SwiperSlide key={client.id}>
+                    <div className={Styles.AboutourSlideSlidermain}>
+                      <img
+                        src={IMGURL + client.image}
+                        loading="lazy"
+                        alt="client.png"
+                      />
+                    </div>
+                  </SwiperSlide>
+                ) : null
+              )}
             </Swiper>
           </div>
         </div>

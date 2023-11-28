@@ -1,5 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import axios from "axios";
 import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
 import Styles from "../../styles/about.module.scss";
@@ -7,19 +8,20 @@ import Styles from "../../styles/about.module.scss";
 const Partners = () => {
   const ApiPoint = process.env.API_KEY;
   const [data, setData] = useState([]);
+  const IMGURL = process.env.SERVER_URL + "/image/";
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await axios.get(ApiPoint + "/en/client/public");
         const result = response.data;
-  
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-  
+
     fetchData();
   }, []);
 
@@ -89,25 +91,19 @@ const Partners = () => {
                 modules={[Autoplay, Pagination]}
                 className={Styles.mySwiper}
               >
-                {data.map((partner, index) => (
-                  <SwiperSlide key={partner.id}>
-                    <div className={Styles.PartnersSlideSlidermain}>
-                      <img
-                        src={partner.image}
-                        loading="lazy"
-                        alt={`partner${index + 1}.png`}
-                      />
-                    </div>
-
-                    <div className={Styles.PartnersSlideSlidermain}>
-                      <img
-                        src={partner.image}
-                        loading="lazy"
-                        alt={`partner${index + 2}.png`}
-                      />
-                    </div>
-                  </SwiperSlide>
-                ))}
+                {data.map((partner, index) =>
+                  partner.visibility === "Show" ? (
+                    <SwiperSlide key={partner.id}>
+                      <div className={Styles.PartnersSlideSlidermain}>
+                        <img
+                          src={IMGURL + partner.image}
+                          loading="lazy"
+                          alt={`partner${index + 1}.png`}
+                        />
+                      </div>
+                    </SwiperSlide>
+                  ) : null
+                )}
               </Swiper>
             </div>
           </div>
