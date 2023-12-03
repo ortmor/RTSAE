@@ -4,7 +4,6 @@ import Styles from "../../styles/home.module.scss";
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
-import Avatar from "react-avatar";
 import { Pagination, Autoplay, Navigation } from "swiper";
 
 function Testimonials() {
@@ -66,12 +65,10 @@ function Testimonials() {
                       }
                     >
                       <div className={Styles.avatarmain}>
-                        <Avatar
-                          className={Styles.avatarbg}
+                        <img
+                          id={Styles.avatarbg}
                           src={IMGURL + testimonial.image}
-                          size="100"
-                          round={true}
-                        />
+                        ></img>
                       </div>
 
                       <h1>{testimonial.title}</h1>
