@@ -1,104 +1,30 @@
-// "use client";
-
-// import Link from "next/link";
-// import axios from "axios";
-// import { useEffect, useState } from "react";
-// import Styles from "../../styles/solution.module.scss";
-// import { Fragment } from "react";
-
-// const Main = () => {
-//   const ApiPoint = process.env.API_KEY;
-//   const IMGURL = process.env.SERVER_URL + "/image/";
-//   const [data, setData] = useState([]);
-//   useEffect(() => {
-//     const fetchData = async () => {
-//       try {
-//         const response = await axios.get(ApiPoint + "/en/solution/public");
-//         const allData = response.data.results;
-//         const filteredData = allData.filter((item) => item.type === "ICT");
-//         setData(filteredData);
-//         setMain(filteredData[0]?.solution || {});
-//       } catch (error) {
-//         console.error("Error fetching data:", error);
-//       }
-//     };
-
-//     fetchData();
-//   }, []);
-
-//   return (
-//     <Fragment>
-//       <br />
-//       <br />
-//       {data.map((sol, index) =>
-//         sol.visibility === "Show" ? (
-//           <div key={sol.id}>
-//             {index % 2 === 0 ? (
-//               <div className={Styles.icthomemainparentdivthree}>
-//                 <div className={Styles.icthomemainboxthree}>
-//                   <img src={IMGURL + sol.image} alt={sol.title}></img>
-//                   <div className={Styles.icthomemainboxthreeimg}></div>
-//                 </div>
-
-//                 <div className={Styles.icthomemainboxthree}>
-//                   <div className={Styles.icthomemainboxthreeheading}>
-//                     <h1
-//                       dangerouslySetInnerHTML={{
-//                         __html:
-//                           typeof sol.title === "string"
-//                             ? sol.title.replace(/\n/g, "<br/>")
-//                             : sol.title,
-//                       }}
-//                     />
-//                   </div>
-//                   <br />
-//                   <Link href={`/ictsolutions/${sol.id}`}> Readmore </Link>
-//                 </div>
-//               </div>
-//             ) : (
-//               <div className={Styles.icthomemainparentdiv}>
-//                 <div className={Styles.icthomemainboxone}>
-//                   <div className={Styles.icthomemainboxoneheading}>
-//                     <h1
-//                       dangerouslySetInnerHTML={{
-//                         __html:
-//                           typeof sol.title === "string"
-//                             ? sol.title.replace(/\n/g, "<br/>")
-//                             : sol.title,
-//                       }}
-//                     />
-//                   </div>
-//                   <br />
-//                   <Link href={`/ictsolutions/${sol.id}`}> Readmore </Link>
-//                 </div>
-//                 <div className={Styles.icthomemainboxtwo}>
-//                   <img src={IMGURL + sol.image} alt={sol.title}></img>
-//                   <div className={Styles.icthomemainboxtwoimg}></div>
-//                 </div>
-//               </div>
-//             )}
-//           </div>
-//         ) : null
-//       )}
-//     </Fragment>
-//   );
-// };
-
-// export default Main;
-
+"use client";
 
 import Link from "next/link";
 import axios from "axios";
-import { Fragment } from "react";
+import { useEffect, useState } from "react";
 import Styles from "../../styles/solution.module.scss";
+import { Fragment } from "react";
 
-const Main = ({ data }) => {
+const Main = () => {
+  const ApiPoint = process.env.API_KEY;
   const IMGURL = process.env.SERVER_URL + "/image/";
+  const [data, setData] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get(ApiPoint + "/en/solution/public");
+        const allData = response.data.results;
+        const filteredData = allData.filter((item) => item.type === "ICT");
+        setData(filteredData);
+        setMain(filteredData[0]?.solution || {});
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
-  // Check if data is undefined
-  if (!data) {
-    return <p>Loading...</p>; // You can replace this with your loading indicator or message
-  }
+    fetchData();
+  }, []);
 
   return (
     <Fragment>
@@ -157,28 +83,5 @@ const Main = ({ data }) => {
     </Fragment>
   );
 };
-
-export async function getServerSideProps() {
-  const ApiPoint = process.env.API_KEY;
-
-  try {
-    const response = await axios.get(ApiPoint + "/en/solution/public");
-    const allData = response.data.results;
-    const filteredData = allData.filter((item) => item.type === "ICT");
-
-    return {
-      props: {
-        data: filteredData,
-      },
-    };
-  } catch (error) {
-    console.error("Error fetching data:", error);
-    return {
-      props: {
-        data: null, // Return null if there's an error
-      },
-    };
-  }
-}
 
 export default Main;
