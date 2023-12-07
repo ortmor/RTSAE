@@ -62,7 +62,12 @@ export default function Page({ params }) {
 
             <button onClick={scrollToMain}>Discover More</button>
           </div>
-          <img id={Styles.img} width="100%" poster="/" src={IMGURL + main.image} />
+          <img
+            id={Styles.img}
+            width="100%"
+            poster="/"
+            src={IMGURL + main.image}
+          />
         </div>
         <div className={Styles.solutioninnerhomelandingcontainerheading}></div>
 
@@ -102,8 +107,7 @@ export default function Page({ params }) {
           const isEven = index % 2 === 0;
 
           if (isEven) {
-            return (
-              sol.visibility === "Show" ? (
+            return sol.visibility === "Show" ? (
               <div
                 key={sol.id}
                 className={Styles.innersolutionhomemainparentdivthree}
@@ -122,11 +126,11 @@ export default function Page({ params }) {
                   <div className={Styles.innersolutionpointsmain}>
                     <ul>
                       {sol.description
-                        .split(",")
+                        .split(".")
                         .map((sentence, index, array) => (
                           <li key={index}>
                             {sentence.trim()}
-                            {index < array.length - 1 && ","}
+                            {index < array.length - 1 && "."}
                           </li>
                         ))}
                     </ul>
@@ -134,27 +138,27 @@ export default function Page({ params }) {
                   <br />
                   <Link href="/contact">Let’s Talk</Link>
                 </div>
-              </div> ) : null
-            );
+              </div>
+            ) : null;
           } else {
-            return (
-              sol.visibility === "Show" ? (
+            return sol.visibility === "Show" ? (
               <div className={Styles.innersolutionhomemainparentdiv}>
                 <div className={Styles.innersolutionhomemainboxone}>
                   <div className={Styles.innersolutionhomemainboxoneheading}>
                     <h1>{sol.title}</h1>
                   </div>
                   <div className={Styles.innersolutionpointsmain}>
-                    <ul>
-                      {sol.description
-                        .split(",")
-                        .map((sentence, index, array) => (
-                          <li key={index}>
-                            {sentence.trim()}
-                            {index < array.length - 1 && ","}
-                          </li>
-                        ))}
-                    </ul>
+                  <ul>
+  {sol.description
+    .split(".")
+    .map((sentence, index, array) => (
+      <li key={index}>
+        {sentence.trim()}
+        {index < array.length - 1 && '.'}
+      </li>
+    ))}
+</ul>
+
                   </div>
                   <br />
                   <Link href="/contact">Let’s Talk</Link>
@@ -166,11 +170,11 @@ export default function Page({ params }) {
 
                 <div className={Styles.innersolutionhomemainboxtwo}>
                   <img src={IMGURL + sol.image}></img>
-                 
+
                   <div className={Styles.innersolutionhomemainboxtwoimg}></div>
                 </div>
-              </div> ) : null
-            );
+              </div>
+            ) : null;
           }
         })}
       </div>

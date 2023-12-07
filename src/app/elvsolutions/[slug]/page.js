@@ -120,16 +120,17 @@ export default function Page({ params }) {
                     <h1>{sol.title}</h1>
                   </div>
                   <div className={Styles.innersolutionpointsmain}>
-                    <ul>
-                      {sol.description
-                        .split(",")
-                        .map((sentence, index, array) => (
-                          <li key={index}>
-                            {sentence.trim()}
-                            {index < array.length - 1 && ","}
-                          </li>
-                        ))}
-                    </ul>
+                  <ul>
+  {sol.description
+    .split(".")
+    .map((sentence, index, array) => (
+      <li key={index}>
+        {sentence.trim()}
+        {index < array.length - 1 && '.'}
+      </li>
+    ))}
+</ul>
+
                   </div>
                   <br />
                   <Link href="/contact">Let’s Talk</Link>
@@ -145,16 +146,17 @@ export default function Page({ params }) {
                     <h1>{sol.title}</h1>
                   </div>
                   <div className={Styles.innersolutionpointsmain}>
-                    <ul>
-                      {sol.description
-                        .split(",")
-                        .map((sentence, index, array) => (
-                          <li key={index}>
-                            {sentence.trim()}
-                            {index < array.length - 1 && ","}
-                          </li>
-                        ))}
-                    </ul>
+                  <ul>
+  {sol.description
+    .split(".")
+    .map((sentence, index, array) => (
+      <li key={index}>
+        {sentence.trim()}
+        {index < array.length - 1 && '.'}
+      </li>
+    ))}
+</ul>
+
                   </div>
                   <br />
                   <Link href="/contact">Let’s Talk</Link>
