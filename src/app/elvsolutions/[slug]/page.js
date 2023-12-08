@@ -122,11 +122,11 @@ export default function Page({ params }) {
                   <div className={Styles.innersolutionpointsmain}>
                   <ul>
   {sol.description
-    .split(">")
+    .split("*")
     .map((sentence, index, array) => (
       <li key={index}>
         {sentence.trim()}
-        {index < array.length - 1 && '>'}
+        {index < array.length - 1 && '*'}
       </li>
     ))}
 </ul>
@@ -148,11 +148,11 @@ export default function Page({ params }) {
                   <div className={Styles.innersolutionpointsmain}>
                   <ul>
   {sol.description
-    .split(">")
+    .split("*")
     .map((sentence, index, array) => (
       <li key={index}>
         {sentence.trim()}
-        {index < array.length - 1 && '>'}
+        {index < array.length - 1 && '*'}
       </li>
     ))}
 </ul>
