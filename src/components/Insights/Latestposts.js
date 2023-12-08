@@ -1,6 +1,6 @@
 "use client";
 import Link from "next/link";
-import axios from "axios";
+// import axios from "axios";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/insights.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
@@ -10,14 +10,45 @@ const Latestposts = () => {
   const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
 
+  // useEffect(() => {
+  //   const fetchData = async () => {
+  //     try {
+  //       const response = await axios.get(
+  //         ApiPoint + "/en/insight-news/latest/public"
+  //       );
+  //       const result = response.data;
+
+  //       const firstThreeResults = result.results.slice(0, 3);
+
+  //       setData(firstThreeResults);
+  //     } catch (error) {
+  //       console.error("Error fetching data:", error);
+  //     }
+  //   };
+
+  //   fetchData();
+  // }, []);
+
+
+
+  //fetch 
+
+
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          ApiPoint + "/en/insight-news/latest/public"
+        const response = await fetch(
+          ApiPoint + "/en/insight-news/latest/public",
+          {
+            cache: "no-store",
+            next: { revalidate: 0 },
+          }
         );
-        const result = response.data;
+        if (!response.ok) {
+          throw new Error(`HTTP error! Status: ${response.status}`);
+        }
 
+        const result = await response.json();
         const firstThreeResults = result.results.slice(0, 3);
 
         setData(firstThreeResults);
@@ -28,6 +59,8 @@ const Latestposts = () => {
 
     fetchData();
   }, []);
+
+
 
   return (
     <div className={Styles.Topnewsmainconatiner}>
