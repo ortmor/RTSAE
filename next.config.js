@@ -4,6 +4,9 @@ require("dotenv").config();
 const nextConfig = {
   reactStrictMode: true,
   swcMinify: true,
+  // experimental: {
+  //   appDir: true,
+  // },
   env: {
     CONTACT_CAPTCHA_SITEKEY: "6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
     API_KEY: process.env.API_KEY,

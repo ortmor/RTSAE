@@ -1,28 +1,44 @@
 "use client";
-
 import { Swiper, SwiperSlide } from "swiper/react";
-import axios from "axios";
-import { useEffect, useState } from "react";
+import { useQuery } from "@tanstack/react-query";
 import { Pagination, Autoplay } from "swiper";
+import fetchData from "@/services/fetchDataService";
 import Styles from "../../styles/about.module.scss";
-
 const Industriesabout = () => {
-  const ApiPoint = process.env.API_KEY;
   const IMGURL = process.env.SERVER_URL + "/image/";
-  const [data, setData] = useState([]);
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get(ApiPoint + "/en/industry/public");
-        const result = response.data;
-        setData(result.results);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-    };
+  // const { data, isLoading, isError } = useQuery({
+  //   queryKey: ["repoData"],
+  //   staleTime: 60000,
+  //   queryFn: async () => {
+  //     const response = await axios.get(ApiPoint + "/en/industry/public");
+  //     return response.data.results;
+  //   },
+  // });
 
-    fetchData();
-  }, []);
+  // if (isLoading) {
+  //   return <p>Loading...</p>;
+  // }
+
+  // if (isError) {
+  //   return <p>Error fetching data</p>;
+  // }
+
+
+  const { data, isLoading, isError } = useQuery({
+    queryKey: ["repoData"],
+    staleTime: 60000,
+    queryFn: fetchData,
+  });
+
+  if (isLoading) {
+    return <p>Loading...</p>;
+  }
+
+  if (isError) {
+    return <p>Error fetching data</p>;
+  }
+
+  console.log("Data", data);
 
   return (
     <div className={Styles.Industrieshome}>
