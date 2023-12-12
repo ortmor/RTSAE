@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "@/components/Layout";
 import Styles from "../../../styles/home.module.scss";
+import uuid from "short-uuid"
 
 export default function Page({ params }) {
   const ApiPoint = process.env.API_KEY;
@@ -22,7 +23,7 @@ export default function Page({ params }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          ApiPoint + "/en/award-body/award/public/" + SolID
+          ApiPoint + `/en/award-body/award/public?fetch=${uuid.generate()}` + SolID
         );
         setTitle(response.data.results[0].award.subTitle);
         setImage(response.data.results[0].image);

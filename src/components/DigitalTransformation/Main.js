@@ -5,6 +5,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/solution.module.scss";
 import { Fragment } from "react";
+import uuid from "short-uuid"
 
 const Main = () => {
   const ApiPoint = process.env.API_KEY;
@@ -14,7 +15,7 @@ const Main = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/solution/public");
+        const response = await axios.get(ApiPoint + `/en/solution/public?fetch=${uuid.generate()}`);
         const allData = response.data.results;
         const filteredData = allData.filter(
           (item) => item.type === "DIGITAL_TRANSFORMATION"

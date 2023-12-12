@@ -4,6 +4,7 @@ import Link from "next/link";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/insights.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import uuid from "short-uuid"
 
 const Latestposts = () => {
   const ApiPoint = process.env.API_KEY;
@@ -29,16 +30,13 @@ const Latestposts = () => {
   //   fetchData();
   // }, []);
 
-
-
-  //fetch 
-
+  //fetch
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         const response = await fetch(
-          ApiPoint + "/en/insight-news/latest/public",
+          ApiPoint + `/en/insight-news/latest/public?fetch=${uuid.generate()}`,
           {
             cache: "no-store",
             next: { revalidate: 0 },
@@ -59,8 +57,6 @@ const Latestposts = () => {
 
     fetchData();
   }, []);
-
-
 
   return (
     <div className={Styles.Topnewsmainconatiner}>

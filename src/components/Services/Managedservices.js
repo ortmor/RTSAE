@@ -1,4 +1,5 @@
 "use client";
+import uuid from "short-uuid"
 import Swal from "sweetalert2";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/services.module.scss";
@@ -12,7 +13,7 @@ const Managedservice = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/service/public");
+        const response = await axios.get(ApiPoint + `/en/service/public?fetch=${uuid.generate()}`);
         const result = response.data;
 
         setData(result.results);

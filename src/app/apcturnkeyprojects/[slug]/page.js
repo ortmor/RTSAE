@@ -8,6 +8,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Styles from "../../../styles/solutioninner.module.scss";
 import Link from "next/link";
+import uuid from "short-uuid"
 
 export default function Page({ params }) {
   const ApiPoint = process.env.API_KEY;
@@ -26,7 +27,7 @@ export default function Page({ params }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          ApiPoint + "/en/solution-body/solution/public/" + SolID
+          ApiPoint + `/en/solution-body/solution/public?fetch=${uuid.generate()}` + SolID
         );
         const allData = response.data.results;
         const filteredData = allData.filter(

@@ -4,6 +4,8 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
 import Styles from "../../styles/about.module.scss";
+import uuid from "short-uuid"
+
 
 const Partners = () => {
   const ApiPoint = process.env.API_KEY;
@@ -13,7 +15,7 @@ const Partners = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/client/public");
+        const response = await axios.get(ApiPoint + `/en/client/public?fetch=${uuid.generate()}`);
         const result = response.data;
 
         setData(result.results);

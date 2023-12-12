@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, EffectFade, Navigation, Pagination } from "swiper";
 import Link from "next/link";
 import Styles from "../../styles/insights.module.scss";
+import uuid from "short-uuid"
 
 const Landing = () => {
   const ApiPoint = process.env.API_KEY;
@@ -15,7 +16,7 @@ const Landing = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/award/public");
+        const response = await axios.get(ApiPoint + `/en/award/public?fetch=${uuid.generate()}`);
         const result = response.data;
         setData(result.results);
       } catch (error) {

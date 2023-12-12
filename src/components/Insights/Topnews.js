@@ -4,6 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/insights.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
+import uuid from "short-uuid"
 
 const Topnews = () => {
   const ApiPoint = process.env.API_KEY;
@@ -14,7 +15,7 @@ const Topnews = () => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          ApiPoint + "/en/insight-news/top/public"
+          ApiPoint + `/en/insight-news/top/public?fetch=${uuid.generate()}`
         );
         const result = response.data;
 

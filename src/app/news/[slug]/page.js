@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "@/components/Layout";
 import Styles from "../../../styles/insights.module.scss";
+import uuid from "short-uuid"
 
 const page = ({ params }) => {
   const ApiPoint = process.env.API_KEY;
@@ -14,7 +15,7 @@ const page = ({ params }) => {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          ApiPoint + "/en/insight-news/public/" + SolID
+          ApiPoint + `/en/insight-news/public?fetch=${uuid.generate()}` + SolID
         );
         const Data = response.data.results;
         setData(Data);

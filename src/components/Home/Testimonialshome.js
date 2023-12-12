@@ -1,6 +1,7 @@
 "use client";
 
 import Styles from "../../styles/home.module.scss";
+import uuid from "short-uuid"
 import axios from "axios";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { useEffect, useState } from "react";
@@ -14,7 +15,7 @@ function Testimonials() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/testimonial/public");
+        const response = await axios.get(ApiPoint + `/en/testimonial/public?fetch=${uuid.generate()}`);
         const result = response.data;
 
         setData(result.results);

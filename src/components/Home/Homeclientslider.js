@@ -1,5 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
+import uuid from "short-uuid"
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
@@ -13,7 +14,7 @@ function Homeclientslider() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/client/public");
+        const response = await axios.get(ApiPoint + `/en/client/public?fetch=${uuid.generate()}`);
         const result = response.data;
 
         setData(result.results);

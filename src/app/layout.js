@@ -1,5 +1,5 @@
+"use client";
 import "./globals.scss";
-import { ReactQueryProvider } from "./ReactQueryProvider";
 
 export const metadata = {
   title: "Royal Technology Solutions",
@@ -12,16 +12,15 @@ export const revalidate = 0;
 
 export default function RootLayout({ children }) {
   return (
-    <ReactQueryProvider>
-      <html lang="en">
-        <head>
-          <link
-            rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
-          />
-        </head>
-        <body suppressHydrationWarning={true}>{children}</body>
-      </html>
-    </ReactQueryProvider>
+    <html lang="en">
+      <head>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css"
+        />
+      </head>
+
+      <body suppressHydrationWarning={true}>{children}</body>
+    </html>
   );
 }

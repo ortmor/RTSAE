@@ -4,6 +4,7 @@ import { useEffect, useState } from "react";
 import Link from "next/link";
 import Styles from "../../styles/careers.module.scss";
 import axios from "axios";
+import uuid from "short-uuid"
 
 const Job = () => {
   const ApiPoint = process.env.API_KEY;
@@ -13,7 +14,7 @@ const Job = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + "/en/career/public");
+        const response = await axios.get(ApiPoint + `/en/career/public?fetch=${uuid.generate()}`);
         const result = response.data;
 
         setData(result.results);
