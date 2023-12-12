@@ -1,10 +1,7 @@
 "use client";
 import Styles from "../../styles/about.module.scss";
 
-
 const Landing = () => {
-
-  
   const scrollToMain = () => {
     const element = document.getElementById("main");
     element.scrollIntoView({ behavior: "smooth" });
@@ -29,9 +26,7 @@ const Landing = () => {
             </p>
           </div>
 
-          <button onClick={scrollToMain}>
-           Discover More
-          </button>
+          <button onClick={scrollToMain}>Discover More</button>
         </div>
         <img
           id={Styles.img}

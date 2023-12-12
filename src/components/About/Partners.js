@@ -15,15 +15,13 @@ const Partners = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + `/en/client/public?fetch=${uuid.generate()}`);
+        const response = await axios.get(ApiPoint + `/en/partner/public?fetch=${uuid.generate()}`);
         const result = response.data;
-
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
-
     fetchData();
   }, []);
 

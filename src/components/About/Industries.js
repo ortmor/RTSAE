@@ -1,4 +1,5 @@
 "use client";
+import React, { useState, useEffect } from "react";
 import axios from "axios";
 import uuid from "short-uuid";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -26,6 +27,10 @@ const Industriesabout = async () => {
 
     fetchData();
   }, []);
+
+  {
+    console.log(data);
+  }
 
   return (
     <div className={Styles.Industrieshome}>
