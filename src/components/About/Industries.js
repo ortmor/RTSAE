@@ -1,12 +1,14 @@
 "use client";
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import uuid from "short-uuid";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import uuid from "short-uuid";
+import axios from "axios";
+import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
+
 import Styles from "../../styles/about.module.scss";
 
-const Industriesabout = async () => {
+const Industriesabout = () => {
   const ApiPoint = process.env.API_KEY;
   const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
@@ -14,11 +16,8 @@ const Industriesabout = async () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(
-          ApiPoint + `/en/industry/public?fetch=${uuid.generate()}`
-        );
+        const response = await axios.get(ApiPoint + `/en/industry/public?fetch=${uuid.generate()}`);
         const result = response.data;
-
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -27,10 +26,6 @@ const Industriesabout = async () => {
 
     fetchData();
   }, []);
-
-  {
-    console.log(data);
-  }
 
   return (
     <div className={Styles.Industrieshome}>

@@ -1,61 +1,58 @@
 "use client";
 import { useRef } from "react";
+import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Styles from "../styles/footer.module.scss";
-import { doSubscribe, doUnsubscribe } from "@/services/subscriptionService";
-
 
 const Subscribe = () => {
+  const ApiPoint = process.env.API_KEY;
   const emailRef = useRef("");
-
 
   const toastId = useRef(null);
 
   const handleSubmitForSubscribe = async (e) => {
     e.preventDefault();
-    const { isSuccess, message } = await doSubscribe(emailRef.current.value);
-    if (isSuccess) {
-      if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.success(message, {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
+    try {
+      const response = await axios.post(ApiPoint + "/subscriber", {
+        email: emailRef.current.value,
+        source: "English",
+      });
 
-      localStorage.setItem("subscribedEmail", emailRef.current.value);
-      emailRef.current.value = "";
-    } else {
-      if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.error(message, {
-          position: "bottom-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-    }
-  };
+      const { success, message } = response.data;
 
-  const handleSubmitForUnsubscribe = async (e) => {
-    e.preventDefault();
-    const { isSuccess, message } = await doUnsubscribe(emailRef.current.value);
-    if (isSuccess) {
-      alert(message);
-      localStorage.removeItem("subscribedEmail");
-      emailRef.current.value = "";
-    } else {
-      alert(message);
+      if (success) {
+        if (!toast.isActive(toastId.current)) {
+          toastId.current = toast.success(message, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+
+        localStorage.setItem("subscribedEmail", emailRef.current.value);
+        emailRef.current.value = "";
+      } else {
+        if (!toast.isActive(toastId.current)) {
+          toastId.current = toast.error(message, {
+            position: "bottom-right",
+            autoClose: 5000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            theme: "light",
+          });
+        }
+      }
+    } catch (error) {
+      console.error("Error submitting subscription:", error.message);
     }
   };
 
@@ -85,7 +82,7 @@ const Subscribe = () => {
               id={Styles.inputbutton2}
               type="button"
               value="Subscribe"
-              onClick={() => window.location.assign("/comingsoon")}
+              onClick={handleSubmitForSubscribe}
             />
           </form>
         </div>

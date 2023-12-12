@@ -1,5 +1,6 @@
 "use client";
 import Link from "next/link";
+import axios from "axios";
 import ReCAPTCHA from "react-google-recaptcha";
 import { MdEmail } from "react-icons/md";
 import { MdPhone } from "react-icons/md";
@@ -8,9 +9,9 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Styles from "../../styles/contact.module.scss";
 import { Fragment, useRef, useState } from "react";
-import sendContactForm from "@/services/contactService";
 
 const CONTACT_CAPTCHA_SITEKEY = process.env.CONTACT_CAPTCHA_SITEKEY;
+const ApiPoint = process.env.API_KEY;
 
 const Contactmain = () => {
   const toastId = useRef(null);
@@ -33,42 +34,63 @@ const Contactmain = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     setloading(true);
-    if (isCaptchaVerified) {
-      const { isSuccess, message } = await sendContactForm({
-        fname: fnameRef.current.value,
-        lname: lnameRef.current.value,
-        email: emailRef.current.value,
-        phone: phoneRef.current.value,
-        type: typeRef.current.value,
-        message: messageRef.current.value,
-        "g-recaptcha-response": captchaResponse,
-      });
 
-      if (isSuccess) {
-        if (!toast.isActive(toastId.current)) {
-          toastId.current = toast.success(message, {
-            position: "top-right",
-            autoClose: 5000,
-            hideProgressBar: true,
-            closeOnClick: true,
-            pauseOnHover: false,
-            draggable: true,
-            progress: undefined,
-            theme: "light",
-          });
+    try {
+      if (isCaptchaVerified) {
+        const response = await axios.post(ApiPoint + "/contact", {
+          firstName: fnameRef.current.value,
+          lastName: lnameRef.current.value,
+          inquiryType: typeRef.current.value,
+          email: emailRef.current.value,
+          phone: phoneRef.current.value,
+          message: messageRef.current.value,
+          source: "English",
+          captchaResponse: captchaResponse,
+        });
+
+        const { success, message } = response.data;
+
+        if (success) {
+          if (!toast.isActive(toastId.current)) {
+            toastId.current = toast.success(message, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          }
+
+          // Reset form fields
+          fnameRef.current.value = "";
+          lnameRef.current.value = "";
+          emailRef.current.value = "";
+          phoneRef.current.value = "";
+          typeRef.current.value = "SalesEnquiries";
+          messageRef.current.value = "";
+
+          // Reset reCAPTCHA
+          reCaptchaRef.current.reset();
+        } else {
+          if (!toast.isActive(toastId.current)) {
+            toastId.current = toast.error(message, {
+              position: "top-right",
+              autoClose: 5000,
+              hideProgressBar: true,
+              closeOnClick: true,
+              pauseOnHover: false,
+              draggable: true,
+              progress: undefined,
+              theme: "light",
+            });
+          }
         }
-        fnameRef.current.value = "";
-        lnameRef.current.value = "";
-        emailRef.current.value = "";
-        phoneRef.current.value = "";
-        typeRef.current.value = "SalesEnquiries";
-        messageRef.current.value = "";
-
-        reCaptchaRef.current.reset();
-        setloading(false);
       } else {
         if (!toast.isActive(toastId.current)) {
-          toastId.current = toast.error(message, {
+          toastId.current = toast.error("reCAPTCHA", {
             position: "top-right",
             autoClose: 5000,
             hideProgressBar: true,
@@ -79,23 +101,10 @@ const Contactmain = () => {
             theme: "light",
           });
         }
-
-        setloading(false);
       }
-    } else {
-      if (!toast.isActive(toastId.current)) {
-        toastId.current = toast.error("Please verify the reCAPTCHA.", {
-          position: "top-right",
-          autoClose: 5000,
-          hideProgressBar: true,
-          closeOnClick: true,
-          pauseOnHover: false,
-          draggable: true,
-          progress: undefined,
-          theme: "light",
-        });
-      }
-
+    } catch (error) {
+      console.error("Error submitting form:", error.message);
+    } finally {
       setloading(false);
     }
   };
@@ -121,9 +130,6 @@ const Contactmain = () => {
               >
                 <option value="SalesEnquiries">Sales Enquiries</option>
                 <option value="SupportServices">Support Services</option>
-                {/* <option value="IT Project">IT Project</option>
-                <option value="ELV Projects">ELV Projects</option>
-                <option value="Solution Enquiry">Solution Enquiry</option> */}
               </select>
               <div className={Styles.contactformfirstcontainer}>
                 <div className={Styles.contactformboxone}>

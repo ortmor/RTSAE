@@ -1,10 +1,11 @@
 "use client";
+
 import { Swiper, SwiperSlide } from "swiper/react";
+import uuid from "short-uuid";
 import { useEffect, useState } from "react";
 import { Autoplay } from "swiper";
 import Styles from "../../styles/about.module.scss";
 import axios from "axios";
-import uuid from "short-uuid";
 
 const Ourclients = () => {
   const ApiPoint = process.env.API_KEY;
@@ -18,6 +19,7 @@ const Ourclients = () => {
           ApiPoint + `/en/client/public?fetch=${uuid.generate()}`
         );
         const result = response.data;
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
@@ -26,8 +28,6 @@ const Ourclients = () => {
 
     fetchData();
   }, []);
-
-  {console.log(data)}
 
   return (
     <div className={Styles.Aboutourclientslidermain}>

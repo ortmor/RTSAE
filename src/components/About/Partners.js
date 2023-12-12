@@ -1,27 +1,30 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import axios from "axios";
 import { useEffect, useState } from "react";
 import { Pagination, Autoplay } from "swiper";
 import Styles from "../../styles/about.module.scss";
-import uuid from "short-uuid"
-
+import uuid from "short-uuid";
+import axios from "axios";
 
 const Partners = () => {
   const ApiPoint = process.env.API_KEY;
-  const [data, setData] = useState([]);
   const IMGURL = process.env.SERVER_URL + "/image/";
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + `/en/partner/public?fetch=${uuid.generate()}`);
+        const response = await axios.get(
+          ApiPoint + `/en/partner/public?fetch=${uuid.generate()}`
+        );
         const result = response.data;
+
         setData(result.results);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
     };
+
     fetchData();
   }, []);
 
