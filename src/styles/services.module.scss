@@ -79,6 +79,11 @@
   }
 }
 
+.mainmiddlecard {
+  margin-top: 7em;
+  margin-bottom: 2em;
+}
+
 @media screen and (max-width: 3000px) {
   .servicelandingcontainerheading {
     text-align: left;
@@ -158,6 +163,11 @@
 }
 
 @media screen and (max-width: 600px) {
+  .mainmiddlecard {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
   .servicelandingcontainerheading {
     text-align: left;
     margin-top: 12rem;
