@@ -4,13 +4,6 @@
   max-height: 100vh;
   height: 100vh;
   overflow: hidden;
-  // #Video {
-  //   width: 100%;
-  //   max-height: 100vh;
-  //   height: 100vh;
-  //   object-fit: cover;
-  // }
-
   img {
     width: 100%;
     object-fit: cover;
@@ -719,6 +712,415 @@
 //footer slider
 
 //Ends
+
+.footerslidermainhome {
+  background-color: #ffffff;
+  margin: 5em auto;
+  width: 95%;
+
+  .footersliderboxmainparent {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    cursor: pointer;
+
+    .footersliderboxmainparentone {
+      width: 30%;
+
+      .footersliderboxmainparentonehead {
+        span {
+          color: #999999;
+        }
+
+        h1 {
+          font-size: 3rem;
+          font-weight: 700;
+        }
+
+        p {
+          color: #999999;
+          font-weight: 400;
+        }
+      }
+
+      .footersliderboxmainparentbuttoncontainer {
+        margin-top: 1em;
+
+        button {
+          border-radius: 40px;
+          border: 1px solid #999999;
+          outline: none;
+          color: #999999;
+          background: #ffffff 0% 0% no-repeat padding-box;
+          width: 50px;
+          height: 50px;
+          border-radius: 40px;
+          font-size: 1.5rem;
+          cursor: pointer;
+        }
+
+        button:hover {
+          border-radius: 40px;
+          border: none;
+          outline: none;
+          color: #ffffff;
+          background: #ff0000 0% 0% no-repeat padding-box;
+          width: 50px;
+          height: 50px;
+          border-radius: 40px;
+          font-size: 1.5rem;
+          font-weight: 900;
+        }
+
+        button:nth-child(2) {
+          margin-left: 0.5em;
+        }
+      }
+    }
+
+    .footersliderboxmainparenttwo {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      width: 60%;
+      background: linear-gradient(#f3f3f3 60%, #ffffff 40%);
+      border-top-left-radius: 15px;
+      border-bottom-left-radius: 15px;
+
+      .footersliderboxmainparenttwobox {
+        background: #ffffff 0% 0% no-repeat padding-box;
+        box-shadow: 0px 7px 60px #00000014;
+        border-radius: 12px;
+        opacity: 1;
+        padding: 1em;
+        height: 400px;
+        width: 100%;
+        margin-bottom: 2em;
+        margin-top: 2em;
+        text-align: center;
+        position: relative;
+
+        .navigationarrowcontainer {
+          background-color: transparent;
+          position: absolute;
+          bottom: 0;
+          margin-bottom: -1em;
+          width: 90%;
+          display: flex;
+          justify-content: center;
+
+          button {
+            border-radius: 50px;
+            display: none;
+            outline: none;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: transparent
+              linear-gradient(201deg, #ff5100 0%, #ff0000 100%) 0% 0% no-repeat
+              padding-box;
+            color: #ffffff;
+          }
+        }
+
+        img {
+          width: 50%;
+        }
+        h1 {
+          text-align: center;
+          letter-spacing: -0.88px;
+          color: #000000;
+          opacity: 1;
+          font-weight: 400;
+          font-size: 2rem;
+        }
+
+        .footersliderboxmainparenttwoboxslider {
+          display: flex;
+        }
+      }
+
+      .footersliderboxmainparenttwobox:hover {
+        button {
+          border-radius: 40px;
+          outline: none;
+          display: block;
+          text-align: center;
+          border: none;
+          width: 50px;
+          height: 50px;
+          border-radius: 100px;
+          font-size: 1.5rem;
+          cursor: pointer;
+          background: transparent
+            linear-gradient(201deg, #ff5100 0%, #ff0000 100%) 0% 0% no-repeat
+            padding-box;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .footerslidermainhome {
+    background-color: #ffffff;
+    margin: 5em auto;
+    width: 95%;
+    .footersliderboxmainparent {
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      cursor: pointer;
+      .footersliderboxmainparentone {
+        width: 30%;
+        .footersliderboxmainparentonehead {
+          span {
+            color: #999999;
+          }
+          h1 {
+            font-size: 2rem;
+            font-weight: 700;
+          }
+          p {
+            color: #999999;
+            font-weight: 400;
+          }
+        }
+        .footersliderboxmainparentbuttoncontainer {
+          margin-top: 1em;
+          button {
+            border-radius: 40px;
+            border: 1px solid #999999;
+            outline: none;
+            color: #999999;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+          }
+
+          button:hover {
+            border-radius: 40px;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            background: #ff0000 0% 0% no-repeat padding-box;
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            font-weight: 900;
+          }
+
+          button:nth-child(2) {
+            margin-left: 0.5em;
+          }
+        }
+      }
+
+      .footersliderboxmainparenttwo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 70%;
+        background: linear-gradient(#f3f3f3 60%, #ffffff 40%);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+        .footersliderboxmainparenttwobox {
+          background: #ffffff 0% 0% no-repeat padding-box;
+          box-shadow: 0px 7px 60px #00000014;
+          border-radius: 12px;
+          opacity: 1;
+          padding: 0em;
+          height: 300px;
+          width: 100%;
+          margin-bottom: 2em;
+          margin-top: 2em;
+          text-align: center;
+          img {
+            width: 40%;
+            margin-top: 1em;
+          }
+          h1 {
+            text-align: center;
+            letter-spacing: -0.88px;
+            color: #000000;
+            opacity: 1;
+            font-weight: 400;
+            font-size: 1.5rem;
+          }
+
+          .footersliderboxmainparenttwoboxslider {
+            display: flex;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .footerslidermainhome {
+    background-color: #ffffff;
+    margin: 5em auto;
+    width: 95%;
+    .footersliderboxmainparent {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      cursor: pointer;
+      .footersliderboxmainparentone {
+        width: 100%;
+        text-align: center;
+        .footersliderboxmainparentonehead {
+          span {
+            color: #999999;
+          }
+          h1 {
+            font-size: 2rem;
+            font-weight: 700;
+          }
+          p {
+            color: #999999;
+            font-weight: 400;
+          }
+        }
+        .footersliderboxmainparentbuttoncontainer {
+          margin-top: 1em;
+          margin-bottom: 1em;
+          button {
+            border-radius: 40px;
+            border: 1px solid #999999;
+            outline: none;
+            color: #999999;
+            background: #ffffff 0% 0% no-repeat padding-box;
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            cursor: pointer;
+          }
+
+          button:hover {
+            border-radius: 40px;
+            border: none;
+            outline: none;
+            color: #ffffff;
+            background: #ff0000 0% 0% no-repeat padding-box;
+            width: 50px;
+            height: 50px;
+            border-radius: 40px;
+            font-size: 1.5rem;
+            font-weight: 900;
+          }
+
+          button:nth-child(2) {
+            margin-left: 0.5em;
+          }
+        }
+      }
+
+      .footersliderboxmainparenttwo {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        width: 100%;
+        background: linear-gradient(#f3f3f3 60%, #ffffff 40%);
+        border-top-left-radius: 15px;
+        border-bottom-left-radius: 15px;
+
+        .footersliderboxmainparenttwobox {
+          background: #ffffff 0% 0% no-repeat padding-box;
+          box-shadow: 0px 7px 60px #00000014;
+          border-radius: 12px;
+          opacity: 1;
+          padding: 0em;
+          height: 400px;
+          width: 100%;
+          margin-bottom: 2em;
+          margin-top: 2em;
+          text-align: center;
+
+          .navigationarrowcontainer {
+            background-color: transparent;
+            position: absolute;
+            bottom: 0;
+            margin-bottom: -1em;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+
+            button {
+              border-radius: 50px;
+              display: none;
+              outline: none;
+              border: none;
+              width: 50px;
+              height: 50px;
+              border-radius: 100px;
+              font-size: 1.5rem;
+              cursor: pointer;
+              background: transparent
+                linear-gradient(201deg, #ff5100 0%, #ff0000 100%) 0% 0%
+                no-repeat padding-box;
+              color: #ffffff;
+            }
+          }
+
+          img {
+            width: 40%;
+            margin-top: 1em;
+          }
+          h1 {
+            text-align: center;
+            letter-spacing: -0.88px;
+            color: #000000;
+            opacity: 1;
+            font-weight: 400;
+            font-size: 1.5rem;
+          }
+
+          .footersliderboxmainparenttwoboxslider {
+            display: flex;
+          }
+        }
+
+        .footersliderboxmainparenttwobox:hover {
+          button {
+            border-radius: 40px;
+            outline: none;
+            display: block;
+            text-align: center;
+            border: none;
+            width: 50px;
+            height: 50px;
+            border-radius: 100px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            background: transparent
+              linear-gradient(201deg, #ff5100 0%, #ff0000 100%) 0% 0% no-repeat
+              padding-box;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+
+
+
+///Footer
+
+
+
 
 .footerslidermainhome {
   background-color: #ffffff;

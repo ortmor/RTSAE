@@ -17,10 +17,6 @@ const Footerslider = () => {
               <span>We offer</span> solutions <br /> that are awesome <br /> and
               reliable
             </h1>
-            {/* <p>
-              Curabitur euismod finibus ligula, id molestie purus congue ac. Sed
-              ac eros magna.
-            </p> */}
           </div>
 
           <div className={Styles.footersliderboxmainparentbuttoncontainer}>
