@@ -3,14 +3,15 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import Layout from "@/components/Layout";
 import Styles from "../../../styles/home.module.scss";
-import uuid from "short-uuid"
+import uuid from "short-uuid";
 
 export default function Page({ params }) {
   const ApiPoint = process.env.API_KEY;
   const IMGURL = process.env.SERVER_URL + "/image/";
   const [data, setData] = useState([]);
   const [Title, setTitle] = useState("");
-  const [Image, setImage] = useState("");
+  const [Image, setImage] = useState([]);
+  const [MainImage, setMainImage] = useState(null);
 
   const SolID = params.slug;
 
@@ -19,6 +20,9 @@ export default function Page({ params }) {
     element.scrollIntoView({ behavior: "smooth" });
   };
 
+  {
+    console.log(Image);
+  }
   useEffect(() => {
     const fetchData = async () => {
       try {
@@ -26,7 +30,8 @@ export default function Page({ params }) {
           `${ApiPoint}/en/award-body/award/public/${SolID}?fetch=${uuid.generate()}`
         );
         setTitle(response.data.results[0].award.subTitle);
-        setImage(response.data.results[0].image);
+        setImage(response.data.results);
+        setMainImage(response.data.results[0].image);
 
         setData(response.data.results);
       } catch (error) {
@@ -55,7 +60,12 @@ export default function Page({ params }) {
 
             <button onClick={scrollToMain}>Explore more</button>
           </div>
-          <img id={Styles.img} width="100%" poster="/" src={IMGURL + Image} />
+          <img
+            id={Styles.img}
+            width="100%"
+            poster="/"
+            src={IMGURL + MainImage}
+          />
         </div>
         <div id="main"></div>
       </div>
@@ -82,7 +92,7 @@ export default function Page({ params }) {
               </div>
 
               <div className={Styles.homemainboxtwo}>
-                <img src={IMGURL + Image}></img>
+                <img src={IMGURL + Image[0].image}></img>
                 <div className={Styles.homemainboxtwoimg}></div>
               </div>
             </div>
@@ -91,7 +101,7 @@ export default function Page({ params }) {
           return award.visibility === "Show" ? (
             <div className={Styles.homemainparentdiv}>
               <div className={Styles.homemainboxtwo}>
-                <img src={IMGURL + Image}></img>
+                <img src={IMGURL + Image[1].image}></img>
                 <div className={Styles.homemainboxtwoimg}></div>
               </div>
               <div className={Styles.homemainboxone}>
