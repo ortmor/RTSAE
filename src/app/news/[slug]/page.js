@@ -19,7 +19,7 @@ const page = ({ params }) => {
         );
         const Data = response.data.results;
         setData(Data);
-        setDescription(Data.description);
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }
