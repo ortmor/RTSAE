@@ -20,7 +20,7 @@ const Main = () => {
           (item) => item.type === "AUDIO_VISUAL"
         );
         setData(filteredData);
-        setMain(filteredData[0]?.solution || {});
+       
       } catch (error) {
         console.error("Error fetching data:", error);
       }

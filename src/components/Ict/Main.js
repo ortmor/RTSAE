@@ -18,7 +18,7 @@ const Main = () => {
         const allData = response.data.results;
         const filteredData = allData.filter((item) => item.type === "ICT");
         setData(filteredData);
-        setMain(filteredData[0]?.solution || {});
+        
       } catch (error) {
         console.error("Error fetching data:", error);
       }

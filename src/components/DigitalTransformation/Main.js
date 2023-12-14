@@ -21,7 +21,7 @@ const Main = () => {
           (item) => item.type === "DIGITAL_TRANSFORMATION"
         );
         setData(filteredData);
-        setMain(filteredData[0]?.solution || {});
+       
       } catch (error) {
         console.error("Error fetching data:", error);
       }
