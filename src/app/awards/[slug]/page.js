@@ -23,7 +23,7 @@ export default function Page({ params }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          ApiPoint + `/en/award-body/award/public?fetch=${uuid.generate()}` + SolID
+          `${ApiPoint}/en/award-body/award/public/${SolID}?fetch=${uuid.generate()}`
         );
         setTitle(response.data.results[0].award.subTitle);
         setImage(response.data.results[0].image);

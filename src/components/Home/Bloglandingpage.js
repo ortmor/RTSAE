@@ -1,6 +1,6 @@
 "use client";
 import { Swiper, SwiperSlide } from "swiper/react";
-import uuid from "short-uuid"
+import uuid from "short-uuid";
 import axios from "axios";
 import { useEffect, useState } from "react";
 import { Autoplay, Navigation, Pagination } from "swiper";
@@ -15,7 +15,9 @@ const Bloglandingpage = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const response = await axios.get(ApiPoint + `/en/award/public?fetch=${uuid.generate()}`);
+        const response = await axios.get(
+          ApiPoint + `/en/award/public?fetch=${uuid.generate()}`
+        );
         const firstThreeResults = response.data.results.slice(0, 3);
         setData(firstThreeResults);
       } catch (error) {
@@ -59,6 +61,7 @@ const Bloglandingpage = () => {
                 <div className={Styles.Bloglandingpageboxonemain}>
                   <div
                     id={Styles.blogimgone}
+                    style={{ backgroundImage: `url(${IMGURL + blog.image})` }}
                     className={Styles.Bloglandingpageboxoneimg}
                   ></div>
                   <div className={Styles.Bloglandingpageoneparagraph}>

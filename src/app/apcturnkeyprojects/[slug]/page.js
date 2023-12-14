@@ -8,7 +8,7 @@ import { AiOutlineArrowLeft } from "react-icons/ai";
 import { AiOutlineArrowRight } from "react-icons/ai";
 import Styles from "../../../styles/solutioninner.module.scss";
 import Link from "next/link";
-import uuid from "short-uuid"
+import uuid from "short-uuid";
 
 export default function Page({ params }) {
   const ApiPoint = process.env.API_KEY;
@@ -27,7 +27,7 @@ export default function Page({ params }) {
     const fetchData = async () => {
       try {
         const response = await axios.get(
-          ApiPoint + `/en/solution-body/solution/public?fetch=${uuid.generate()}` + SolID
+          `${ApiPoint}/en/solution-body/solution/public/${SolID}?fetch=${uuid.generate()}`
         );
         const allData = response.data.results;
         const filteredData = allData.filter(
@@ -126,15 +126,15 @@ export default function Page({ params }) {
                   </div>
                   <div className={Styles.innersolutionpointsmain}>
                   <ul>
-  {sol.description
-    .split("*")
-    .map((sentence, index, array) => (
-      <li key={index}>
-        {sentence.trim()}
-        {index < array.length - 1 && '*'}
-      </li>
-    ))}
-</ul>
+                      {sol.description
+                        .split("*")
+                        .map((sentence, index, array) => (
+                          <li key={index}>
+                            {sentence.trim()}
+                            {index < array.length - 1 && ""}
+                          </li>
+                        ))}
+                    </ul>
                   </div>
                   <br />
                   <Link href="/contact">Let’s Talk</Link>
@@ -150,16 +150,15 @@ export default function Page({ params }) {
                   </div>
                   <div className={Styles.innersolutionpointsmain}>
                   <ul>
-  {sol.description
-    .split("*")
-    .map((sentence, index, array) => (
-      <li key={index}>
-        {sentence.trim()}
-        {index < array.length - 1 && '*'}
-      </li>
-    ))}
-</ul>
-
+                      {sol.description
+                        .split("*")
+                        .map((sentence, index, array) => (
+                          <li key={index}>
+                            {sentence.trim()}
+                            {index < array.length - 1 && ""}
+                          </li>
+                        ))}
+                    </ul>
                   </div>
                   <br />
                   <Link href="/contact">Let’s Talk</Link>

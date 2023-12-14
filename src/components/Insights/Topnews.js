@@ -4,7 +4,7 @@ import axios from "axios";
 import { useEffect, useState } from "react";
 import Styles from "../../styles/insights.module.scss";
 import { AiOutlineArrowRight } from "react-icons/ai";
-import uuid from "short-uuid"
+import uuid from "short-uuid";
 
 const Topnews = () => {
   const ApiPoint = process.env.API_KEY;
@@ -53,7 +53,8 @@ const Topnews = () => {
                         .substring(0, 300)}</p>`,
                     }}
                   />
-
+                  <br />
+                  <br />
                   <Link href={`/news/${posts.id}`}>
                     READ{" "}
                     <AiOutlineArrowRight className={Styles.topnewscardarrow} />

@@ -55,7 +55,8 @@ const Latestposts = () => {
                         .substring(0, 300)}</p>`,
                     }}
                   />
-
+                  <br />
+                  <br />
                   <Link href={`/news/${posts.id}`}>
                     READ{" "}
                     <AiOutlineArrowRight className={Styles.topnewscardarrow} />{" "}
