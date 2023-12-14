@@ -20,9 +20,7 @@ export default function Page({ params }) {
     element.scrollIntoView({ behavior: "smooth" });
   };
 
-  {
-    console.log(Image);
-  }
+ 
   useEffect(() => {
     const fetchData = async () => {
       try {
