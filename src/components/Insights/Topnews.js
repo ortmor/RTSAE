@@ -19,7 +19,7 @@ const Topnews = () => {
         );
         const result = response.data;
 
-        const firstThreeResults = result.results.slice(0, 3);
+        const firstThreeResults = result.results;
 
         setData(firstThreeResults);
       } catch (error) {

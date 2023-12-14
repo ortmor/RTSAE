@@ -94,9 +94,9 @@ const Job = () => {
         )}
       </div>
 
-      <div className={Styles.viewmorecontainer}>
+      {/* <div className={Styles.viewmorecontainer}>
         <Link href="/comingsoon">View more</Link>
-      </div>
+      </div> */}
     </div>
   );
 };
