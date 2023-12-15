@@ -57,7 +57,7 @@ const Bloglandingpage = () => {
           blog.visibility === "Show" ? (
             <SwiperSlide key={blog.id}>
               <div className={Styles.Bloglandingpageparentcontainer}>
-                {/* chlid one */}
+        
                 <div className={Styles.Bloglandingpageboxonemain}>
                   <div
                     id={Styles.blogimgone}
