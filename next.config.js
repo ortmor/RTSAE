@@ -2,7 +2,7 @@ require("dotenv").config();
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  reactStrictMode: true,
+ reactStrictMode: false,
   swcMinify: true,
   env: {
     CONTACT_CAPTCHA_SITEKEY: "6LfdRMgnAAAAAG3qehULkgsEkeEc6KSx0JswCsdB",
@@ -24,10 +24,6 @@ const nextConfig = {
           {
             key: "Content-Security-Policy",
             value: "",
-          },
-          {
-            key: "X-Content-Type-Options",
-            value: "nosniff",
           },
           {
             key: "Referrer-Policy",
